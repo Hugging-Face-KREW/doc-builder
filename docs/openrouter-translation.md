@@ -65,6 +65,34 @@ Transformers package and its doc-build dependencies. Translation itself does not
 For Japanese use `--lang ja` and a separate output directory.
 If `--source` is omitted, the command clones the pinned Transformers commit from GitHub.
 
+## Five-page Korean evaluation set
+
+The agreed test selection is checked in at `scripts/translation/ko-poc-pages.txt`:
+
+| English source path | Evaluation purpose |
+| --- | --- |
+| `pipeline_tutorial.md` | Compare with the existing Korean translation |
+| `tokenizer_summary.md` | Compare with the existing Korean translation |
+| `training.md` | Compare with the existing Korean translation |
+| `quantization/selecting.md` | Review a newly generated Korean translation |
+| `chat_templating_writing.md` | Review a newly generated Korean translation |
+
+These reference-availability labels reflect the user's evaluation plan. Existing
+Korean translations may cover an older English revision; compare their content
+before treating them as ground truth. The generator always reads English sources,
+not the existing Korean documents.
+
+Use the selection in both the dry run and generation commands above:
+
+```bash
+--pages-file scripts/translation/ko-poc-pages.txt
+```
+
+Use `--output-dir ./translation-output/ko-five-pages` for this set. It also generates
+an appropriately pruned Korean sidebar. Review terminology, omissions, code and
+link preservation, and Markdown rendering on all five pages. Record the exact source
+SHA and OpenRouter model so results can be compared across runs.
+
 ## Output, caching, and validation
 
 The output directory contains translated `.md`/`.mdx` pages, `_toctree.yml`,
