@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "error": "Translation failed; completed pages were cached, output was not published:\ntokenizer_summary.md: Unit 1.22: Translation introduced markup; source='Steps 2-4 repeat until the vocabulary reaches the target size.'; response='단계 2~4는 어휘가 목표 크기에 도달할 때까지 반복합니다.'",
+  "wall_seconds": 488.6166872920003,
+  "api_roundtrip_seconds": 480.0547175281681,
+  "median_api_roundtrip_seconds": 0.8005519160069525,
+  "http_requests": 343,
+  "http_errors": 0,
+  "validation_retry_http_requests": 17,
+  "prompt_tokens": 50113,
+  "completion_tokens": 16563,
+  "reported_cost_usd": 0.00791014115,
+  "requests_missing_cost": 0,
+  "accounted_cost_usd": 0.007910141149999996,
+  "providers": [
+    "Alibaba",
+    "DekaLLM",
+    "Nebius",
+    "PrimeIntellect",
+    "SiliconFlow",
+    "StreamLake"
+  ],
+  "timing_definition": "Client wall clock and full HTTP round-trip latency; not GPU-only inference or TTFT.",
+  "human_quality_review": "pending"
+}

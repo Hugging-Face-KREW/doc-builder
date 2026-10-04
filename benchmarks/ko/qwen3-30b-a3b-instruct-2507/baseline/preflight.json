@@ -1,0 +1,814 @@
+{
+  "fenced_blocks": 48,
+  "pages": 5,
+  "preserved_labels": [
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 8,
+      "kind": "tableCell",
+      "text": "bitsandbytes"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 14,
+      "kind": "tableCell",
+      "text": "HQQ"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 16,
+      "kind": "tableCell",
+      "text": "SINQ"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 18,
+      "kind": "tableCell",
+      "text": "torchao"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 22,
+      "kind": "heading",
+      "text": "bitsandbytes"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 40,
+      "kind": "heading",
+      "text": "SINQ"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 49,
+      "kind": "heading",
+      "text": "torchao"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 61,
+      "kind": "heading",
+      "text": "GPTQ/GPTQModel"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 91,
+      "kind": "heading",
+      "text": "bitsandbytes"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 106,
+      "kind": "paragraph",
+      "text": "<iframe\n  src=\"https://huggingface.co/datasets/derekl35/quantization-benchmarks/embed/viewer/default/train\"\n  frameborder=\"0\"\n  width=\"100%\"\n  height=\"560px\"\n  title=\"benchmarking results dataset\"\n></iframe>"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 113,
+      "kind": "tableCell",
+      "text": "~2x"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 115,
+      "kind": "tableCell",
+      "text": "**4-bit** (AWQ, GPTQ, HQQ, bnb-nf4, SINQ)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 116,
+      "kind": "tableCell",
+      "text": "~4x"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 24,
+      "kind": "heading",
+      "text": "SentencePiece"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 29,
+      "kind": "heading",
+      "text": "WordPiece"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 36,
+      "kind": "tableCell",
+      "text": "`\"u\"` + `\"g\"`"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 37,
+      "kind": "tableCell",
+      "text": "20"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 38,
+      "kind": "tableCell",
+      "text": "20 / (36 × 20) = 0.028"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 39,
+      "kind": "tableCell",
+      "text": "`\"u\"` + `\"n\"`"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 40,
+      "kind": "tableCell",
+      "text": "16"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 41,
+      "kind": "tableCell",
+      "text": "16 / (36 × 16) = 0.028"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 42,
+      "kind": "tableCell",
+      "text": "`\"h\"` + `\"u\"`"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 43,
+      "kind": "tableCell",
+      "text": "15"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 44,
+      "kind": "tableCell",
+      "text": "15 / (15 × 36) = 0.028"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 45,
+      "kind": "tableCell",
+      "text": "`\"g\"` + `\"s\"`"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 46,
+      "kind": "tableCell",
+      "text": "5"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 47,
+      "kind": "tableCell",
+      "text": "5 / (20 × 5) = 0.050"
+    },
+    {
+      "page": "training.md",
+      "part": 1,
+      "unit": 7,
+      "kind": "paragraph",
+      "text": "<iframe\n  src=\"https://huggingface.co/datasets/karthiksagarn/astro_horoscope/embed/viewer/default/train\"\n  frameborder=\"0\"\n  width=\"100%\"\n  height=\"560px\"\n></iframe>"
+    }
+  ],
+  "review_labels": [
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 1,
+      "kind": "heading",
+      "text": "Writing a chat template"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 5,
+      "kind": "heading",
+      "text": "Template writing tips"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 8,
+      "kind": "heading",
+      "text": "Writing multimodal chat templates"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 14,
+      "kind": "heading",
+      "text": "Trimming whitespace"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 18,
+      "kind": "heading",
+      "text": "Special variables and callables"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 25,
+      "kind": "heading",
+      "text": "Compatibility with non-Python Jinja"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 31,
+      "kind": "heading",
+      "text": "Big templates"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 35,
+      "kind": "heading",
+      "text": "Storing and loading chat templates"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 37,
+      "kind": "heading",
+      "text": "Storage formats"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 44,
+      "kind": "heading",
+      "text": "Loading precedence"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 53,
+      "kind": "heading",
+      "text": "Updating an older repository"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 56,
+      "kind": "heading",
+      "text": "Templates for tools"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 60,
+      "kind": "heading",
+      "text": "Tool definitions"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 65,
+      "kind": "heading",
+      "text": "Tool calls"
+    },
+    {
+      "page": "chat_templating_writing.md",
+      "part": 1,
+      "unit": 69,
+      "kind": "heading",
+      "text": "Tool responses"
+    },
+    {
+      "page": "pipeline_tutorial.md",
+      "part": 1,
+      "unit": 21,
+      "kind": "heading",
+      "text": "Batch inference"
+    },
+    {
+      "page": "pipeline_tutorial.md",
+      "part": 1,
+      "unit": 32,
+      "kind": "heading",
+      "text": "Task-specific parameters"
+    },
+    {
+      "page": "pipeline_tutorial.md",
+      "part": 1,
+      "unit": 38,
+      "kind": "heading",
+      "text": "Chunk batching"
+    },
+    {
+      "page": "pipeline_tutorial.md",
+      "part": 1,
+      "unit": 44,
+      "kind": "heading",
+      "text": "Large datasets"
+    },
+    {
+      "page": "pipeline_tutorial.md",
+      "part": 1,
+      "unit": 47,
+      "kind": "heading",
+      "text": "Large models"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 1,
+      "kind": "heading",
+      "text": "Selecting a quantization method"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 6,
+      "kind": "tableCell",
+      "text": "quantization method"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 7,
+      "kind": "tableCell",
+      "text": "use case"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 10,
+      "kind": "tableCell",
+      "text": "compressed-tensors"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 11,
+      "kind": "tableCell",
+      "text": "loading specific quantized formats (FP8)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 12,
+      "kind": "tableCell",
+      "text": "GPTQModel or AWQ"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 13,
+      "kind": "tableCell",
+      "text": "good 4-bit accuracy with upfront calibration"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 19,
+      "kind": "tableCell",
+      "text": "flexibility and fast inference with torch.compile"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 20,
+      "kind": "heading",
+      "text": "No Calibration Required (On-the-fly Quantization)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 26,
+      "kind": "tableCell",
+      "text": "Primarily optimized for NVIDIA GPUs (CUDA)."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 27,
+      "kind": "tableCell",
+      "text": "Good community support and widely adopted."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 28,
+      "kind": "tableCell",
+      "text": "Inference speedup isn't guaranteed."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 30,
+      "kind": "heading",
+      "text": "HQQ (Half-Quadratic Quantization)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 35,
+      "kind": "tableCell",
+      "text": "Multiple backends for fast inference."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 37,
+      "kind": "tableCell",
+      "text": "Compatible with `torch.compile`."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 45,
+      "kind": "tableCell",
+      "text": "GemLite backend for faster inference."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 53,
+      "kind": "tableCell",
+      "text": "Newer library, ecosystem still evolving."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 54,
+      "kind": "tableCell",
+      "text": "Offers decent CPU quantization support."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 55,
+      "kind": "tableCell",
+      "text": "Performance depends on `torch.compile` working well."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 59,
+      "kind": "heading",
+      "text": "Calibration-based Quantization"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 65,
+      "kind": "tableCell",
+      "text": "Often achieves high accuracy."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 67,
+      "kind": "tableCell",
+      "text": "Can lead to inference speedups."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 68,
+      "kind": "tableCell",
+      "text": "Possible to overfit on calibration data."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 71,
+      "kind": "heading",
+      "text": "AWQ (Activation-aware Weight Quantization)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 76,
+      "kind": "tableCell",
+      "text": "Requires calibration if quantizing yourself."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 77,
+      "kind": "tableCell",
+      "text": "Can lead to inference speedups."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 78,
+      "kind": "tableCell",
+      "text": "Shorter calibration time than GPTQ."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 81,
+      "kind": "heading",
+      "text": "Loading Specific Formats"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 82,
+      "kind": "heading",
+      "text": "compressed-tensors"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 85,
+      "kind": "tableCell",
+      "text": "Supports flexible formats like FP8."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 86,
+      "kind": "tableCell",
+      "text": "Primarily for loading pre-quantized models."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 89,
+      "kind": "heading",
+      "text": "Fine-tuning"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 94,
+      "kind": "paragraph",
+      "text": "**Cons:** Primarily for NVIDIA GPUs."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 99,
+      "kind": "paragraph",
+      "text": "Consider these if:"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 100,
+      "kind": "paragraph",
+      "text": "You need extreme compression (sub-4-bit)."
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 103,
+      "kind": "heading",
+      "text": "Benchmark Comparison"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 107,
+      "kind": "paragraph",
+      "text": "The key takeaways are:"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 108,
+      "kind": "tableCell",
+      "text": "Quantization & Methods"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 109,
+      "kind": "tableCell",
+      "text": "Memory Savings (vs bf16)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 111,
+      "kind": "tableCell",
+      "text": "Other Notes"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 112,
+      "kind": "tableCell",
+      "text": "**8-bit** (bnb-int8, HQQ, Quanto, torchao, fp8)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 114,
+      "kind": "tableCell",
+      "text": "Very close to baseline bf16 model"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 117,
+      "kind": "tableCell",
+      "text": "Relatively high accuracy"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 119,
+      "kind": "tableCell",
+      "text": "**Sub-4-bit** (VPTQ, AQLM, 2-bit GPTQ)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 120,
+      "kind": "tableCell",
+      "text": "Extreme (>4x)"
+    },
+    {
+      "page": "quantization/selecting.md",
+      "part": 1,
+      "unit": 121,
+      "kind": "tableCell",
+      "text": "Noticeable drop, especially at 2-bit"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 1,
+      "kind": "heading",
+      "text": "Tokenization algorithms"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 5,
+      "kind": "heading",
+      "text": "Byte pair encoding (BPE)"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 13,
+      "kind": "heading",
+      "text": "Byte-level BPE"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 15,
+      "kind": "heading",
+      "text": "Unigram"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 34,
+      "kind": "tableCell",
+      "text": "frequency"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 35,
+      "kind": "tableCell",
+      "text": "score"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 49,
+      "kind": "heading",
+      "text": "Word-level tokenization"
+    },
+    {
+      "page": "tokenizer_summary.md",
+      "part": 1,
+      "unit": 52,
+      "kind": "heading",
+      "text": "Character-level tokenization"
+    },
+    {
+      "page": "training.md",
+      "part": 1,
+      "unit": 1,
+      "kind": "heading",
+      "text": "Fine-tuning"
+    },
+    {
+      "page": "training.md",
+      "part": 1,
+      "unit": 13,
+      "kind": "heading",
+      "text": "Loading a model"
+    },
+    {
+      "page": "training.md",
+      "part": 1,
+      "unit": 16,
+      "kind": "heading",
+      "text": "Training configuration"
+    },
+    {
+      "page": "training.md",
+      "part": 1,
+      "unit": 30,
+      "kind": "heading",
+      "text": "Next steps"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 1,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Base classes"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 2,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Preprocessors"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 3,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Tokenization algorithms"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 5,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Pipeline API"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 7,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Chat with models"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 8,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Writing a chat template"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 10,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Get started"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 11,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Fine-tuning"
+    },
+    {
+      "page": "_toctree.yml",
+      "part": 13,
+      "unit": 1,
+      "kind": "paragraph",
+      "text": "Selecting a quantization method"
+    }
+  ],
+  "errors": []
+}

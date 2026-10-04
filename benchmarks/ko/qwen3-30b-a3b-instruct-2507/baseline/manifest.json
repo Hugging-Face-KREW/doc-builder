@@ -1,0 +1,83 @@
+{
+  "status": "failed",
+  "prepared_at": "2026-10-04T06:00:57.479946+00:00",
+  "model": "qwen/qwen3-30b-a3b-instruct-2507",
+  "base_revision": "773a807b08ba5a039d6ead6774545e748064f596",
+  "source_repository": "https://github.com/huggingface/transformers",
+  "source_revision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+  "language": "ko",
+  "temperature": 0,
+  "context_window": 16384,
+  "max_tokens": 4096,
+  "concurrency": 1,
+  "cold_cache": true,
+  "provider_routing": {
+    "max_price": {
+      "prompt": 0.15,
+      "completion": 0.6
+    }
+  },
+  "experiment_cost_ceiling_usd": 1.0,
+  "python": "3.12.7",
+  "packages": {
+    "httpx": "0.28.1",
+    "pyyaml": "6.0.3",
+    "huggingface_hub": "2.1.1"
+  },
+  "prompt_sha256": "9fac0a4db955519d7827747e92dfce15fc15e167dee2f023add00d72e8f4764c",
+  "glossary_sha256": "47607474b00c3f0575af6167f2b998e52aaf9ac5499081226eafa350b9991f12",
+  "implementation_sha256": {
+    "scripts/translation/benchmark_qwen3.py": "3111426c22b721d1048014dd090f48dd001bec5d14f5242ea4535386dea9f184",
+    "src/doc_builder/translate/pipeline.py": "00cdc12dfa469a395e00a79797aa33ec26de0ee26e2504e2467e3df10f1899ca",
+    "src/doc_builder/translate/openrouter.py": "33d261d18d2783d8a73d9491169c7468ad373ae37f3b5b0e2781d3b14039c9e1",
+    "src/doc_builder/translate/segment.py": "b725a7d8f0c384d310abafb8e87db7e2071664132f9d1c65f4902e1c10bb6eb0",
+    "src/doc_builder/translate/local.py": "56b3e9be0f8878e03cefc3d64934df9734ff3669e17de01af8135afe04269ce7",
+    "kit/preprocessors/translate.cjs": "e1c924592586f9d651ad4862f71f525c65ce63be4ad555cb1548defc9ebb0170",
+    "kit/package-lock.json": "cf2c81fbd9b99941919e9883f92d75f9327e9bef73da2904c0fe9d01e47589be"
+  },
+  "documents": [
+    {
+      "path": "pipeline_tutorial.md",
+      "source_sha256": "5044abb04c77a2554c9e9259c62dc9d121aca561885ce2bde16e6be5bbb0fdec",
+      "units": 52,
+      "required_units": 52,
+      "existing_korean_reference": true
+    },
+    {
+      "path": "tokenizer_summary.md",
+      "source_sha256": "f9c73212d27f9af6e98f195448da7ffb04953a3742630aa98932843c1e2f4ccc",
+      "units": 56,
+      "required_units": 42,
+      "existing_korean_reference": true
+    },
+    {
+      "path": "training.md",
+      "source_sha256": "9c949acef2ca72e8a8272f0270ec52b6fad1c007e89c7a1d4fdb4cf6a1c15229",
+      "units": 36,
+      "required_units": 35,
+      "existing_korean_reference": true
+    },
+    {
+      "path": "quantization/selecting.md",
+      "source_sha256": "b514ce7747f5764702f995bccfa2d6a42edb21267eaff3bdbfd754aada1ac54a",
+      "units": 123,
+      "required_units": 110,
+      "existing_korean_reference": false
+    },
+    {
+      "path": "chat_templating_writing.md",
+      "source_sha256": "ec012e9e389f395508d8293f8fa8741ec27e6d36fbcdcaf21a794be0473784bd",
+      "units": 74,
+      "required_units": 74,
+      "existing_korean_reference": false
+    },
+    {
+      "path": "_toctree.yml",
+      "source_sha256": "10cef331ee95f18b50b4f6c27d25f0590738acc00c6970b7fcd33c708d8d81cb",
+      "units": 13,
+      "required_units": 13,
+      "existing_korean_reference": false
+    }
+  ],
+  "finished_at": "2026-10-04T06:09:06.137427+00:00"
+}
