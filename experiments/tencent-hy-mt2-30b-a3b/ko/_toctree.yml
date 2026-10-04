@@ -1,0 +1,10 @@
+- local: pipeline_tutorial
+  title: 파이프라인입니다.
+- local: tokenizer_summary
+  title: 토큰화 알고리즘
+- local: training
+  title: 미세 조정입니다.
+- local: quantization/selecting
+  title: 양자화 방법을 선택합니다.
+- local: chat_templating_writing
+  title: 채팅 템플릿 작성하기

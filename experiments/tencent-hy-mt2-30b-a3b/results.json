@@ -1,0 +1,167 @@
+{
+  "model": "tencent/hy-mt2-30b-a3b",
+  "provider": "openrouter",
+  "language": "ko",
+  "source_repository": "huggingface/transformers",
+  "source_revision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+  "pipeline_code_revision": "5964d44",
+  "settings": {
+    "context_window": 8192,
+    "max_tokens": 2048,
+    "retry_max_tokens": 4096,
+    "temperature": 0
+  },
+  "documents": [
+    {
+      "source_document": "pipeline_tutorial.md",
+      "output_file": "ko/pipeline_tutorial.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/pipeline_tutorial.md",
+      "sha256": "bb012e106b3057868dc3a3dff1d02910aa7afce35541d18ab1455e15ebbd6429",
+      "status": "success",
+      "successful_attempt": {
+        "requests": 56,
+        "prompt_tokens": 9826,
+        "completion_tokens": 3305,
+        "cost_usd": 0.001702099,
+        "elapsed_seconds": 48.55
+      },
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 8192,
+        "output": 2048,
+        "group": 64,
+        "language": "ko",
+        "model": "tencent/hy-mt2-30b-a3b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "adapter_version": 2
+      }
+    },
+    {
+      "source_document": "tokenizer_summary.md",
+      "output_file": "ko/tokenizer_summary.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/tokenizer_summary.md",
+      "sha256": "1e46b81ab34ab452a96719fd7ccd426f5251d9d9c532d626d03fbd261e62fa7f",
+      "status": "success",
+      "successful_attempt": {
+        "requests": 43,
+        "prompt_tokens": 7482,
+        "completion_tokens": 2960,
+        "cost_usd": 0.001426868,
+        "elapsed_seconds": 43.46
+      },
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 8192,
+        "output": 2048,
+        "group": 64,
+        "language": "ko",
+        "model": "tencent/hy-mt2-30b-a3b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "adapter_version": 2
+      }
+    },
+    {
+      "source_document": "training.md",
+      "output_file": "ko/training.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/training.md",
+      "sha256": "a22757db83b2294a6b79744f637e40eb510eeed19841af676154ea8c72154fd0",
+      "status": "success",
+      "successful_attempt": {
+        "requests": 44,
+        "prompt_tokens": 6988,
+        "completion_tokens": 2526,
+        "cost_usd": 0.001262282,
+        "elapsed_seconds": 39.08
+      },
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 8192,
+        "output": 2048,
+        "group": 64,
+        "language": "ko",
+        "model": "tencent/hy-mt2-30b-a3b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "source_document": "quantization/selecting.md",
+      "output_file": "ko/quantization/selecting.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/quantization/selecting.md",
+      "sha256": "6ece4ff3ccc731f93125a9520ad57dab63403457754de23de0a85211859f619f",
+      "status": "success",
+      "successful_attempt": {
+        "requests": 129,
+        "prompt_tokens": 17382,
+        "completion_tokens": 3395,
+        "cost_usd": 0.002287793,
+        "elapsed_seconds": 86.63
+      },
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 8192,
+        "output": 2048,
+        "group": 64,
+        "language": "ko",
+        "model": "tencent/hy-mt2-30b-a3b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "adapter_version": 4,
+        "validation_attempts": 3
+      }
+    },
+    {
+      "source_document": "chat_templating_writing.md",
+      "output_file": "ko/chat_templating_writing.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/chat_templating_writing.md",
+      "sha256": "d2e84f10c0ebe37ccc775dece9a5d43ed2e150bb75f8e491c17b8d544596b3cb",
+      "status": "success",
+      "successful_attempt": {
+        "requests": 78,
+        "prompt_tokens": 12543,
+        "completion_tokens": 6225,
+        "cost_usd": 0.002764557,
+        "elapsed_seconds": 76.78
+      },
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 8192,
+        "output": 2048,
+        "group": 64,
+        "language": "ko",
+        "model": "tencent/hy-mt2-30b-a3b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    }
+  ],
+  "aggregate": {
+    "completed_documents": 5,
+    "translation_requests_including_failed_attempts": 899,
+    "translation_cost_usd_including_failed_attempts": 0.021096255,
+    "cost_scope": "Includes translation retries and failed attempts for these five documents; excludes separate diagnostic probes."
+  },
+  "note": "Documents were generated while the adapter was being improved; per-document pipeline_config records the saved state. Outputs are unedited machine-translation drafts."
+}
