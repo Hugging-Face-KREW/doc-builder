@@ -8,10 +8,14 @@
 전체 실행은 488.62초, API 보고 비용은 $0.00791014입니다.
 
 [결과 보고서](RESULTS.md)에서 5개 결과와 문서별 시간을 확인할 수 있습니다.
-`baseline/accepted/ko/`에는 캐시와 일치하는 통과 문서 4개 및 목차가 있고,
-`baseline/rejected/ko/tokenizer_summary.md`는 마지막 모델 응답을 조립한 **거절된 진단용
-산출물**입니다. 이 파일은 검증 통과본이 아닙니다. 원래 파이프라인은 정책대로
-전체 결과의 게시를 중단했고, 측정 후 오프라인 분석만 산출물을 분리 저장했습니다.
+[번역 파일 폴더](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/)에 문서 5개와
+목차를 모았습니다. 이 중 `tokenizer_summary.md`는 마지막 모델 응답을 조립한
+**거절된 진단용 산출물**이며 검증 통과본이 아닙니다. 문서별 상태는
+[실험 README](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/README.md)와
+[results.json](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/results.json)에 명시했습니다.
+원래 파이프라인은 정책대로 전체 결과의 게시를 중단했고, 측정 후 오프라인 분석으로
+산출물을 보존했습니다. 이후 팀의 `experiments/<provider-model>/ko/` 구조에 맞춰
+파일 위치만 변경했으며, 원본 로그와 측정값은 이 폴더에 유지합니다.
 번역문, 프롬프트, 용어집, 검증기 및 재시도 로직을 결과에 맞춰 수정하지 않았습니다.
 
 ## 고정 조건
@@ -33,6 +37,12 @@ ID에는 `:free`가 없습니다. 모델이나 공급자가 달라지면 별도 
 API 모델 ID는 immutable weight revision을 보장하지 않습니다.
 
 ## 재현
+
+이 baseline의 측정 코드가 포함된 commit은 `714d17b18381250635e8b38f14cb5afb71d9be15`입니다.
+이후 공유 브랜치의 용어집과 어댑터가 바뀌었으므로 **별도 checkout에서 해당 commit을
+사용**해야 당시 응답을 재생할 수 있습니다. 아래 명령은 해당 checkout 기준이며,
+재생 결과는 당시의 `baseline/accepted/ko/`, `baseline/rejected/ko/` 경로에 생성됩니다.
+현재 `experiments/`의 파일은 그 결과와 바이트 단위로 동일한 이동본입니다.
 
 저장소 루트에서 [기존 설치 안내](../../../docs/openrouter-translation.md)에 따라
 `uv venv`, `uv pip install -e .`, `npm ci --prefix kit`를 실행합니다.
@@ -77,7 +87,8 @@ git -C ../transformers checkout --detach 469230357aab0f2b303b0d638c1f8d06edb1418
 오프라인 재생은 저장된 응답만 사용하며, 모든 요청 본문, 최종 성공/실패 판정,
 통과 문서 캐시가 원래 실행과 정확히 같은지 검사한 뒤 문서별 수치를 저장합니다.
 측정 로그나 번역을 교정하거나 API 호출을 반복하는 기능이 아닙니다.
-거절된 문서는 `rejected/`에만 저장합니다. 이번에 관찰된 `~` 거절 이외의
+당시 재생 도구는 거절된 문서를 `rejected/`에만 저장합니다. 현재 실험 폴더에서는
+파일을 같은 `ko/` 아래 모으되 README와 JSON에 거절 상태를 명시합니다. 관찰된 `~` 거절 이외의
 오류는 진단용 문서 조립도 중단하며, 원래 gate의 성공/실패 판정을 바꾸지 않습니다.
 
 OpenRouter에서 서버의 GPU 연산 시간이나 TTFT를 직접 측정하지 않으므로

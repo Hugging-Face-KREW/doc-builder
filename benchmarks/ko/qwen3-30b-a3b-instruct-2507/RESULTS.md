@@ -26,14 +26,14 @@
 
 | 문서 / 번역 결과 | API 시간(초) | 호출(재시도 호출) | 비용(USD) | 기존 gate |
 | --- | ---: | ---: | ---: | --- |
-| [Pipeline tutorial](baseline/accepted/ko/pipeline_tutorial.md) | 79.66 | 52 (0) | 0.00133367 | 통과 |
-| [Tokenizer summary — 거절된 진단용](baseline/rejected/ko/tokenizer_summary.md) | 65.84 | 46 (4) | 0.00142349 | 실패 |
-| [Training](baseline/accepted/ko/training.md) | 49.15 | 43 (8) | 0.00102074 | 통과 |
-| [Selecting a quantization method](baseline/accepted/ko/quantization/selecting.md) | 104.23 | 113 (3) | 0.00178098 | 통과 |
-| [Writing a chat template](baseline/accepted/ko/chat_templating_writing.md) | 163.64 | 76 (2) | 0.00224195 | 통과 |
-| [목차 — 문서 5개에 포함하지 않음](baseline/accepted/ko/_toctree.yml) | 17.53 | 13 (0) | 0.00010931 | 통과 |
+| [Pipeline tutorial](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/pipeline_tutorial.md) | 79.66 | 52 (0) | 0.00133367 | 통과 |
+| [Tokenizer summary — 거절된 진단용](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/tokenizer_summary.md) | 65.84 | 46 (4) | 0.00142349 | 실패 |
+| [Training](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/training.md) | 49.15 | 43 (8) | 0.00102074 | 통과 |
+| [Selecting a quantization method](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/quantization/selecting.md) | 104.23 | 113 (3) | 0.00178098 | 통과 |
+| [Writing a chat template](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/chat_templating_writing.md) | 163.64 | 76 (2) | 0.00224195 | 통과 |
+| [목차 — 문서 5개에 포함하지 않음](../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/_toctree.yml) | 17.53 | 13 (0) | 0.00010931 | 통과 |
 
-`accepted/`는 전체 publish 성공을 의미하지 않습니다. 한 문서라도 실패하면
+표의 통과 상태는 전체 publish 성공을 의미하지 않습니다. 한 문서라도 실패하면
 원래 pipeline은 전체 출력 게시를 중단합니다. 위 4개는 그때 저장된 검증 통과
 캐시를 오프라인 재생으로 대조한 결과입니다. 거절 파일은 최종 응답을 단지
 검토용으로 조립했으며, `~`를 `-`로 고치는 등의 수정은 하지 않았습니다.

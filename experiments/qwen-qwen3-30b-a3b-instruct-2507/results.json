@@ -1,0 +1,150 @@
+{
+  "model": "qwen/qwen3-30b-a3b-instruct-2507",
+  "provider": "openrouter",
+  "language": "ko",
+  "source_repository": "huggingface/transformers",
+  "source_revision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+  "pipeline_code_revision": "773a807b08ba5a039d6ead6774545e748064f596",
+  "original_results_commit": "714d17b18381250635e8b38f14cb5afb71d9be15",
+  "settings": {
+    "context_window": 16384,
+    "max_tokens": 4096,
+    "retry_max_tokens": 8192,
+    "temperature": 0,
+    "concurrency": 1,
+    "provider_routing": {
+      "max_price": {
+        "prompt": 0.15,
+        "completion": 0.6
+      }
+    }
+  },
+  "documents": [
+    {
+      "source_document": "pipeline_tutorial.md",
+      "output_file": "ko/pipeline_tutorial.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/pipeline_tutorial.md",
+      "sha256": "a5e9452ce90ca389a02bc803c8e28eda902d4501612181a2844794e5fd6e7c7b",
+      "status": "accepted_by_existing_pipeline",
+      "previous_output_file": "benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/accepted/ko/pipeline_tutorial.md",
+      "content_unchanged": true,
+      "api_roundtrip_seconds": 79.66319829109125,
+      "http_requests": 52,
+      "validation_retry_http_requests": 0,
+      "reported_cost_usd": 0.00133366515,
+      "fenced_blocks": 17,
+      "fenced_blocks_byte_identical": true
+    },
+    {
+      "source_document": "tokenizer_summary.md",
+      "output_file": "ko/tokenizer_summary.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/tokenizer_summary.md",
+      "sha256": "93a34e7b6d37e3df75d74699a9fd29de961d883ea8ffea7249032feed3c7440d",
+      "status": "rejected_diagnostic_only",
+      "previous_output_file": "benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/rejected/ko/tokenizer_summary.md",
+      "content_unchanged": true,
+      "api_roundtrip_seconds": 65.8368047918193,
+      "http_requests": 46,
+      "validation_retry_http_requests": 4,
+      "reported_cost_usd": 0.0014234924,
+      "fenced_blocks": 11,
+      "fenced_blocks_byte_identical": true
+    },
+    {
+      "source_document": "training.md",
+      "output_file": "ko/training.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/training.md",
+      "sha256": "89831541c04b7b30b3e01151ee09488738b3082e14156034974b6943b3bd012a",
+      "status": "accepted_by_existing_pipeline",
+      "previous_output_file": "benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/accepted/ko/training.md",
+      "content_unchanged": true,
+      "api_roundtrip_seconds": 49.15494566457346,
+      "http_requests": 43,
+      "validation_retry_http_requests": 8,
+      "reported_cost_usd": 0.00102073605,
+      "fenced_blocks": 6,
+      "fenced_blocks_byte_identical": true
+    },
+    {
+      "source_document": "quantization/selecting.md",
+      "output_file": "ko/quantization/selecting.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/quantization/selecting.md",
+      "sha256": "d52da7a4671a7a140c6a4b413133fa33bb925a3d9384185fc9ee43e5011f86ae",
+      "status": "accepted_by_existing_pipeline",
+      "previous_output_file": "benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/accepted/ko/quantization/selecting.md",
+      "content_unchanged": true,
+      "api_roundtrip_seconds": 104.22997436765581,
+      "http_requests": 113,
+      "validation_retry_http_requests": 3,
+      "reported_cost_usd": 0.00178098465,
+      "fenced_blocks": 0,
+      "fenced_blocks_byte_identical": true
+    },
+    {
+      "source_document": "chat_templating_writing.md",
+      "output_file": "ko/chat_templating_writing.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/chat_templating_writing.md",
+      "sha256": "511f7067cd30e8ea6b050703f894f959c9a242d50c3f211131479f5f5a975af4",
+      "status": "accepted_by_existing_pipeline",
+      "previous_output_file": "benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/accepted/ko/chat_templating_writing.md",
+      "content_unchanged": true,
+      "api_roundtrip_seconds": 163.63925103936344,
+      "http_requests": 76,
+      "validation_retry_http_requests": 2,
+      "reported_cost_usd": 0.00224195095,
+      "fenced_blocks": 14,
+      "fenced_blocks_byte_identical": true
+    }
+  ],
+  "sidebar": {
+    "source_document": "_toctree.yml",
+    "output_file": "ko/_toctree.yml",
+    "source_url": null,
+    "sha256": "bbbdf8cd8567e2139d892ee579b3b74397915a3573693dfeb296c2f2f12b5fbc",
+    "status": "accepted_by_existing_pipeline",
+    "previous_output_file": "benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/accepted/ko/_toctree.yml",
+    "content_unchanged": true,
+    "api_roundtrip_seconds": 17.53054337366484,
+    "http_requests": 13,
+    "validation_retry_http_requests": 0,
+    "reported_cost_usd": 0.00010931195,
+    "fenced_blocks": 0,
+    "fenced_blocks_byte_identical": true
+  },
+  "aggregate": {
+    "status": "failed",
+    "error": "Translation failed; completed pages were cached, output was not published:\ntokenizer_summary.md: Unit 1.22: Translation introduced markup; source='Steps 2-4 repeat until the vocabulary reaches the target size.'; response='단계 2~4는 어휘가 목표 크기에 도달할 때까지 반복합니다.'",
+    "wall_seconds": 488.6166872920003,
+    "api_roundtrip_seconds": 480.0547175281681,
+    "median_api_roundtrip_seconds": 0.8005519160069525,
+    "http_requests": 343,
+    "http_errors": 0,
+    "validation_retry_http_requests": 17,
+    "prompt_tokens": 50113,
+    "completion_tokens": 16563,
+    "reported_cost_usd": 0.00791014115,
+    "requests_missing_cost": 0,
+    "accounted_cost_usd": 0.007910141149999996,
+    "providers": [
+      "Alibaba",
+      "DekaLLM",
+      "Nebius",
+      "PrimeIntellect",
+      "SiliconFlow",
+      "StreamLake"
+    ],
+    "timing_definition": "Client wall clock and full HTTP round-trip latency; not GPU-only inference or TTFT.",
+    "human_quality_review": "pending"
+  },
+  "validation": {
+    "pages": 5,
+    "accepted_documents": 4,
+    "rejected_diagnostic_documents": 1,
+    "fenced_code_blocks_preserved": 48,
+    "document_validation": "failed",
+    "sidebar_validation": "passed",
+    "human_quality_review": "pending"
+  },
+  "measurement_artifacts": "../../benchmarks/ko/qwen3-30b-a3b-instruct-2507/baseline/",
+  "note": "Relocation only; no inference or translation edits. tokenizer_summary.md remains a rejected diagnostic artifact. Presence in the model's ko directory is not evidence of validation success."
+}
