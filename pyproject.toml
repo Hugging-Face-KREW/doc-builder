@@ -41,6 +41,7 @@ Repository = "https://github.com/huggingface/doc-builder"
 
 [project.optional-dependencies]
 transformers = ["transformers[dev]"]
+translate = ["torch>=2.8", "transformers>=5.16.1", "accelerate", "kernels>=0.11.0"]
 testing = [
     "pytest",
     "pytest-xdist",
@@ -99,7 +100,7 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
-doc_builder = ["mock_deps/*.txt"]
+doc_builder = ["mock_deps/*.txt", "glossaries/*.yml"]
 
 [tool.uv]
 override-dependencies = ["huggingface-hub>=1.5.0"]

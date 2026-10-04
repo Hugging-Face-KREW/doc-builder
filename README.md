@@ -327,6 +327,9 @@ doc-builder build {package_name} {path_to_docs} --build_dir {build_dir} --langua
 
 To automatically build the documentation for all languages via the GitHub Actions templates, simply provide the `languages` argument to your workflow, with a space-separated list of the languages you wish to build, e.g. `languages: en es`.
 
+For a local Korean machine-translation PoC using OpenRouter, see the
+[translation setup and usage guide](docs/openrouter-translation.md).
+
 ### Redirects
 
 You can optionally provide `_redirects.yml` for "old links". The yml file should look like:
