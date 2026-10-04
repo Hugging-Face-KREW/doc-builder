@@ -2,7 +2,7 @@
   {
     "page": "pipeline_tutorial.md",
     "status": "accepted_by_existing_pipeline",
-    "artifact": "accepted/ko/pipeline_tutorial.md",
+    "artifact": "../../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/pipeline_tutorial.md",
     "http_requests": 52,
     "http_errors": 0,
     "validation_retry_http_requests": 0,
@@ -26,7 +26,7 @@
   {
     "page": "tokenizer_summary.md",
     "status": "rejected_diagnostic_only",
-    "artifact": "rejected/ko/tokenizer_summary.md",
+    "artifact": "../../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/tokenizer_summary.md",
     "http_requests": 46,
     "http_errors": 0,
     "validation_retry_http_requests": 4,
@@ -50,7 +50,7 @@
   {
     "page": "training.md",
     "status": "accepted_by_existing_pipeline",
-    "artifact": "accepted/ko/training.md",
+    "artifact": "../../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/training.md",
     "http_requests": 43,
     "http_errors": 0,
     "validation_retry_http_requests": 8,
@@ -75,7 +75,7 @@
   {
     "page": "quantization/selecting.md",
     "status": "accepted_by_existing_pipeline",
-    "artifact": "accepted/ko/quantization/selecting.md",
+    "artifact": "../../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/quantization/selecting.md",
     "http_requests": 113,
     "http_errors": 0,
     "validation_retry_http_requests": 3,
@@ -99,7 +99,7 @@
   {
     "page": "chat_templating_writing.md",
     "status": "accepted_by_existing_pipeline",
-    "artifact": "accepted/ko/chat_templating_writing.md",
+    "artifact": "../../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/chat_templating_writing.md",
     "http_requests": 76,
     "http_errors": 0,
     "validation_retry_http_requests": 2,
@@ -123,7 +123,7 @@
   {
     "page": "_toctree.yml",
     "status": "accepted_by_existing_pipeline",
-    "artifact": "accepted/ko/_toctree.yml",
+    "artifact": "../../../../experiments/qwen-qwen3-30b-a3b-instruct-2507/ko/_toctree.yml",
     "http_requests": 13,
     "http_errors": 0,
     "validation_retry_http_requests": 0,
