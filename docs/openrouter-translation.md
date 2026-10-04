@@ -129,3 +129,19 @@ The original HF generation, Bucket publication and Job coordinator are also reta
 For GPU execution, install `uv pip install -e '.[translate]'` and run
 `python -m doc_builder.translate.job --help`. This path still requires HF credentials,
 Jobs and Bucket access. Automatic HF workflows from the draft PR were not imported.
+
+## Per-model evaluation branches
+
+Each model under evaluation gets its own branch off `translation-korean`
+(for example `translation-korean-qwen3.8-27b`). Git cannot nest a branch under an
+existing branch name, so the model name is appended with a hyphen. On that branch run:
+
+```bash
+OPENROUTER_MODEL=qwen/qwen3.8-27b scripts/translation/run-model.sh --push
+```
+
+The script reads `OPENROUTER_API_KEY` from the git-ignored `.env` (prompting and saving
+it when missing), translates the five-page set from a clean `../transformers` checkout,
+writes to `translation-results/<model-slug>/`, appends the run to `runs.tsv`, and commits.
+Reasoning models count thinking tokens toward `--max-tokens`, so the script defaults to
+`MAX_TOKENS=16384` and `CONTEXT_WINDOW=65536`; override both via environment variables.
