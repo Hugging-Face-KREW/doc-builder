@@ -1,0 +1,605 @@
+{
+  "format": "translation-review-five-v1",
+  "reviewer": "심소현",
+  "exportedAt": "2026-10-04T07:55:47.904Z",
+  "reviews": [
+    {
+      "document": "tokenizer_summary.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/tokenizer_summary.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:22:31.844Z"
+      },
+      "candidates": [
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "2d529bf374095267ac3e93046b4bb00e134b9e824828e121d7e8017a7b6807a5",
+          "validationStatus": "success"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "d12a02d6889536e5ea2ff1866b4aa4054deca894c1b69facfca32f2fe6e78da9",
+          "validationStatus": "failed"
+        },
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "4ce8ecc718fabdea2a835fc21b16a63c66c626c69900e55a426bab9330afb839",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "93a34e7b6d37e3df75d74699a9fd29de961d883ea8ffea7249032feed3c7440d",
+          "validationStatus": "rejected_diagnostic_only"
+        },
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "1e46b81ab34ab452a96719fd7ccd426f5251d9d9c532d626d03fbd261e62fa7f",
+          "validationStatus": "success"
+        }
+      ],
+      "overall": [],
+      "overallNeedsRevision": false,
+      "note": "",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "google-gemma-4-26b-a4b-it": "토큰화 알고리즘\n\nTransformers는 Byte pair encoding (BPE), Unigram, 그리고 WordPiece라는 세 가지 서브워드 토큰화 알고리즘을 지원합니다. 이 알고리즘들은 텍스트를 단어와 문자 사이의 단위로 분할하여, 의미 있는 조각들을 포착하면서도 어휘를 압축된 상태로 유지합니다. 흔히 쓰이는 단어는 단일 토큰으로 온전하게 유지되며, 드물거나 알 수 없는 단어는 서브워드로 분해됩니다.\n\n예를 들어, `annoyingly`는 어휘에 따라 `[\"annoying\", \"ly\"]` 또는 `[\"annoy\", \"ing\", \"ly\"]`로 분할될 수 있습니다. 서브워드 분할을 통해 모델은 알려진 서브워드들로부터 학습되지 않은 단어들을 표현할 수 있습니다.\n\n[!TIP]\n서브워드 토큰화는 하위 단어들을 서로 연결하여 길고 복잡한 단어를 형성할 수 있는 터키어와 같은 언어에 특히 유용합니다.",
+            "nvidia-nemotron-3.5-lightning": "토큰화 알고리즘\n\nTransformers는 서브워드 토크나이저 세 가지 알고리즘을 지원합니다: 바이트 페어 인코딩(BPE), 유니그램, 그리고 WordPiece. 텍스트를 단어와 문자 사이의 단위로 분할하여 어휘를 콤팩트하게 유지하면서도 의미 있는 조각을 포착합니다. 일반적인 단어는 그대로 단일 토큰으로 유지되며, 드문 단어이거나 알 수 없는 단어는 서브워드로 분해됩니다.\n\n예를 들어, `annoyingly`는 `[\"annoying\", \"ly\"]` 또는 `[\"annoy\", \"ing\", \"ly\"]`로 나뉠 수 있으며, 이는 어휘에 따라 달라집니다. 서브워드 분할은 알 수 없는 단어를 알 수 있는 서브워드로 표현하게 합니다.\n\n[!TIP]\n서브워드 토크나이징은 터키어와 같은 언어에서 특히 유용하며, 긴 복잡한 단어를 서브워드를 연결하여 형성할 수 있습니다.",
+            "qwen-qwen3.8-27b": "토큰화 알고리즘\n\nTransformers는 세 가지 서브워드 토큰화 알고리즘을 지원합니다: 바이트 쌍 인코딩(BPE), 유니그램, 그리고 WordPiece. 이들은 텍스트를 단어와 문자 사이의 단위로 분할하여, 의미 있는 조각을 포착하면서도 어휘를 간결하게 유지합니다. 일반적인 단어는 단일 토큰으로 온전히 유지되고, 드물거나 알려지지 않은 단어는 서브워드로 분해됩니다.\n\n예를 들어, `annoyingly`는 어휘에 따라 `[\"annoying\", \"ly\"]` 또는 `[\"annoy\", \"ing\", \"ly\"]`로 분할될 수 있습니다. 서브워드 분할은 모델이 알려진 서브워드로부터 확인되지 않은 단어를 표현할 수 있게 합니다.\n\n[!TIP]\n서브워드 토큰화는 터키어와 같이 서브워드를 연결하여 길고 복잡한 단어를 형성할 수 있는 언어에서 특히 유용합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "토큰화 알고리즘입니다.\n\nTransformers는 바이트 쌍 인코딩(BPE), 유니그램, 그리고 WordPiece의 세 가지 하위어 토큰화 알고리즘을 지원합니다. 이들은 단어와 문자 사이의 단위로 텍스트를 나누어, 어휘를 작게 유지하면서도 의미 있는 조각을 포착합니다. 일반적인 단어는 단일 토큰으로 그대로 유지되며, 드문 또는 알 수 없는 단어는 하위어로 분해됩니다.\n\n예를 들어, `annoyingly`는 어휘에 따라 `[\"annoying\", \"ly\"]` 또는 `[\"annoy\", \"ing\", \"ly\"]`로 분할될 수 있습니다. 하위어 분할은 모델이 알려진 하위어로부터 미지의 단어를 표현할 수 있도록 합니다.\n\n[!TIP]\n서브워드 토큰화는 서브워드를 연결하여 긴 복잡한 단어를 만들 수 있는 터키어와 같은 언어에 특히 유용합니다.",
+            "tencent-hy-mt2-30b-a3b": "토큰화 알고리즘입니다.\n\nTransformers는 바이트 페어 인코딩(BPE), 유니그램, 그리고 WordPiece라는 세 가지 서브워드 토큰화 알고리즘을 지원합니다. 이러한 알고리즘들은 텍스트를 단어와 문자 사이의 단위로 분할하여 어휘의 크기를 작게 유지하면서도 의미 있는 조각들을 포착할 수 있게 합니다. 흔히 사용되는 단어들은 하나의 토큰으로 그대로 유지되며, 드물거나 알려지지 않은 단어들은 서브워드로 분해됩니다.\n\n예를 들어, `annoyingly`는 사용되는 어휘에 따라 `[\"annoying\", \"ly\"]` 또는 `[\"annoy\", \"ing\", \"ly\"]`로 분할될 수 있습니다. 서브워드 분할을 통해 모델은 알려진 서브워드들로부터 이전에 본 적 없는 단어를 표현할 수 있습니다.\n\n[!TIP]\n서브워드 토큰화는 터키어와 같이 서브워드를 연결하여 길고 복잡한 단어를 만들 수 있는 언어에 특히 유용합니다."
+          }
+        },
+        "1": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507",
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "제목은 바이트 페어 인코딩 (BPE)이 가장 좋습니다.\n본문은 C",
+          "texts": {
+            "google-gemma-4-26b-a4b-it": "바이트 쌍 인코딩(Byte pair encoding, BPE)\n\n[Byte pair encoding](https://huggingface.co/papers/1508.07909) (BPE)는 Transformers에서 가장 인기 있는 토큰화 알고리즘이며, [Llama](./model_doc/llama), [Gemma](./model_doc/gemma), [Qwen2](./model_doc/qwen2) 및 기타 모델에서 사용됩니다.\n\n사전 토크나이저는 텍스트를 공백이나 기타 규칙에 따라 분할하여, 고유한 단어 집합과 그 빈도를 생성합니다.\n\nBPE 알고리즘은 모든 문자로 하여금 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\"]`라는 기본 어휘를 생성합니다.\n\nBPE는 개별 문자로 시작하여 가장 빈번하게 나타나는 인접 쌍을 반복적으로 병합합니다. `\"u\"`와 `\"g\"`는 `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"`에서 가장 많이 함께 나타나므로, BPE는 이들을 `\"ug\"`로 병합하고 이를 어휘에 추가합니다.\n\n다음으로 흔한 쌍은 `\"u\"`와 `\"n\"`이며, 이는 `\"pun\"`와 `\"bun\"`에 나타나므로 `\"un\"`로 병합됩니다.\n\n어휘는 이제 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\", \"ug\", \"un\"]`입니다. BPE는 목표 어휘 크기에 도달할 때까지 병합 규칙 학습을 계속하며, 이 크기는 기본 어휘 크기에 병합 횟수를 더한 값과 같습니다. [GPT](model_doc/openai-gpt)는 40,478개의 어휘 크기(478개의 기본 토큰 + 40,000개의 병합)를 가진 BPE를 사용합니다.\n\n기본 어휘에 포함되지 않은 모든 문자는 `\"<unk>\"`와 같은 미등록 토큰으로 매핑됩니다. 실제로는 기본 어휘가 학습 중에 나타난 모든 문자를 포함하므로, 미등록 토큰은 드뭅니다.",
+            "nvidia-nemotron-3.5-lightning": "바이트 페어 인코딩 (BPE)\n\n[Byte pair encoding](https://huggingface.co/papers/1508.07909) (BPE)는 Transformers에서 가장 널리 사용되는 토크나이저 알고리즘으로, [Llama](./model_doc/llama), [Gemma](./model_doc/gemma), [Qwen2](./model_doc/qwen2) 등의 모델에서 사용됩니다.\n\n전처리기는 공백이나 기타 규칙에 따라 텍스트를 분할하여 고유 단어와 그 빈도 집합을 생성합니다.\n\nBPE 알고리즘은 모든 문자로부터 기본 어휘 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\"]`을 생성합니다.\n\nBPE는 개별 문자로 시작하여 가장 빈번한 인접 쌍을 반복적으로 병합합니다. `\"u\"`와 `\"g\"`은 `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"`에서 가장 많이 함께 나타나므로, BPE는 이를 `\"ug\"`로 병합하고 어휘에 추가합니다.\n\n가장 흔한 다음 쌍은 `\"u\"`와 `\"n\"`이며, `\"pun\"`와 `\"bun\"`에 나타나므로 `\"un\"`로 병합됩니다.\n\n어휘는 이제 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\", \"ug\", \"un\"]`입니다. BPE는 목표 어휘 크기에 도달할 때까지 병합 규칙 학습을 계속하며, 목표 어휘 크기는 기본 어휘 크기에 병합 횟수를 더한 값과 같습니다. [GPT](model_doc/openai-gpt)는 40,478(기본 토큰 478개 + 40,000회의 병합) 크기의 어휘를 사용하여 BPE를 수행합니다.\n\n기반 어휘집에 포함되지 않은 모든 문자는 `\"<unk>\"`과 같은 알 수 없는 토큰에 매핑됩니다. 실제로는 기본 어휘집이 훈련 중에 본 모든 문자를 커버하므로 알 수 없는 토큰은 드뭅니다.",
+            "qwen-qwen3.8-27b": "바이트 쌍 인코딩(BPE)\n\n[Byte pair encoding](https://huggingface.co/papers/1508.07909)(BPE)은 Transformers에서 가장 인기 있는 토큰화 알고리즘으로, [Llama](./model_doc/llama), [Gemma](./model_doc/gemma), [Qwen2](./model_doc/qwen2) 및 기타 모델에서 사용됩니다.\n\n사전 토크나이저는 공백 또는 기타 규칙에 따라 텍스트를 분할하여 고유 단어 집합과 그 빈도를 생성합니다.\n\nBPE 알고리즘은 모든 문자에서 기본 어휘 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\"]`를 생성합니다.\n\nBPE는 개별 문자에서 시작하여 가장 빈번한 인접 쌍을 반복적으로 병합합니다. `\"u\"`와 `\"g\"`는 `\"hug\"`, `\"pug\"`, `\"hugs\"`에서 가장 많이 함께 나타나므로, BPE는 이들을 `\"ug\"`로 병합하고 어휘에 추가합니다.\n\n다음으로 흔한 쌍은 `\"u\"`와 `\"n\"`이며, 이들은 `\"pun\"`과 `\"bun\"`에 나타나므로 `\"un\"`으로 병합됩니다.\n\n어휘는 이제 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\", \"ug\", \"un\"]`입니다. BPE는 기본 어휘 크기加上 병합 수와 동일한 목표 어휘 크기에 도달할 때까지 병합 규칙을 계속 학습합니다. [GPT](model_doc/openai-gpt)는 40,478(기본 토큰 478개 + 병합 40,000개)의 어휘 크기를 가진 BPE를 사용합니다.\n\n기본 어휘에 없는 모든 문자는 `\"<unk>\"`와 같은 알려지지 않은 토큰으로 매핑됩니다. 실제로, 기본 어휘는 학습 중에 확인된 모든 문자를 포함하므로, 알려지지 않은 토큰은 드뭅니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "바이트 쌍 인코딩(BPE)입니다\n\n[바이트 쌍 인코딩](https://huggingface.co/papers/1508.07909) (BPE)는 Transformers에서 가장 인기 있는 토큰화 알고리즘으로, [Llama](./model_doc/llama), [Gemma](./model_doc/gemma), [Qwen2](./model_doc/qwen2) 등 여러 모델에서 사용됩니다.\n\n사전 토크나이저는 공백 또는 기타 규칙에 따라 텍스트를 분할하여 고유한 단어와 그 빈도 수를 생성합니다.\n\nBPE 알고리즘은 모든 문자에서 기본 어휘 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\"]`를 생성합니다.\n\nBPE는 개별 문자에서 시작하여 가장 빈번한 인접 쌍을 반복적으로 병합합니다. `\"u\"`와 `\"g\"`는 `\"hug\"`, `\"pug\"`, `\"hugs\"`에서 가장 자주 함께 나타나므로 BPE는 이를 `\"ug\"`로 병합하고 어휘에 추가합니다.\n\n다음으로 자주 나타나는 쌍은 `\"u\"`와 `\"n\"`이며, 이는 `\"pun\"`와 `\"bun\"`에 나타나므로 `\"un\"`으로 합쳐집니다.\n\n어휘는 이제 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\", \"ug\", \"un\"]`입니다. BPE는 목표 어휘 크기에 도달할 때까지 병합 규칙을 학습합니다. 이 목표 어휘 크기는 기본 어휘 크기와 병합 횟수의 합과 같습니다. [GPT](model_doc/openai-gpt)은 어휘 크기가 40,478(기본 토큰 478개 + 병합 40,000회)인 BPE를 사용합니다.\n\n기본 어휘에 포함되지 않은 모든 문자는 `\"<unk>\"`와 같은 미지 토큰으로 매핑됩니다. 실질적으로 기본 어휘는 학습 중에 나타난 모든 문자를 커버하므로, 미지 토큰은 드물게 발생합니다.",
+            "tencent-hy-mt2-30b-a3b": "바이트 페어 인코딩(BPE)입니다.\n\n[바이트 페어 인코딩](https://huggingface.co/papers/1508.07909)(BPE)은 Transformers 모델에서 가장 널리 사용되는 토큰화 알고리즘이며, [Llama](./model_doc/llama), [Gemma](./model_doc/gemma), [Qwen2](./model_doc/qwen2)와 같은 모델들에서 활용됩니다.\n\n사전 토크나이저는 공백이나 기타 규칙에 따라 텍스트를 분할하여 고유한 단어들과 그 출현 빈도를 산출합니다.\n\nBPE 알고리즘은 모든 문자로부터 기본 어휘인 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\"]`를 생성합니다.\n\nBPE는 개별 문자로 시작하여 가장 빈번하게 나타나는 인접한 쌍을 반복적으로 병합합니다. `\"u\"`와 `\"g\"`은 `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"`에서 가장 자주 함께 나타나므로, BPE는 이들을 `\"ug\"`로 병합한 뒤 어휘에 추가합니다.\n\n그 다음으로 흔한 조합은 `\"u\"`와 `\"n\"`이며, 이들은 `\"pun\"`과 `\"bun\"`에 나타나므로 `\"un\"`로 합쳐집니다.\n\n현재 어휘는 `[\"b\", \"g\", \"h\", \"n\", \"p\", \"s\", \"u\", \"ug\", \"un\"]`입니다. BPE는 기본 어휘 크기에 병합된 항목 수를 더한 목표 어휘 크기에 도달할 때까지 병합 규칙을 계속 학습합니다. [GPT](model_doc/openai-gpt)는 어휘 크기가 40,478개인 BPE를 사용하며, 이는 기본 토큰 478개와 병합된 항목 40,000개로 구성됩니다.\n\n기본 어휘에 포함되지 않은 모든 문자는 `\"<unk>\"`와 같은 알 수 없는 토큰으로 매핑됩니다. 실제로는 학습 과정에서 나타나는 모든 문자가 기본 어휘에 포함되므로 알 수 없는 토큰이 발생하는 경우는 드뭅니다."
+          }
+        },
+        "2": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507",
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "제목은 바이트 수준 BPE이나 바이트 레벨 BPE가 좋습니다.\n본문 기준으로 선택했습니다. ",
+          "texts": {
+            "google-gemma-4-26b-a4b-it": "바이트 수준 BPE\n\n모든 유니코드 문자를 포함하면 기본 어휘가 매우 방대해질 것입니다. 대신 바이트 수준 BPE는 256개의 바이트 값을 기본 어휘로 사용하여, `\"<unk>\"` 토큰 없이도 모든 단어를 토큰화할 수 있도록 보장합니다. [GPT-2](./model_doc/gpt2)는 어휘 크기가 50,257(256개 바이트 토큰 + 50,000개 병합 + 특수 문장 종료 토큰)인 바이트 수준 BPE를 사용합니다.",
+            "nvidia-nemotron-3.5-lightning": "바이트 레벨 BPE\n\n유니코드 전체를 포함하면 기본 어휘가 엄청나게 커집니다. 바이트 레벨 BPE는 256개의 바이트 값을 기본 어휘로 사용하여, 모든 단어가 토크나이징 없이 처리되도록 보장합니다. `\"<unk>\"` 토큰입니다. [GPT-2](./model_doc/gpt2) 바이트 레벨 BPE를 사용하여 어휘 크기 50,257(256 바이트 토큰 + 50,000 병합 + 특수 종료 토큰)을 사용합니다.",
+            "qwen-qwen3.8-27b": "바이트 수준 BPE\n\n모든 Unicode 문자를 포함하면 기본 어휘가 매우 커집니다. 바이트 수준 BPE는 대신 256개의 바이트 값을 기본 어휘로 사용하여 `\"<unk>\"` 토큰 없이 모든 단어를 토큰화할 수 있도록 보장합니다. [GPT-2](./model_doc/gpt2)는 50,257의 어휘 크기(256개 바이트 토큰 + 50,000개 병합 + 특수 텍스트 종료 토큰)를 가진 바이트 수준 BPE를 사용합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "바이트 수준 BPE입니다.\n\n모든 유니코드 문자를 포함하면 기본 어휘가 매우 커집니다. 바이트 수준 BPE는 256개의 바이트 값으로 기본 어휘를 구성하여, 모든 단어가 `\"<unk>\"` 토큰 없이 토큰화될 수 있도록 합니다. [GPT-2](./model_doc/gpt2)는 어휘 크기가 50,257(256개의 바이트 토큰 + 50,000회의 병합 + 특수 종료 텍스트 토큰)인 바이트 수준 BPE를 사용합니다.",
+            "tencent-hy-mt2-30b-a3b": "바이트 수준의 BPE입니다.\n\n모든 유니코드 문자를 포함할 경우 기본 어휘의 크기가 엄청나게 커지게 됩니다. 반면 바이트 단위 BPE는 256개의 바이트 값을 기본 어휘로 사용하여 모든 단어를 `\"<unk>\"` 토큰 없이도 토큰화할 수 있도록 합니다. [GPT-2](./model_doc/gpt2)는 어휘 크기가 50,257개인 바이트 단위 BPE를 사용하며, 이는 256개의 바이트 토큰과 50,000개의 병합 결과, 그리고 특수한 문장 종료 토큰을 포함합니다."
+          }
+        },
+        "3": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b",
+            "qwen-qwen3-30b-a3b-instruct-2507"
+          ],
+          "needsRevision": false,
+          "note": "제목은 유니그램\n본문 기준으로 평가했습니다.",
+          "texts": {
+            "google-gemma-4-26b-a4b-it": "유니그램\n\n[Unigram](https://huggingface.co/papers/1804.10959)은 Transformers에서 두 번째로 인기 있는 토큰화 알고리즘으로, [T5](./model_doc/t5), [BigBird](./model_doc/big_bird), [Pegasus](./model_doc/pegasus) 등의 모델에서 사용됩니다.\n\nUnigram은 대규모의 후보 서브워드 집합으로 시작하며, 각 후보는 해당 서브워드가 얼마나 자주 나타나는지에 따라 확률 점수를 부여받습니다.\n\nUnigram은 각 단계에서 현재 어휘가 학습 데이터를 얼마나 잘 토큰화하는지 점수를 매깁니다.\n\n모든 토큰에 대해, Unigram은 해당 토큰을 제거했을 때 전체 손실이 얼마나 증가하는지를 측정합니다. 예를 들어, `\"pu\"`를 제거해도 `\"pug\"`와 `\"pun\"`를 여전히 `[\"p\", \"ug\"]` 및 `[\"p\", \"un\"]`로 토큰화할 수 있기 때문에 손실에 거의 영향을 미치지 않습니다.\n\n하지만 `\"ug\"`를 제거하면 `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"`가 모두 이에 의존하기 때문에 손실이 크게 증가할 것입니다.\n\nUnigram은 손실 증가가 가장 낮은 토큰을 제거하며, 보통 하위 10-20%를 대상으로 합니다. 기본 문자는 항상 유지되므로 어떤 단어든 토큰화할 수 있습니다. `\"bu\"`, `\"pu\"`, `\"gs\"`, `\"pug\"`, `\"bun\"`와 같은 토큰들은 전체 가능도에 대한 기여도가 가장 낮기 때문에 제거됩니다.\n\n어휘가 목표 크기에 도달할 때까지 단계 2-4를 반복합니다.\n\n추론 과정에서 Unigram은 단어를 여러 방식으로 토큰화할 수 있습니다. `\"hugs\"`는 `[\"hug\", \"s\"]`, `[\"h\", \"ug\", \"s\"]`, 또는 `[\"h\", \"u\", \"g\", \"s\"]`가 될 수 있습니다. Unigram은 가장 높은 확률을 가진 토큰화를 선택합니다. 병합 규칙에 기반하여 결정론적인 BPE와 달리, Unigram은 확률적이며 학습 중에 서로 다른 토큰화를 샘플링할 수 있습니다.",
+            "nvidia-nemotron-3.5-lightning": "유니그램\n\n[언그림](https://huggingface.co/papers/1804.10959)는 Transformers에서 두 번째로 인기 있는 토크나이저 알고리즘으로, [T5](./model_doc/t5), [빅버드](./model_doc/big_bird), [페가수스](./model_doc/pegasus) 등에서 사용됩니다.\n\n유니그램은 큰 후보 서브워드 집합으로 시작하며, 각 후보는 빈도 기반으로 확률 점수를 받습니다.\n\n현재 어휘가 훈련 데이터의 각 단계에서 얼마나 잘 토크나이징되는지를 측정합니다.\n\n각 토큰에 대해 유니그램은 토큰을 제거했을 때 전체 손실이 얼마나 증가하는지를 측정합니다. 예를 들어, `\"pu\"`을 제거해도 손실에 거의 영향을 주지 않는데, 이는 `\"pug\"`과 `\"pun\"`가 각각 `[\"p\", \"ug\"]`과 `[\"p\", \"un\"]`로 토크나이즈될 수 있기 때문입니다.\n\n하지만 제거하면 `\"ug\"` 손실이 현저히 증가하게 됩니다. `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"` 모두 그것에 의존합니다.\n\n유니그램은 손실 증가가 가장 낮은 토큰을 제거하며, 보통 하위 10~20%를 제거합니다. 기본 문자(기본 한글)는 항상 유지되어 어떤 단어든 토큰화할 수 있습니다. '와 같은 토큰은... `\"bu\"`, `\"pu\"`, `\"gs\"`, `\"pug\"`, 그리고 `\"bun\"` 가장 전체적인 가능성에 기여도가 낮아 제거되었습니다.\n\n2-4번 단계는 어휘가 목표 크기에 도달할 때까지 반복합니다.\n\n추론 중에는 Unigram이 단어를 여러 가지 방법으로 토큰화할 수 있습니다. `\"hugs\"`는 `[\"hug\", \"s\"]`, `[\"h\", \"ug\", \"s\"]`, 또는 `[\"h\", \"u\", \"g\", \"s\"]`과 같이 변할 수 있습니다. Unigram은 가장 높은 확률의 토큰화를 선택합니다. BPE가 결정론적이며 병합 규칙에 기반한 것과 달리, Unigram은 확률론적이며 훈련 중에 다양한 토큰화를 샘플링할 수 있습니다.",
+            "qwen-qwen3.8-27b": "유니그램\n\n[Unigram](https://huggingface.co/papers/1804.10959)은 Transformers에서 두 번째로 인기 있는 토큰화 알고리즘으로, [T5](./model_doc/t5), [BigBird](./model_doc/big_bird), [Pegasus](./model_doc/pegasus) 등의 모델에서 사용됩니다.\n\n유니그램은 대규모 후보 부분어휘 집합으로 시작하며, 각 후보는 해당 부분어휘가 나타나는 빈도에 기반하여 확률 점수를 부여받습니다.\n\n유니그램은 각 단계에서 현재 어휘가 학습 데이터를 얼마나 잘 토큰화하는지를 평가합니다.\n\n모든 토큰에 대해 Unigram은 해당 토큰을 제거했을 때 전체 손실이 얼마나 증가하는지 측정합니다. 예를 들어, `\"pu\"`를 제거해도 손실에 거의 영향을 미치지 않습니다. 이는 `\"pug\"`와 `\"pun\"`이 여전히 `[\"p\", \"ug\"]`와 `[\"p\", \"un\"]`로 토큰화될 수 있기 때문입니다.\n\n하지만 `\"ug\"`를 제거하면 `\"hug\"`, `\"pug\"`, `\"hugs\"`가 모두 이 토큰에 의존하고 있으므로 손실이 크게 증가합니다.\n\nUnigram은 손실 증가량이 가장 낮은 토큰, 일반적으로 하위 10-20%를 제거합니다. 기본 문자는 항상 유지되므로 모든 단어를 토큰화할 수 있습니다. `\"bu\"`, `\"pu\"`, `\"gs\"`, `\"pug\"`, `\"bun\"`와 같은 토큰은 전체 가능성에 가장 적게 기여했기 때문에 제거됩니다.\n\n2단계에서 4단계까지 반복하여 어휘가 목표 크기에 도달할 때까지 수행합니다.\n\n추론 단계에서 Unigram은 한 단어를 여러 방식으로 토큰화할 수 있습니다. `\"hugs\"`는 `[\"hug\", \"s\"]`, `[\"h\", \"ug\", \"s\"]`, 또는 `[\"h\", \"u\", \"g\", \"s\"]`로 변환될 수 있습니다. Unigram은 가장 높은 확률을 가진 토큰화를 선택합니다. 병합 규칙에 기반하여 결정론적으로 동작하는 BPE와 달리, Unigram은 확률적이며 학습 중에 서로 다른 토큰화를 샘플링할 수 있습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "유니그램입니다.\n\n[유니그램](https://huggingface.co/papers/1804.10959)은 Transformers에서 두 번째로 인기 있는 토큰화 알고리즘으로, [T5](./model_doc/t5), [BigBird](./model_doc/big_bird), [Pegasus](./model_doc/pegasus) 등 여러 모델에서 사용됩니다.\n\n유니그램은 많은 후보 서브워드 집합에서 시작하며, 각 후보는 등장 빈도에 따라 확률 점수를 받습니다.\n\n유니그램 점수는 각 단계에서 현재 어휘가 학습 데이터를 얼마나 잘 토큰화하는지를 평가합니다.\n\n각 토큰에 대해 Unigram은 해당 토큰을 제거했을 때 전체 손실이 얼마나 증가하는지를 측정합니다. 예를 들어, `\"pu\"`를 제거해도 손실에 거의 영향을 주지 않으며, 이는 `\"pug\"`과 `\"pun\"`가 여전히 `[\"p\", \"ug\"]`와 `[\"p\", \"un\"]`로 토큰화될 수 있기 때문입니다.\n\n그러나 `\"ug\"`를 제거하면 `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"` 모두 이 부분에 의존하므로 손실이 크게 증가합니다.\n\n유니그램은 손실 증가량이 가장 낮은 토큰을 제거하며, 일반적으로 하위 10~20%입니다. 기본 문자는 항상 유지되므로 어떤 단어도 토큰화할 수 있습니다. 토큰들처럼 `\"bu\"`, `\"pu\"`, `\"gs\"`, `\"pug\"`, 그리고 `\"bun\"` 가장 낮은 전체 가능성 기여도를 보인 항목은 제거됩니다.\n\n단계 2~4는 어휘가 목표 크기에 도달할 때까지 반복합니다.\n\n추론 시, Unigram은 단어를 여러 가지 방식으로 토큰화할 수 있습니다. `\"hugs\"`는 `[\"hug\", \"s\"]`, `[\"h\", \"ug\", \"s\"]`, 또는 `[\"h\", \"u\", \"g\", \"s\"]`로 변환될 수 있습니다. Unigram은 가장 높은 확률을 가진 토큰화 방식을 선택합니다. BPE와 달리, Unigram은 결정론적이며 병합 규칙에 기반하지만, 확률적이고 학습 중에 다양한 토큰화를 샘플링할 수 있습니다.",
+            "tencent-hy-mt2-30b-a3b": "유니그램입니다.\n\n[유니그램](https://huggingface.co/papers/1804.10959)은 Transformers에서 두 번째로 널리 사용되는 토큰화 알고리즘이며, [T5](./model_doc/t5), [빅버드](./model_doc/big_bird), [페가수스](./model_doc/pegasus)와 같은 모델들에서 활용됩니다.\n\n유니그램은 방대한 후보 서브워드 집합으로부터 시작하며, 각 후보는 그 단어가 등장하는 빈도에 따라 확률 점수를 부여받습니다.\n\n유니그램은 각 단계에서 현재의 어휘가 학습 데이터를 얼마나 잘 토큰화하는지를 평가합니다.\n\n유니그램은 각 토큰을 제거했을 때 전체 손실이 얼마나 증가하는지를 측정합니다. 예를 들어, `\"pu\"`를 제거하더라도 손실에 미치는 영향이 거의 없는데, 그 이유는 `\"pug\"`과 `\"pun\"`가 여전히 `[\"p\", \"ug\"]` 및 `[\"p\", \"un\"]`로 토큰화될 수 있기 때문입니다.\n\n하지만 `\"ug\"`를 제거하면 손실이 크게 증가하는데, 이는 `\"hug\"`, `\"pug\"`, 그리고 `\"hugs\"`가 모두 이에 의존하기 때문입니다.\n\n유니그램은 손실 증가가 가장 적은 토큰들, 보통 하위 10-20%에 해당하는 토큰들을 제거합니다. 기본 문자들은 항상 유지되므로 어떤 단어든 토큰화할 수 있습니다. `\"bu\"`, `\"pu\"`, `\"gs\"`, `\"pug\"`, 그리고 `\"bun\"`와 같은 토큰들은 전체 확률에 가장 적게 기여했기 때문에 제거됩니다.\n\n어휘의 크기가 목표치에 도달할 때까지 2단계부터 4단계까지를 반복합니다.\n\n추론 과정에서 Unigram은 단어를 여러 가지 방식으로 토큰화할 수 있습니다. `\"hugs\"`는 `[\"hug\", \"s\"]`, `[\"h\", \"ug\", \"s\"]`, 또는 `[\"h\", \"u\", \"g\", \"s\"]`로 변환될 수 있습니다. Unigram은 가장 높은 확률을 가진 토큰화 방식을 선택합니다. 병합 규칙에 따라 결정적인 방식으로 토큰화하는 BPE와 달리, Unigram은 확률적이며 학습 중에 서로 다른 토큰화 결과를 생성할 수 있습니다."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:33:58.027Z",
+      "blind": true
+    },
+    {
+      "document": "training.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/training.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:22:31.844Z"
+      },
+      "candidates": [
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "a22757db83b2294a6b79744f637e40eb510eeed19841af676154ea8c72154fd0",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "89831541c04b7b30b3e01151ee09488738b3082e14156034974b6943b3bd012a",
+          "validationStatus": "accepted_by_existing_pipeline"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "c9957ddcfe4960110a95e4c2653f0c92ca9792c1c2720f0e818cd3eb66d41bd5",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "44e409fef70e53fbe3b70c7cf5b49e00d7777d190d71d8b57128fc6b38addf5a",
+          "validationStatus": "success"
+        },
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "1cd3a7f905d0d6e5bdc5e5f12180b756dbac02a0ad46a2def307d381b934f753",
+          "validationStatus": "success"
+        }
+      ],
+      "overall": [],
+      "overallNeedsRevision": false,
+      "note": "",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b",
+            "qwen-qwen3-30b-a3b-instruct-2507"
+          ],
+          "needsRevision": false,
+          "note": "제목은 미세 조정 혹은 Fine-tuning\n본문 기준으로 평가했습니다.",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "미세 조정입니다.\n\n미세 조정은 특정 작업이나 도메인에 맞는 더 작은 데이터셋을 이용하여 사전 학습된 대규모 모델의 학습을 계속하는 과정입니다. 예를 들어, 코딩 예제로 구성된 데이터셋에서 미세 조정을 수행하면 모델이 코딩 능력을 더욱 향상시킬 수 있습니다. 미세 조정은 사전 학습과 동일한 과정이지만, 무작위 가중치에서 시작하지 않는다는 점이 다릅니다. 또한 미세 조정에는 훨씬 적은 연산 자원, 데이터 및 시간이 필요합니다.\n\n아래의 튜토리얼에서는 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 방법을 단계별로 설명합니다.\n\n사용자 토큰을 이용하여 Hugging Face 계정에 로그인한 후, 미세 조정된 모델을 Hub에 업로드할 수 있습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "미세 조정합니다.\n\n미세 조정은 특정 작업이나 도메인에 맞는 작은 데이터셋을 사용하여 대규모 사전 학습된 모델을 추가로 학습하는 과정입니다. 예를 들어, 코드 예제 데이터셋으로 미세 조정하면 모델의 코드 작성 능력이 향상됩니다. 미세 조정은 사전 학습과 동일한 방식이지만, 무작위 가중치에서 시작하지 않습니다. 또한 계산 자원, 데이터, 시간이 훨씬 적게 필요합니다.\n\n아래의 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델의 미세 조정을 안내합니다.\n\n사용자 토큰을 사용하여 Hugging Face 계정에 로그인하여 최적화된 모델을 Hub에 푸시합니다.",
+            "nvidia-nemotron-3.5-lightning": "미세 조정\n\n미세 조정은 특정 작업이나 도메인에 특화된 작은 데이터셋으로 대규모 사전 학습 모델의 추가 학습을 진행하는 과정입니다. 예를 들어, 코딩 예시 데이터셋으로 미세 조정하면 모델의 코딩 능력이 향상됩니다. 미세 조정은 사전 학습과 동일하지만, 랜덤 가중치로 시작하지 않는다는 점이 다릅니다. 또한 훨씬 적은 연산, 데이터, 시간을 필요로 합니다.\n\n아래 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 과정을 안내합니다.\n\nHugging Face 계정에 사용자 토큰으로 로그인하여 파인튜닝된 모델을 Hub에 푸시하십시오.",
+            "qwen-qwen3.8-27b": "미세 조정\n\n미세 조정은 특정 작업이나 도메인에 특화된 더 작은 데이터셋을 사용하여 대규모 사전 학습된 모델의 학습을 계속하는 과정입니다. 예를 들어, 코딩 예제 데이터셋으로 미세 조정을 수행하면 모델의 코딩 능력이 향상됩니다. 미세 조정은 무작위 가중치로 시작하지 않는다는 점을 제외하면 사전 학습과 동일합니다. 또한, 훨씬 적은 컴퓨트, 데이터, 시간이 필요합니다.\n\n아래 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 과정을 안내합니다.\n\n사용자 토큰으로 Hugging Face 계정에 로그인하여 Hub에 파인튜닝된 모델을 푸시합니다.",
+            "google-gemma-4-26b-a4b-it": "미세 조정\n\n미세 조정은 특정 작업이나 도메인에 특화된 더 작은 데이터셋을 사용하여 대규모 사전 학습된 모델의 학습을 계속하는 것입니다. 예를 들어, 코딩 예시 데이터셋으로 미세 조정을 수행하면 모델이 코딩 능력을 향상시키는 데 도움이 됩니다. 미세 조정은 무작위 가중치에서 시작하지 않는다는 점을 제외하면 사전 학습과 동일합니다. 또한 미세 조정은 훨씬 적은 연산량, 데이터 및 시간이 필요합니다.\n\n아래 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 과정을 안내합니다.\n\n미세 조정된 모델을 Hub에 푸시하려면 사용자 토큰을 사용하여 Hugging Face 계정에 로그인하십시오."
+          }
+        },
+        "2": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507",
+            "tencent-hy-mt2-30b-a3b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "모델을 로딩합니다.\n\n사전 학습된 체크포인트를 불러와서 미세 조정을 수행할 수 있습니다(모델 로딩에 관한 보다 자세한 내용은 [모델 로딩](./models) 가이드를 참조하시기 바랍니다).\n\n`dtype=\"auto\"`를 설정하면 저장된 데이터 타입 그대로 가중치를 로드할 수 있습니다. 이 옵션을 사용하지 않으면 PyTorch는 가중치를 `torch.float32` 형태로 로드하는데, 만약 원래 가중치가 `torch.bfloat16` 형태였다면 메모리 사용량이 두 배로 증가하게 됩니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "모델 로딩합니다\n\n사전 학습된 체크포인트를 로드하여 미세 조정합니다 (모델 로드에 대한 자세한 내용은 [모델 로드](./models) 가이드를 참조하세요).\n\n`dtype=\"auto\"`를 설정하면 가중치를 저장된 dtype으로 로드합니다. 이를 설정하지 않으면 PyTorch는 가중치를 `torch.float32`로 로드하게 되며, 가중치가 원래 `torch.bfloat16`였다면 메모리 사용량이 두 배로 증가합니다.",
+            "nvidia-nemotron-3.5-lightning": "모델 로드하기\n\n사전 학습된 체크포인트를 로드하여 [Loading models](./models) 가이드에서 모델 로드에 대한 자세한 내용을 확인하십시오.\n\n`dtype=\"auto\"`를 설정하면 저장된 dtype으로 가중치를 로드합니다. `torch.float32`로 로드하면 가중치가 원래 `torch.bfloat16`인 경우 메모리 사용량이 두 배가 됩니다.",
+            "qwen-qwen3.8-27b": "모델 로드\n\n사전 학습된 체크포인트를 로드하여 미세 조정을 수행합니다(모델 로딩에 대한 자세한 내용은 [모델 로드](./models) 가이드를 참조하십시오).\n\n`dtype=\"auto\"`를 설정하면 가중치를 저장된 dtype로 로드합니다. 이 설정이 없으면 PyTorch는 가중치를 `torch.float32`로 로드하며, 가중치가 원래 `torch.bfloat16`인 경우 메모리 사용량이 두 배로 증가합니다.",
+            "google-gemma-4-26b-a4b-it": "모델 로드하기\n\n미세 조정을 위해 사전 학습된 체크포인트를 로드합니다 ([Loading models](./models) 가이드를 참조하여 모델 로드에 대한 자세한 내용을 확인하십시오).\n\n가중치를 저장된 dtype으로 로드하려면 `dtype=\"auto\"`를 설정하십시오. 이 설정이 없으면 PyTorch는 가중치를 `torch.float32`로 로드하며, 가중치가 원래 `torch.bfloat16`인 경우 메모리 사용량이 두 배로 증가합니다."
+          }
+        },
+        "4": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507",
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "C에서 첫 문장을 \"학습을 시작합니다.\"로 한 게 좋았으나 전체적으로는 B가 좋습니다.",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "학습입니다.\n\n필요한 모든 구성 요소를 갖춘 [`Trainer`] 인스턴스를 생성한 후, [`~Trainer.train`]을 호출하여 시작하시기 바랍니다.\n\n[`~Trainer.push_to_hub`]는 미세 조정된 가중치, 생성 설정, 토크나이저 및 모델 설정을 Hub에 업로드합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "학습\n\n필요한 모든 구성 요소를 갖춘 [`Trainer`] 인스턴스를 생성한 후, [`~Trainer.train`]을 호출하여 시작합니다.\n\n[`~Trainer.push_to_hub`]는 최적화된 가중치, 생성 설정, 토크나이저 및 모델 설정을 Hub에 업로드합니다.",
+            "nvidia-nemotron-3.5-lightning": "학습\n\n[`Trainer`] 인스턴스를 생성하여 필요한 모든 컴포넌트를 설정한 뒤, [`~Trainer.train`]을 호출하여 학습을 시작합니다.\n\n[`~Trainer.push_to_hub`] 허브에 파인튜닝된 가중치, 생성 설정, 토크나이저, 모델 설정을 업로드합니다.",
+            "qwen-qwen3.8-27b": "학습\n\n필요한 모든 구성 요소를 갖춘 [`Trainer`] 인스턴스를 생성한 다음, [`~Trainer.train`]을 호출하여 시작합니다.\n\n[`~Trainer.push_to_hub`]는 미세 조정된 가중치, 생성 설정, 토크나이저, 모델 설정을 Hub에 업로드합니다.",
+            "google-gemma-4-26b-a4b-it": "학습\n\n모든 필수 구성 요소를 포함하는 [`Trainer`] 인스턴스를 생성한 다음, [`~Trainer.train`]을 호출하여 시작합니다.\n\n[`~Trainer.push_to_hub`]는 미세 조정된 가중치, 생성 설정, 토크나이저 및 모델 설정을 Hub에 업로드합니다."
+          }
+        },
+        "5": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "다음 단계입니다.\n\n일반적인 Trainer 기능들, 즉 사용자 정의 손실 함수, 메모리 효율적인 평가, 체크포인팅 등에 대한 최소한의 작동 예제를 확인하려면 [Trainer 기능](./trainer_recipes) 가이드를 읽어보시기 바랍니다.\n\n새로운 기능 및 맞춤형 기능을 지원하기 위해 [`Trainer`] 메서드를 서브클래싱하는 방법을 알아보려면 [Subclassing Trainer methods](./trainer_customize) 가이드를 읽어보시기 바랍니다.\n\n로깅, 조기 종료 및 기타 맞춤형 동작을 위해 학습 이벤트에 연결하는 방법을 알아보려면 [콜백](./trainer_callbacks) 가이드를 읽어보시기 바랍니다.\n\n읽어보세요. [데이터 수집기](./data_collators) 샘플을 배치로 구성하는 방식을 사용자 정의하는 방법을 배우기 위한 안내서입니다.\n\n임대한 GPU에서 어떤 예제 스크립트든 실행할 수 있습니다. [Hugging Face 채용 정보](https://huggingface.co/docs/hub/jobs-training) (참조하세요) [스크립트를 실행합니다. Hugging Face 채용 정보](./run_scripts#run-a-script-on-hugging-face-jobs)).\n\n다양한 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제를 확인하려면 [transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [노트북](./notebooks) 또는 **리소스 > 태스크 레시피** 섹션을 참조해 주시기 바랍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "다음 단계입니다\n\n일반적인 Trainer 기능인 사용자 정의 손실 함수, 메모리 효율적인 평가, 체크포인팅 등에 대한 최소한의 작동 예제는 [Trainer 기능 안내서](./trainer_recipes)를 참조하시기 바랍니다.\n\n읽기 [하위 클래스화합니다 Trainer 방법들입니다](./trainer_customize) 서브클래싱하는 방법을 배우는 가이드입니다. [`Trainer`] 새로운 기능 및 사용자 정의 기능을 지원하기 위한 방법입니다.\n\n로그 기록, 조기 중지 및 기타 사용자 정의 동작을 위해 학습 이벤트에 연결하는 방법을 알아보려면 [콜백](./trainer_callbacks) 가이드를 읽어보십시오.\n\n샘플이 배치로 조합되는 방식을 사용자 정의하는 방법을 배우기 위해 [데이터 콜레이터](./data_collators) 가이드를 읽어보십시오.\n\n임의의 예제 스크립트를 [Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)를 통해 임대한 GPU에서 실행합니다 (자세한 내용은 [Hugging Face Jobs에서 스크립트 실행하기](./run_scripts#run-a-script-on-hugging-face-jobs) 참조합니다).\n\n다른 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제는 [transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [노트북](./notebooks), 또는 **자원 > 작업 조리법** 섹션을 참조하시기 바랍니다.",
+            "nvidia-nemotron-3.5-lightning": "다음 단계\n\n읽기 [Trainer 기능](./trainer_recipes) 가이드: 최소 실행 예제, 일반적인 ... Trainer 사용자 지정 손실 함수, 메모리 효율적인 평가, 체크포인트 등 다양한 기능을 지원합니다.\n\n[Subclassing Trainer methods](./trainer_customize) 가이드를 읽고, [`Trainer`] 클래스의 메서드를 서브클래싱하여 새로운 기능과 사용자 지정 기능을 지원하는 방법을 학습하십시오.\n\n[콜백](./trainer_callbacks) 가이드를 읽고 학습 이벤트에 훅을 걸어 로깅, 조기 종료 및 기타 사용자 정의 동작을 학습하는 방법을 알아보세요.\n\n[데이터 콜레이터](./data_collators) 가이드를 읽어보아, 샘플이 배치로 어셈블되는 방법을 사용자 정의하는 방법을 학습하십시오.\n\n렌트 GPU에서 예제 스크립트를 실행하려면 [Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)을(를) 참조하세요 ( [Run a script on Hugging Face Jobs](./run_scripts#run-a-script-on-hugging-face-jobs) 참조).\n\n[transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [notebooks](./notebooks), 또는 **Resources > Task Recipes** 섹션을 참조하여 다양한 텍스트, 오디오, 비전 및 멀티모달 태스크에 대한 추가 학습 예시를 확인하십시오.",
+            "qwen-qwen3.8-27b": "다음 단계\n\n[Trainer 기능](./trainer_recipes) 가이드를 참고하여 커스텀 손실 함수, 메모리 효율적 평가, 체크포인트링 등 일반적인 Trainer 기능의 최소 작동 예제를 확인합니다.\n\n[Trainer 메서드 서브클래스화](./trainer_customize) 가이드를 읽고 [`Trainer`] 메서드를 서브클래스화하여 새로운 및 사용자 정의된 기능을 지원하는 방법을 학습합니다.\n\n학습 이벤트에 대한 로깅, 조기 종료 및 기타 사용자 정의 동작을 연결하는 방법을 배우려면 [콜백](./trainer_callbacks) 가이드를 읽어 보십시오.\n\n[데이터 콜렉터](./data_collators) 가이드를 읽어 샘플이 배치로 조립되는 방식을 사용자 지정하는 방법을 학습합니다.\n\n임대 GPU에서 [Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)를 사용하여 예제 스크립트를 실행해 보세요([Hugging Face Jobs에서 스크립트 실행](./run_scripts#run-a-script-on-hugging-face-jobs) 참조).\n\n[transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [notebooks](./notebooks), 또는 **Resources > Task Recipes** 섹션을 참조하여 다양한 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제를 확인합니다.",
+            "google-gemma-4-26b-a4b-it": "다음 단계\n\n커스텀 손실 함수, 메모리 효율적인 평가, 체크포인팅 등 일반적인 Trainer 기능의 최소 작동 예제를 확인하려면 [Trainer 기능](./trainer_recipes) 가이드를 읽어보십시오.\n\n새롭고 사용자 정의된 기능을 지원하기 위해 [`Trainer`] 메서드를 서브클래싱하는 방법을 배우려면 [Trainer 메서드 서브클래싱](./trainer_customize) 가이드를 읽어보십시오.\n\n로깅, 조기 종료 및 기타 사용자 정의 동작을 위해 학습 이벤트에 연결하는 방법을 배우려면 [Callbacks](./trainer_callbacks) 가이드를 읽어보십시오.\n\n샘플이 배치로 조립되는 방식을 사용자 지정하는 방법을 배우려면 [Data collators](./data_collators) 가이드를 읽어보십시오.\n\n[Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)를 사용하여 대여한 GPU에서 모든 예제 스크립트를 실행합니다 ( [ Hugging Face Jobs에서 스크립트 실행](./run_scripts#run-a-script-on-hugging-face-jobs)을 참조하십시오).\n\n다양한 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제는 [transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [notebooks](./notebooks), 또는 **Resources > Task Recipes** 섹션을 참조하십시오."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:38:32.239Z",
+      "blind": true
+    },
+    {
+      "document": "pipeline_tutorial.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/pipeline_tutorial.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:22:31.844Z"
+      },
+      "candidates": [
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "bb012e106b3057868dc3a3dff1d02910aa7afce35541d18ab1455e15ebbd6429",
+          "validationStatus": "success"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "e8a16377990e20e0773e01af566c121ccf76c0656f8b39de5967a4670360c606",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "a5e9452ce90ca389a02bc803c8e28eda902d4501612181a2844794e5fd6e7c7b",
+          "validationStatus": "accepted_by_existing_pipeline"
+        },
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "6c9f0aa1bf629f866ea180090e455f0562ef5fe6358c9934cf365e1ec7b38f92",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "c7d8b703d9c7614d7ec68a07a33593119205b1151320bd2193be4238d41cfb6a",
+          "validationStatus": "success"
+        }
+      ],
+      "overall": [],
+      "overallNeedsRevision": false,
+      "note": "",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b",
+            "qwen-qwen3-30b-a3b-instruct-2507"
+          ],
+          "needsRevision": false,
+          "note": "제목은 '파이프라인'\n본문 기준으로 평가했습니다.",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "파이프라인입니다.\n\n[`Pipeline`]는 Hugging Face [Hub](https://hf.co/models)에 있는 어떤 모델이든 사용하여 다양한 머신러닝 작업에 즉시 활용할 수 있는 간단하면서도 강력한 추론 API입니다.\n\n회의록을 작성하기 위해 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 것과 같은 작업별 매개변수를 사용하여 [`Pipeline`]을 사용자의 작업에 맞게 조정할 수 있습니다. [`Pipeline`]은 GPU, Apple Silicon, 그리고 반정밀도 가중치를 지원하여 추론 속도를 높이고 메모리를 절약합니다.\n\nTransformers에는 일반적인 [`Pipeline`]과 [`TextGenerationPipeline`]와 같은 여러 개별 작업 전용 파이프라인이 있습니다. [`Pipeline`]의 `task` 매개변수에 작업 식별자를 지정하여 이러한 개별 파이프라인을 로드할 수 있습니다. 각 파이프라인에 대한 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본적으로 사전 학습된 모델과 전처리기를 사용하도록 설정되어 있지만, 다른 모델을 사용하고 싶다면 `model` 매개변수를 통해 이를 재정의할 수 있습니다.\n\n예를 들어, [Gemma 2](./model_doc/gemma2)와 함께 [`TextGenerationPipeline`]을 사용하려면 `task=\"text-generation\"` 및 `model=\"google/gemma-2-2b\"`로 설정하면 됩니다.\n\n입력이 하나 이상인 경우에는 이를 리스트 형태로 전달해야 합니다.\n\n이 가이드는 [`Pipeline`]에 대해 소개하고, 그 기능을 설명하며, 다양한 매개변수를 구성하는 방법을 보여줍니다.",
+            "nvidia-nemotron-3.5-lightning": "파이프라인\n\nThe [`Pipeline`] 는 다양한 머신러닝 작업에 활용할 수 있는 간단하지만 강력한 추론 API입니다. Hugging Face [Hub](https://hf.co/models).\n\n[`Pipeline`]를 작업에 맞게 조정하려면, 회의록 전사를 위해 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 것과 같은 작업별 파라미터를 추가하십시오. [`Pipeline`]은 GPU, Apple Silicon, 그리고 accelerate을 가속화하고 메모리를 절약하기 위해 반정밀 가중치를 지원합니다.\n\nTransformers는 두 가지 파이프라인 클래스를 가지고 있습니다. 일반적인 [`Pipeline`]과 다양한 개별 태스크 전용 파이프라인, 예를 들어 [`TextGenerationPipeline`]가 그것입니다. 이러한 개별 파이프라인을 로드하려면 [`Pipeline`]의 `task` 파라미터에 태스크 식별자를 설정하면 됩니다. 각 파이프라인에 해당하는 태스크 식별자는 그들의 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본 사전 학습된 모델 및 전처리기를 사용하도록 구성되어 있지만, `model` 파라미터를 사용하여 다른 모델을 사용하고자 할 경우 이를 재정의할 수 있습니다.\n\n예를 들어, [`TextGenerationPipeline`]를 [Gemma 2](./model_doc/gemma2)와 함께 사용하려면 `task=\"text-generation\"`와 `model=\"google/gemma-2-2b\"`를 설정하십시오.\n\n입력이 하나 이상인 경우, 목록으로 전달하십시오.\n\n이 가이드는 [`Pipeline`]을 소개하고, 그 기능을 보여주며, 다양한 파라미터를 구성하는 방법을 보여줍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "파이프라인입니다\n\n[`Pipeline`]는 Hugging Face [Hub](https://hf.co/models)의 어떤 모델을 사용하더라도 다양한 머신러닝 작업에 쉽게 활용할 수 있는 간단하면서도 강력한 추론 API입니다.\n\n작업에 맞게 [`Pipeline`]를 조정하여 회의록을 녹음하는 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 등의 작업 전용 매개변수를 설정할 수 있습니다. [`Pipeline`]는 GPU, Apple Silicon, 및 반정밀도 가중치를 지원하여 accelerate시키고 메모리를 절약합니다.\n\nTransformers에는 일반적인 [`Pipeline`]과 [`TextGenerationPipeline`]와 같은 특정 작업용 파이프라인들이 있습니다. 각각의 파이프라인은 [`Pipeline`]의 `task` 파라미터에 작업 식별자를 설정하여 로드할 수 있습니다. 각 파이프라인의 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본적으로 사전 학습된 모델과 전처리기를 사용하도록 구성되어 있지만, 다른 모델을 사용하고자 할 경우 `model` 매개변수를 통해 이를 재정의할 수 있습니다.\n\n예를 들어, [`TextGenerationPipeline`]를 [Gemma 2](./model_doc/gemma2)와 함께 사용하려면 `task=\"text-generation\"` 및 `model=\"google/gemma-2-2b\"`를 설정합니다.\n\n입력이 하나보다 많을 경우, 이를 리스트 형태로 전달합니다.\n\n이 가이드에서는 [`Pipeline`]를 소개하고, 그 기능을 보여주며, 다양한 매개변수를 어떻게 구성할 수 있는지 안내합니다.",
+            "google-gemma-4-26b-a4b-it": "파이프라인\n\n[`Pipeline`]은 Hugging Face [Hub](https://hf.co/models)의 모든 모델을 사용하여 다양한 머신러닝 작업에 즉시 사용할 수 있는 단순하면서도 강력한 추론 API입니다.\n\n회의록 전사를 위한 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 것과 같은 작업별 매개변수를 사용하여 [`Pipeline`]을 귀하의 작업에 맞게 조정하십시오. [`Pipeline`]은 추론을 accelerate하고 메모리를 절약하기 위해 GPU, Apple Silicon 및 반정밀도 가중치를 지원합니다.\n\nTransformers에는 범용적인 [`Pipeline`]과 [`TextGenerationPipeline`]와 같은 여러 개별 작업별 파이프라인이라는 두 가지 파이프라인 클래스가 있습니다. [`Pipeline`]의 `task` 매개변수에 작업 식별자를 설정하여 이러한 개별 파이프라인을 로드할 수 있습니다. 각 파이프라인에 대한 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본 사전 학습된 모델과 전처리기를 사용하도록 구성되어 있지만, 다른 모델을 사용하고자 하는 경우 `model` 파라미터를 사용하여 이를 재정의할 수 있습니다.\n\n예를 들어, [Gemma 2](./model_doc/gemma2)와 함께 [`TextGenerationPipeline`]를 사용하려면 `task=\"text-generation\"` 및 `model=\"google/gemma-2-2b\"`를 설정합니다.\n\n입력이 두 개 이상인 경우, 이를 리스트로 전달합니다.\n\n이 가이드는 [`Pipeline`]을 소개하고, 그 기능을 시연하며, 다양한 매개변수를 구성하는 방법을 보여줍니다.",
+            "qwen-qwen3.8-27b": "파이프라인\n\n[`Pipeline`]은 Hugging Face [Hub](https://hf.co/models)의 다양한 모델로 여러 기계 학습 작업을 수행할 수 있도록 즉시 사용할 수 있는 단순하면서도 강력한 추론 API입니다.\n\n맞춤 [`Pipeline`] 회의록 전사를 위한 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 등 작업별 매개변수를 사용하여 작업에 적용합니다. [`Pipeline`] GPU를 지원합니다. Apple Silicon, 그리고 반정밀도 가중치를 accelerate 추론 및 메모리 저장.\n\nTransformers에는 두 가지 파이프라인 클래스가 있습니다. 범용 [`Pipeline`]과 [`TextGenerationPipeline`]과 같은 여러 개별 작업별 파이프라인입니다. [`Pipeline`]의 `task` 매개변수에 작업 식별자를 설정하여 이러한 개별 파이프라인을 로드할 수 있습니다. 각 파이프라인의 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본적으로 사전 학습된 모델과 전처리기를 사용하도록 구성되지만, 다른 모델을 사용하려는 경우 `model` 매개변수를 사용하여 이를 재정의할 수 있습니다.\n\n예를 들어, [`TextGenerationPipeline`]을 [Gemma 2](./model_doc/gemma2)와 함께 사용하려면 `task=\"text-generation\"`과 `model=\"google/gemma-2-2b\"`를 설정해야 합니다.\n\n입력이 하나 이상인 경우, 목록으로 전달합니다.\n\n이 가이드에서는 [`Pipeline`]을 소개하고, 그 기능을 시연하며, 다양한 매개변수를 구성하는 방법을 보여 드립니다."
+          }
+        },
+        "1": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507",
+            "qwen-qwen3.8-27b"
+          ],
+          "needsRevision": false,
+          "note": "1문단은 C, 2문단은 E",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "작업입니다.\n\n[`Pipeline`]은 다양한 모달리티에 걸쳐 여러 머신러닝 작업과 호환됩니다. 적절한 입력을 파이프라인에 전달하면 나머지 처리는 파이프라인이 담당합니다.\n\n다양한 작업 및 모달리티에 [`Pipeline`]을 사용하는 방법에 대한 몇 가지 예시를 소개합니다.",
+            "nvidia-nemotron-3.5-lightning": "작업\n\n[`Pipeline`]는 다양한 모달리티에서 많은 머신러닝 작업과 호환됩니다. 적절한 입력을 파이프라인에 전달하면 나머지는 파이프라인이 처리합니다.\n\n[`Pipeline`]를 사용하여 다양한 작업 및 모달리티에 대해 몇 가지 예를 보여드리겠습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "작업\n\n[`Pipeline`]는 다양한 모달리티의 많은 머신러닝 작업과 호환됩니다. 적절한 입력을 파이프라인에 전달하면 나머지는 자동으로 처리됩니다.\n\n다양한 작업과 모달리티에 대해 [`Pipeline`]를 사용하는 방법에 대한 몇 가지 예시입니다.",
+            "google-gemma-4-26b-a4b-it": "작업\n\n[`Pipeline`]은 다양한 모달리티에 걸쳐 많은 머신러닝 작업과 호환됩니다. 파이프라인에 적절한 입력을 전달하면 나머지 작업은 파이프라인이 처리합니다.\n\n다양한 작업 및 모달리티에 대해 [`Pipeline`]를 사용하는 몇 가지 예시는 다음과 같습니다.",
+            "qwen-qwen3.8-27b": "작업\n\n[`Pipeline`]은 다양한 모달리티에 걸친 여러 기계 학습 작업과 호환됩니다. 파이프라인에 적절한 입력을 전달하면 나머지 처리를 자동으로 수행합니다.\n\n[`Pipeline`]를 다양한 작업과 모달리티에 사용하는 방법에 대한 몇 가지 예시를 보여 드리겠습니다."
+          }
+        },
+        "2": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b",
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "첫 문단은 A, 두 번째 문단은 B로 하고 싶습니다.\n첫 문단에서 모두 \"최소한\" 부분을 빼도 될 것 같아요.",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "매개변수\n\n최소한으로는 [`Pipeline`]에 필요한 것은 작업 식별자, 모델 및 적절한 입력뿐입니다. 하지만 작업별 매개변수부터 성능 최적화에 이르기까지 파이프라인을 구성하는 데 사용할 수 있는 매개변수가 많이 있습니다.\n\n이 섹션에서는 보다 중요한 매개변수들에 대해 소개합니다.",
+            "nvidia-nemotron-3.5-lightning": "매개변수\n\n최소한으로, [`Pipeline`]는 작업 식별자, 모델, 그리고 적절한 입력만 있으면 됩니다. 하지만 파이프라인을 구성하기 위해 사용 가능한 많은 파라미터가 있으며, 작업별 파라미터부터 성능 최적화까지 포함합니다.\n\n이 섹션에서는 주요 파라미터 몇 가지를 소개합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "매개변수입니다\n\n최소한 [`Pipeline`]는 작업 식별자, 모델 및 적절한 입력만 필요합니다. 그러나 작업에 특화된 매개변수부터 성능 최적화에 이르기까지 구성할 수 있는 다양한 매개변수가 제공됩니다.\n\n이 섹션에서는 더 중요한 파라미터 중 일부를 소개합니다.",
+            "google-gemma-4-26b-a4b-it": "매개변수\n\n최소한 [`Pipeline`]에는 작업 식별자, 모델 및 적절한 입력만 필요합니다. 하지만 작업별 매개변수부터 성능 최적화에 이르기까지 파이프라인을 구성하는 데 사용할 수 있는 많은 매개변수가 있습니다.\n\n이 섹션에서는 몇 가지 더 중요한 매개변수들을 소개합니다.",
+            "qwen-qwen3.8-27b": "매개변수\n\n최소한, [`Pipeline`]에는 작업 식별자, 모델, 그리고 적절한 입력만 필요합니다. 그러나 작업별 매개변수부터 성능 최적화에 이르기까지 파이프라인을 구성할 수 있는 다양한 매개변수가 있습니다.\n\n이 섹션에서는 보다 중요한 매개변수 중 일부를 소개합니다."
+          }
+        },
+        "4": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "배치 추론입니다.\n\n[`Pipeline`]는 `batch_size` 매개변수를 사용하여 입력 데이터의 배치를 처리할 수도 있습니다. 배치 추론은 특히 GPU에서 속도를 향상시킬 수 있지만, 반드시 그런 것은 아닙니다. 하드웨어, 데이터 및 모델 자체와 같은 다른 요인들도 배치 추론이 속도를 개선하는지에 영향을 줄 수 있습니다. 이러한 이유로 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력값이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]은 한 번에 2개의 입력값으로 구성된 배치를 모델에 전달합니다.\n\n배치 추론의 또 다른 유용한 활용 사례는 [`Pipeline`]에서 스트리밍 데이터를 처리하는 것입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단하기 위해 다음의 일반적인 기준을 참고하시기 바랍니다.\n\n확실히 알 수 있는 유일한 방법은 사용 중인 모델, 데이터 및 하드웨어에서 성능을 측정하는 것입니다.\n\n지연 시간에 제약이 있는 경우(예: 실시간 추론 제품)에는 배치 추론을 사용하지 마십시오.\n\nCPU를 사용하는 경우에는 추론을 배치로 처리하지 마십시오.\n\n데이터의 `sequence_length`를 알지 못한다면 배치 추론을 수행하지 마십시오. 성능을 측정한 뒤 `sequence_length` 값을 점진적으로 늘리고, 오류 발생 시 복구할 수 있도록 메모리 부족(OOM) 상태를 확인하는 절차를 포함해야 합니다.\n\n배치 추론이 필요한 경우에는 배치 추론을 수행하십시오. `sequence_length` 일반적으로는 정상적으로 작동하며, OOM 오류가 발생할 때까지 계속해서 추론을 수행합니다. GPU의 용량이 클수록 배치 추론이 더욱 유용합니다.\n\n배치 추론을 수행하려는 경우에는 반드시 메모리 부족 오류를 처리할 수 있는지 확인해야 합니다.",
+            "nvidia-nemotron-3.5-lightning": "배치 추론\n\n[`Pipeline`]는 또한 `batch_size` 파라미터를 사용하여 입력 배치도 처리할 수 있습니다. 배치 추론은 GPU에서 특히 속도를 향상시킬 수 있지만, 보장되지는 않습니다. 하드웨어, 데이터, 모델 자체와 같은 기타 변수는 배치 추론이 속도를 향상시키는지에 영향을 미칠 수 있습니다. 이러한 이유로 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력값이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]는 모델에 한 번에 2개의 입력값 배치(batch)를 전달합니다.\n\n배치 추론의 또 다른 좋은 사용 사례는 [`Pipeline`]에서 스트리밍 데이터에 있습니다.\n\n배치 추론이 성능을 개선하는 데 도움이 될 수 있는지 판단할 때 다음 일반적인 가이드라인을 염두에 두십시오.\n\n모델, 데이터, 하드웨어에서 성능을 측정하는 것만이 확실하게 알 수 있는 유일한 방법입니다.\n\n지연 시간(실시간 추론 제품의 경우 등)에 제약이 있는 경우 배치 추론을 수행하지 마십시오.\n\nCPU를 사용 중이라면 CPU을 하지 마십시오.\n\n배치를 추론하지 마십시오. 데이터의 `sequence_length`를 알 수 없으면요. 성능을 측정하고, `sequence_length`를 반복적으로 늘리며, 메모리 부족(OOM) 체크를 포함하여 실패로부터 복구하십시오.\n\n배치 추론을 수행하려면 `sequence_length`가 규칙적이어야 하며, OOM 오류에 도달할 때까지 계속 밀어붙이십시오. GPU가 클수록 배치 추론이 더 유용합니다.\n\n배치를 수행할 경우 OOM 오류를 처리할 수 있도록 확인해 주세요.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "배치 추론입니다\n\n[`Pipeline`]는 `batch_size` 파라미터를 사용하여 입력의 배치를 처리할 수도 있습니다. 배치 추론은 특히 GPU에서 속도 향상을 가져올 수 있으나, 보장되지는 않습니다. 하드웨어, 데이터 및 모델 자체와 같은 다른 변수들은 배치 추론이 속도 향상에 기여하는지 여부에 영향을 줄 수 있습니다. 이에 따라 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예제에서 입력이 4개이고 `batch_size`가 2로 설정되어 있을 경우, [`Pipeline`]는 모델에 한 번에 2개의 입력 배치를 전달합니다.\n\n배치 추론의 또 다른 좋은 사용 사례는 [`Pipeline`]에서 스트리밍 데이터를 처리하는 것입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단하기 위해 다음의 일반적인 원칙을 기억하시기 바랍니다.\n\n확실하게 알 수 있는 유일한 방법은 모델, 데이터 및 하드웨어에서 성능을 측정하는 것입니다.\n\n지연 시간에 제약이 있는 경우(예: 실시간 추론 제품 등) 배치 추론을 하지 마십시오.\n\nCPU를 사용하는 경우 배치 추론을 하지 마십시오.\n\n데이터의 `sequence_length`를 모른다면 배치 추론을 하지 마십시오. 성능을 측정하고, 반복적으로 `sequence_length`를 늘리며 메모리 초과(OOM) 확인을 포함하여 실패 시 복구할 수 있도록 하십시오.\n\n`sequence_length`가 규칙적인 경우 배치 추론을 수행하고, OOM 오류가 발생할 때까지 계속 진행합니다. GPU가 클수록 배치 추론이 더욱 유용합니다.\n\n배치 추론을 수행하기로 결정한 경우 OOM 오류를 처리할 수 있도록 하십시오.",
+            "google-gemma-4-26b-a4b-it": "배치 추론\n\n[`Pipeline`]는 `batch_size` 매개변수를 사용하여 입력 배치를 처리할 수도 있습니다. 배치 추론은 특히 GPU에서 속도를 향상시킬 수 있지만, 이것이 보장되지는 않습니다. 하드웨어, 데이터 및 모델 자체와 같은 다른 변수들이 배치 추론이 속도를 향상시키는지 여부에 영향을 미칠 수 있습니다. 이러한 이유로 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]는 한 번에 2개의 입력으로 구성된 배치를 모델에 전달합니다.\n\n배치 추론의 또 다른 유용한 사례는 [`Pipeline`]에서의 스트리밍 데이터입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단할 때 다음의 일반적인 지침들을 염두에 두십시오.\n\n확실하게 알 수 있는 유일한 방법은 모델, 데이터 및 하드웨어에 대한 성능을 측정하는 것입니다.\n\n지연 시간에 제약이 있는 경우(예를 들어 실시간 추론 제품)에는 배치를 통한 추론을 수행하지 마십시오.\n\nCPU를 사용하는 경우 배치를 통한 추론을 수행하지 마십시오.\n\n데이터의 `sequence_length`를 알 수 없는 경우에는 배치를 사용한 추론을 수행하지 마십시오. 성능을 측정하면서 `sequence_length`를 반복적으로 추가하고, 오류 발생 시 복구할 수 있도록 메모리 부족(OOM) 체크를 포함하십시오.\n\n`sequence_length`가 일정하다면 배치 추론을 수행하고, OOM 오류가 발생할 때까지 계속 시도하십시오. GPU의 크기가 클수록 배치 추론이 더 유용합니다.\n\n배치 추론을 수행하기로 결정했다면 OOM 오류를 처리할 수 있는지 반드시 확인하십시오.",
+            "qwen-qwen3.8-27b": "배치 추론\n\n[`Pipeline`]는 `batch_size` 매개변수를 사용하여 입력 배치도 처리할 수 있습니다. 배치 추론은 특히 GPU에서 속도를 향상시킬 수 있지만, 이는 보장되지 않습니다. 하드웨어, 데이터, 모델 자체와 같은 다른 변수가 배치 추론이 속도를 향상시키는지 여부에 영향을 미칠 수 있습니다. 이 때문에 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]은 한 번에 2개의 입력 배치로 모델을 전달합니다.\n\n배치 추론의 또 다른 좋은 사용 사례는 [`Pipeline`]에서 스트리밍 데이터를 처리하는 것입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단할 때 다음 일반적인 지침을 염두에 두십시오.\n\n확실히 알 수 있는 유일한 방법은 모델, 데이터, 하드웨어에서 성능을 측정하는 것입니다.\n\n지연 시간으로 제한이 있는 경우(예: 실시간 추론 제품)에는 추론을 배치하지 마십시오.\n\nCPU를 사용하는 경우 추론을 배치하지 마십시오.\n\n데이터의 `sequence_length`를 알 수 없는 경우 추론을 배치하지 마십시오. 성능을 측정하고, `sequence_length`에 점진적으로 값을 추가하며, 실패 시 복구하기 위해 메모리 부족(OOM) 검사를 포함하십시오.\n\n`sequence_length`가 규칙적이라면 배치 추론을 수행하고, OOM 오류가 발생할 때까지 계속 증가시키십시오. GPU가 클수록 배치 추론이 더 유용합니다.\n\n배치 추론을 수행하기로 결정했다면 OOM 오류를 처리할 수 있는지 반드시 확인하십시오."
+          }
+        },
+        "6": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "청크 배칭입니다.\n\n데이터를 청크 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 단일 입력(예: 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 나누어야 할 수 있습니다.\n\n일부 작업, 예를 들어 제로샷 분류나 질의응답과 같은 경우에는 단일 입력에 대해 여러 번의 순전파가 필요할 수 있으며, 이로 인해 `batch_size` 매개변수와 관련된 문제가 발생할 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)는 자동으로 배치 처리를 수행할 수 있으므로 입력 데이터가 유발하는 순전파 횟수에 대해 걱정할 필요가 없습니다. 대신 `batch_size`를 입력 데이터와 별개로 최적화할 수 있습니다.\n\n아래 예시는 이가 [`Pipeline`]과 어떻게 다른지를 보여줍니다.",
+            "nvidia-nemotron-3.5-lightning": "청크 배치\n\n데이터를 청크로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 예를 들어 정말 긴 오디오 파일과 같이 단일 입력이 여러 부분으로 분할되어 처리될 수 있습니다.\n\n일부 작업, 예를 들어 영 제로-샷 분류나 질문 응답의 경우, 단일 입력에 대해 여러 번의 전파가 필요할 수 있으며, 이는 `batch_size` 파라미터에 문제를 일으킬 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)는 자동으로 배치 처리를 처리할 수 있으므로 입력으로 트리거된 포워드 패스의 수에 대해 걱정할 필요가 없습니다. 대신, `batch_size`를 입력과 독립적으로 최적화할 수 있습니다.\n\n아래 예제는 [`Pipeline`]과 어떻게 다른지 보여줍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "청크 배치 처리합니다\n\n데이터를 조각 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 하나의 입력(예: 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 나누어야 할 수 있습니다.\n\n일부 작업, 예를 들어 제로샷 분류 또는 질문 응답과 같은 경우, 단일 입력에 대해 여러 번의 전방 전파가 필요할 수 있으며, 이는 `batch_size` 매개변수에 문제를 일으킬 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)가 자동으로 배치 처리를 수행하므로 입력값이 유발하는 순전파 횟수에 대해 걱정할 필요가 없습니다. 대신 입력값과 무관하게 `batch_size`를 별도로 최적화할 수 있습니다.\n\n아래 예시는 [`Pipeline`]와 어떻게 다른지 보여줍니다.",
+            "google-gemma-4-26b-a4b-it": "청크 배치 처리\n\n데이터를 청크 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 단일 입력(예를 들어, 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 분할해야 할 수도 있습니다.\n\n제로샷 분류 또는 질의응답과 같은 일부 작업의 경우, 단일 입력에 대해 여러 번의 순방향 패스가 필요할 수 있으며 이는 `batch_size` 매개변수에 문제를 일으킬 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스 모두 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)는 배치 처리를 자동으로 수행할 수 있으므로 입력값이 트리거하는 순전파 횟수에 대해 걱정할 필요가 없습니다. 대신, 입력값과 독립적으로 `batch_size`를 최적화할 수 있습니다.\n\n아래 예시는 [`Pipeline`]와 어떻게 다른지 보여줍니다.",
+            "qwen-qwen3.8-27b": "청크 배치\n\n데이터를 청크 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 타입의 경우, 단일 입력(예: 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 분할해야 할 수 있습니다.\n\n일부 작업, 예를 들어 제로샷 분류나 질의응답의 경우, 단일 입력에 대해 여러 번의 전방 전달이 필요할 수 있으며, 이로 인해 `batch_size` 매개변수와 관련된 문제가 발생할 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)은 배치 처리를 자동으로 처리할 수 있으므로 입력이 유발하는 전방 패스 횟수에 대해 걱정할 필요가 없습니다. 대신, 입력과 독립적으로 `batch_size`를 최적화할 수 있습니다.\n\n아래 예제는 [`Pipeline`]와 어떻게 다른지를 보여 줍니다."
+          }
+        },
+        "7": {
+          "kind": "section",
+          "selected": [],
+          "needsRevision": true,
+          "note": "",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "대용량 데이터셋입니다.\n\n대용량 데이터셋을 이용한 추론 작업의 경우, 데이터셋 자체를 직접 반복 처리할 수 있습니다. 이렇게 하면 전체 데이터셋을 위해 즉시 메모리를 할당할 필요가 없으며, 배치를 직접 생성하는 것에 대해서도 걱정할 필요가 없습니다. 성능 향상을 확인하기 위해 [배치 추론](#batch-inference) 기능에서 `batch_size` 매개변수를 사용해 보시기 바랍니다.\n\n대규모 데이터셋에서 추론을 실행하는 다른 방법들입니다. [`Pipeline`] 이터레이터나 제너레이터를 사용하는 방법도 포함됩니다.",
+            "nvidia-nemotron-3.5-lightning": "대규모 데이터세트\n\n대규모 데이터셋에 대한 추론 시, 데이터셋 자체를 직접 반복할 수 있습니다. 이는 전체 데이터셋에 대한 메모리를 즉시 할당하지 않으며, 배치 자체를 생성할 필요도 없습니다. `batch_size` 파라미터와 함께 [배치 추론](#batch-inference)을 시도해 보시면 성능 향상이 도움이 될 수 있습니다.\n\n[`Pipeline`]를 사용한 대량 데이터셋 추론의 다른 방법으로는 반복자나 제너레이터를 사용하는 것이 있습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "대규모 데이터셋입니다\n\n큰 데이터셋을 사용한 추론의 경우, 데이터셋 자체를 직접 반복할 수 있습니다. 이 방법은 전체 데이터셋에 대한 메모리 할당을 즉시 하지 않으며, 배치를 수동으로 생성할 필요도 없습니다. 성능 향상 여부를 확인하기 위해 [배치 추론](#batch-inference)을 `batch_size` 매개변수와 함께 시도해 보시기 바랍니다.\n\n크고 큰 데이터셋에 대해 [`Pipeline`]를 사용하여 추론을 실행하는 다른 방법으로는 반복자나 생성자를 사용하는 것이 있습니다.",
+            "google-gemma-4-26b-a4b-it": "대규모 데이터 세트\n\n대규모 데이터셋으로 추론을 수행할 때는 데이터셋 자체를 직접 반복할 수 있습니다. 이는 데이터셋 전체에 대해 즉시 메모리를 할당하는 것을 방지하며, 직접 배치를 생성하는 것에 대해 걱정할 필요가 없습니다. [Batch inference](#batch-inference)를 `batch_size` 매개변수와 함께 사용하여 성능이 향상되는지 확인해 보십시오.\n\n[`Pipeline`]를 사용하여 대규모 데이터셋에 대해 추론을 실행하는 다른 방법으로는 이터레이터 또는 제너레이터를 사용하는 방법이 있습니다.",
+            "qwen-qwen3.8-27b": "대규모 데이터셋\n\n대형 데이터셋에 대한 추론을 수행하려면 데이터셋 자체를 직접 반복할 수 있습니다. 이를 통해 전체 데이터셋에 대한 메모리를 즉시 할당하는 것을 방지할 수 있으며, 배치를 직접 생성할 필요도 없습니다. 성능이 향상되는지 확인하려면 [배치 추론](#batch-inference)을 `batch_size` 매개변수와 함께 사용해 보세요.\n\n[`Pipeline`]로 대규모 데이터셋에서 추론을 실행하는 다른 방법에는 반복자 또는 생성자를 사용하는 것이 포함됩니다."
+          }
+        },
+        "8": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "tencent-hy-mt2-30b-a3b": "대형 모델입니다.\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]를 사용하여 대형 모델을 실행할 때 몇 가지 최적화 기능을 제공합니다. 먼저 Accelerate가 설치되어 있는지 확인하십시오.\n\n`device_map=\"auto\"` 설정은 모델을 먼저 가장 빠른 장치인 GPU에 자동으로 할당한 뒤, 사용 가능한 경우 다른 더 느린 장치인 CPU나 하드 드라이브로 보내는 데 유용합니다.\n\n[`Pipeline`]은 반정밀도 가중치(torch.float16)를 지원하며, 이를 통해 처리 속도가 크게 향상되고 메모리 사용량도 절약됩니다. 대부분의 모델, 특히 규모가 큰 모델의 경우 성능 저하가 거의 없습니다. 만약 사용 중인 하드웨어가 지원한다면, 더 넓은 범위를 활용하기 위해 torch.bfloat16를 사용할 수도 있습니다.\n\n[!TIP]\n입력값은 내부적으로 torch.float16 형식으로 변환되며, 이 기능은 PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]은 메모리 사용량을 더욱 줄이기 위해 양자화된 모델도 지원합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 뒤, 파이프라인 내의 `model_kwargs`에 `quantization_config`를 추가해 주시기 바랍니다.",
+            "nvidia-nemotron-3.5-lightning": "대형 모델\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]을 사용하여 대규모 모델을 실행할 때 몇 가지 최적화를 가능하게 합니다. Accelerate를 먼저 설치해 주세요.\n\nThe `device_map=\"auto\"` 설정은 사용 가능한 경우 가장 빠른 장치(GPU)에 먼저 모델을 자동으로 분산시킨 다음 다른 느린 장치에 배포하는 데 유용합니다.CPU, 하드디스크).\n\n[`Pipeline`]는 torch.float16의 반정밀 가중치를 지원하며, 이는 크게 빨라지고 메모리를 절약할 수 있습니다. 대부분의 모델에서 성능 손실은 무시할 수 있으며, 특히 큰 모델의 경우 더욱 그렇습니다. 하드웨어가 지원한다면 torch.bfloat16을 대신 사용하면 더 넓은 범위를 지원할 수 있습니다.\n\n[!TIP]\n내부적으로 입력은 torch.float16로 변환되며, PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로 [`Pipeline`]도 메모리 사용량을 더욱 줄이기 위해 양자화된 모델을 수락합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 다음, `quantization_config`를 `model_kwargs`에 추가하십시오.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "대규모 모델입니다\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]를 사용하여 대규모 모델을 실행할 때 몇 가지 최적화 기능을 제공합니다. 먼저 Accelerate가 설치되어 있는지 확인하시기 바랍니다.\n\n`device_map=\"auto\"` 설정은 모델을 가장 빠른 장치(GPU)에 우선적으로 자동으로 배분한 후, 사용 가능한 경우 더 느린 장치(CPU, 하드 드라이브)로 배분하는 데 유용합니다.\n\n[`Pipeline`]는 반정밀 가중치(torch.float16)를 지원하여 성능이 향상되고 메모리 사용량을 절약할 수 있습니다. 대부분의 모델, 특히 더 큰 모델에서는 성능 저하가 거의 발생하지 않습니다. 하드웨어에서 지원하는 경우 더 넓은 범위를 위해 torch.bfloat16를 사용할 수 있습니다.\n\n[!TIP]\n입력은 내부적으로 torch.float16로 변환되며, 이는 오직 PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]는 메모리 사용량을 더욱 줄이기 위해 양자화 모델도 수용합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인하고, 그 후 파이프라인에 `quantization_config`를 `model_kwargs`에 추가합니다.",
+            "google-gemma-4-26b-a4b-it": "대규모 모델\n\n[Accelerate](https://hf.co/docs/accelerate/index)를 사용하면 [`Pipeline`]으로 대규모 모델을 실행할 때 몇 가지 최적화 기능을 사용할 수 있습니다. 먼저 Accelerate가 설치되어 있는지 확인하십시오.\n\n`device_map=\"auto\"` 설정은 모델을 다른 더 느린 장치(CPU, 하드 드라이브)로 보내기 전에 가장 빠른 장치(GPU)에 우선적으로 자동으로 분산 배치하는 데 유용합니다.\n\n[`Pipeline`]은(는) 반정밀도 가중치(torch.float16)를 지원하며, 이를 통해 속도를 크게 높이고 메모리를 절약할 수 있습니다. 대부분의 모델, 특히 규모가 큰 모델의 경우 성능 저하는 무시할 수 있는 수준입니다. 하드웨어가 지원하는 경우, 더 넓은 범위를 위해 대신 torch.bfloat16을(를) 활성화할 수 있습니다.\n\n[!TIP]\n입력값은 내부적으로 torch.float16으로 변환되며, PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]은 메모리 사용량을 더욱 줄이기 위해 양자화된 모델도 지원합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 다음, 파이프라인의 `model_kwargs`에 `quantization_config`를 추가하십시오.",
+            "qwen-qwen3.8-27b": "대형 모델\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]으로 대규모 모델을 실행할 때 여러 최적화를 제공합니다. 먼저 Accelerate가 설치되어 있는지 확인하십시오.\n\n`device_map=\"auto\"` 설정은 모델이 가용한 경우 더 느린 장치(CPU, 하드 드라이브)로 배포되기 전에 가장 빠른 장치(GPU)에 자동으로 분배되도록 하는 데 유용합니다.\n\n[`Pipeline`]는 반정밀 가중치(torch.float16)를 지원하며, 이는 훨씬 더 빠르고 메모리를 절약할 수 있습니다. 대부분의 모델, 특히 더 큰 모델의 경우 성능 저하는 무시할 수 있는 수준입니다. 하드웨어가 이를 지원하는 경우, 더 넓은 범위를 위해 대신 torch.bfloat16를 활성화할 수 있습니다.\n\n[!TIP]\n입력은 내부적으로 torch.float16으로 변환되며, PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]은 메모리 사용량을 더욱 줄이기 위해 양자화 모델도 지원합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 후, 파이프라인의 `model_kwargs`에 `quantization_config`를 추가하십시오."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:47:47.748Z",
+      "blind": true
+    },
+    {
+      "document": "quantization/selecting.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/quantization/selecting.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:22:31.844Z"
+      },
+      "candidates": [
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "d52da7a4671a7a140c6a4b413133fa33bb925a3d9384185fc9ee43e5011f86ae",
+          "validationStatus": "accepted_by_existing_pipeline"
+        },
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "6ece4ff3ccc731f93125a9520ad57dab63403457754de23de0a85211859f619f",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "9328b313f77c7691019010c9f4a0779b96e3d78bce5b0b5e62a398da7b91799b",
+          "validationStatus": "success"
+        },
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "b1ad7e6ad3b15b6cb1af7c40692b7d3c195dc30a2edaef0220d8e3082e5858d1",
+          "validationStatus": "success"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "6a7652fa2152c88d786c2f7746799c69274f406e8e8cf0be678a06d482bc9925",
+          "validationStatus": "failed"
+        }
+      ],
+      "overall": [],
+      "overallNeedsRevision": true,
+      "note": "표 내 텍스트의 번역 방식이 일관적이지 않습니다. 명사형과 문장형 중 하나를 택할 필요가 있습니다.",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3.8-27b",
+            "tencent-hy-mt2-30b-a3b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "nvidia-nemotron-3.5-lightning": "양자화 방법 선택\n\n많은 양자화 방법이 [누락된 내용]에 사용 가능합니다. Transformers 추론 및 미세 조정을 위한 본 가이드는 사용 사례에 따라 가장 일반적인 생산용 양자화 기법을 선택하는 데 도움을 주며, 각 기법의 장단점을 제시합니다.\n\n전체 지원 메서드와 그 기능을 확인하려면 [Overview](./overview)에 있는 표를 참조하십시오.",
+            "tencent-hy-mt2-30b-a3b": "양자화 방법을 선택하기입니다.\n\nTransformers에서는 추론 및 미세 조정을 위해 다양한 양자화 방법들이 제공됩니다. 본 가이드는 사용 사례에 따라 가장 일반적이고 실제 서비스에 적용 가능한 양자화 기법을 선택하는 데 도움을 주며, 각 기법의 장점과 단점을 설명합니다.\n\n지원되는 모든 방법과 그 기능에 대한 종합적인 개요를 확인하려면 [개요](./overview)에 있는 표를 참조해 주시기 바랍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "양자화 방법 선택하기입니다\n\nTransformers에는 추론 및 미세 조정용으로 다양한 양자화 방법이 제공됩니다. 본 가이드는 사용 사례에 따라 가장 일반적이고 프로덕션 환경에서 사용 가능한 양자화 기법을 선택하는 데 도움을 주며, 각 기법의 장점과 단점을 제시합니다.\n\n모든 지원되는 방법과 그 기능에 대한 포괄적인 개요는 [개요](./overview)에 있는 표를 참조하시기 바랍니다.",
+            "google-gemma-4-26b-a4b-it": "양자화 방법 선택하기\n\nTransformers에는 추론 및 미세 조정을 위한 다양한 양자화 방법이 있습니다. 이 가이드는 사용 사례에 따라 가장 일반적이고 프로덕션에 바로 적용 가능한 양자화 기술을 선택할 수 있도록 도와주며, 각 기술의 장단점을 제시합니다.\n\n지원되는 모든 메서드와 그 기능에 대한 포괄적인 개요를 확인하려면 [Overview](./overview)의 표를 다시 참조하십시오.",
+            "qwen-qwen3.8-27b": "양자화 방법 선택\n\nTransformers에는 추론과 미세 조정을 위한 다양한 양자화 방법이 있습니다. 이 가이드는 사용 사례에 따라 가장 일반적이고 프로덕션 환경에서 사용할 수 있는 양자화 기술을 선택하는 데 도움을 주며, 각 기술의 장단점을 제시합니다.\n\n지원되는 모든 방법과 그 기능에 대한 포괄적인 개요는 [개요](./overview)의 표를 참조하십시오."
+          }
+        },
+        "1": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "nvidia-nemotron-3.5-lightning": "추론\n\n아래에 제시된 양자화 방법을 추론에 적용합니다.\n\n| 양자화 방법 | 사용 사례 |\n|---|---|\n| bitsandbytes | 사용 편의성 및 QLoRA 미세 조정 on NVIDIA 그리고 인텔 GPU도. |\n| 압축 텐서 | FP8 양식 로드 중 |\n| GPTQModel 또는 AWQ | 4비트 정확도와 사전 보정 |\n| HQQ | 빠른 실시간 양자화, 캘리브레이션 필요 없음 |\n| SINQ | 초고속이지만 고품질의 온라인 양자화, 캘리브레이션 불필요 |\n| torchao | 유연성과 빠른 추론으로 torch.compile와 함께 |",
+            "tencent-hy-mt2-30b-a3b": "추론입니다.\n\n추론을 위해 아래의 양자화 방법들을 고려해 주시기 바랍니다.\n\n| 양자화 방법 | 사용 사례입니다. |\n|---|---|\n| bitsandbytes | 사용 편의성 및 NVIDIA와 Intel GPU에서의 QLoRA 미세 조정입니다. |\n| 압축된 텐서입니다. | 특정 양자화 형식(FP8)을 로딩합니다. |\n| GPTQModel 또는 AWQ입니다. | 사전 보정을 통해 우수한 4비트 정확도를 제공합니다. |\n| HQQ | 보정 없이 즉시 적용되는 빠른 양자화 기능 |\n| SINQ | 보정 없이도 초고속으로 고품질의 즉석 양자화 처리 가능 |\n| torchao | torch.compile을 이용한 유연성과 빠른 추론 |",
+            "qwen-qwen3-30b-a3b-instruct-2507": "추론합니다\n\n추론을 위한 아래의 양자화 방법을 고려합니다.\n\n| 양자화 방법입니다 | 사용 사례 |\n|---|---|\n| bitsandbytes | 사용 편의성 및 QLoRA 미세 조정은 NVIDIA 및 인텔 GPU에서 지원합니다. |\n| 압축된 텐서 | 특정 양자화 형식(FP8) 로딩합니다 |\n| GPTQModel 또는 AWQ | 사전 캘리브레이션을 통해 우수한 4비트 정확도를 제공합니다. |\n| HQQ | 캘리브레이션 없이 빠른 온더플라이 양자화입니다. |\n| SINQ | 캘리브레이션 없이 초고속이면서도 고품질의 실시간 양자화를 제공합니다. |\n| torchao | 유연성과 빠른 추론을 위한 torch.compile |",
+            "google-gemma-4-26b-a4b-it": "추론\n\n추론을 위한 아래의 양자화 방법들을 고려하십시오.\n\n| 양자화 방법 | 유스케이스 |\n|---|---|\n| bitsandbytes | NVIDIA 및 Intel GPU에서의 사용 편의성 및 QLoRA 미세 조정 |\n| 압축된 텐서 | 특정 양자화 형식(FP8) 로드하기 |\n| GPTQModel 또는 AWQ | 사전 보정을 통한 우수한 4비트 정확도 |\n| HQQ | 보정 없는 빠른 온더플라이 양자화 |\n| SINQ | 보정(calibration) 없이 실시간으로 수행되는 매우 빠르고 고품질인 양자화 |\n| torchao | torch.compile을(를) 통한 유연성 및 빠른 추론 |",
+            "qwen-qwen3.8-27b": "추론\n\n추론을 위해 아래 양자화 방법들을 고려해 보십시오.\n\n| 양자화 방법 | 사용 사례 |\n|---|---|\n| bitsandbytes | 사용 편의성 및 NVIDIA와 Intel GPU에서의 QLoRA 미세 조정 |\n| 압축된 텐서 | 특정 양자화 형식(FP8)을 로드하는 중 |\n| GPTQModel 또는 AWQ | 사전 보정을 통한 양호한 4비트 정확도 |\n| HQQ | 교정 없이 빠른 온더플라이 양자화 |\n| SINQ | 교정 없이 초고속으로 고품질 온더플라이 양자화를 수행합니다 |\n| torchao | 유연하고 빠른 추론을 위한 torch.compile |"
+          }
+        },
+        "3": {
+          "kind": "section",
+          "selected": [],
+          "needsRevision": true,
+          "note": "표 내 텍스트의 번역 방식 비일관성",
+          "texts": {
+            "nvidia-nemotron-3.5-lightning": "bitsandbytes\n\n| 장점                                                         | 소속                                                    |\n|--------------------------------------------------------------|---------------------------------------------------------|\n| 추론에 필요한 캘리브레이션 데이터셋이 매우 간단합니다.  | 주로 최적화된 NVIDIA GPUs (CUDA).             |\n| 좋은 커뮤니티 지원 및 널리 사용됨.                   | 추론 속도가 보장되지 않습니다.                     |\n\n[bitsandbytes 문서](./bitsandbytes)를 참조하십시오.",
+            "tencent-hy-mt2-30b-a3b": "bitsandbytes\n\n| 장점                                                         | 단점                                                    |\n|--------------------------------------------------------------|---------------------------------------------------------|\n| 매우 간단하며, 추론을 위해 별도의 보정 데이터셋이 필요하지 않습니다.  | 주로 NVIDIA GPU(CUDA)에 최적화되어 있습니다.             |\n| 훌륭한 커뮤니티 지원이 제공되며 널리 채택되고 있습니다.                   | 추론 속도 향상이 보장되는 것은 아닙니다.                     |\n\n더 자세한 내용은 [bitsandbytes 문서](./bitsandbytes)를 참조하시기 바랍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "bitsandbytes\n\n| 장점                                                         | 단점입니다.                                                    |\n|--------------------------------------------------------------|---------------------------------------------------------|\n| 매우 간단하며, 추론 시 보정 데이터셋이 필요하지 않습니다.  | 주로 NVIDIA GPU(CUDA)에 최적화되어 있습니다.             |\n| 좋은 커뮤니티 지원과 널리 채택되고 있습니다.                   | 추론 속도 향상이 보장되지 않습니다.                     |\n\n자세한 내용은 [bitsandbytes 문서](./bitsandbytes)를 참조하시기 바랍니다.",
+            "google-gemma-4-26b-a4b-it": "bitsandbytes\n\n| 장점                                                         | 단점                                                    |\n|--------------------------------------------------------------|---------------------------------------------------------|\n| 매우 간단하며, 추론을 위한 교정 데이터셋이 필요하지 않습니다.  | 주로 NVIDIA GPU(CUDA)에 최적화되어 있습니다.             |\n| 커뮤니티 지원이 우수하며 널리 채택되어 있습니다.                   | 추론 속도 향상이 보장되지 않습니다.                     |\n\n더 자세한 내용은 [bitsandbytes documentation](./bitsandbytes)을 참조하십시오.",
+            "qwen-qwen3.8-27b": "bitsandbytes\n\n| 장점                                                         | 단점                                                    |\n|--------------------------------------------------------------|---------------------------------------------------------|\n| 매우 간단하며, 추론을 위해 보정 데이터셋이 필요하지 않습니다.  | 주요 최적화 대상은 NVIDIA GPU(CUDA)입니다.             |\n| 좋은 커뮤니티 지원과 광범위한 채택                   | 추론 속도 향상이 보장되지 않습니다.                     |\n\n자세한 내용은 [bitsandbytes 문서](./bitsandbytes)를 참조하십시오."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:52:30.755Z",
+      "blind": true
+    },
+    {
+      "document": "chat_templating_writing.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/chat_templating_writing.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:22:31.844Z"
+      },
+      "candidates": [
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "22c538792de48b2429ce175f6669c97ac2d495ad7e414033e1c08d5fd9b9ac0d",
+          "validationStatus": "success"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "71c3ac73793fc8d9c909dc73d375463cba266f6aef1a312c959f5d391097504e",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "511f7067cd30e8ea6b050703f894f959c9a242d50c3f211131479f5f5a975af4",
+          "validationStatus": "accepted_by_existing_pipeline"
+        },
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "d2e84f10c0ebe37ccc775dece9a5d43ed2e150bb75f8e491c17b8d544596b3cb",
+          "validationStatus": "success"
+        },
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "9a5ffab32257bf0adf25431f3e1ab2feeca1322e364b81dfe4bcac1493427fb8",
+          "validationStatus": "success"
+        }
+      ],
+      "overall": [
+        "qwen-qwen3.8-27b"
+      ],
+      "overallNeedsRevision": false,
+      "note": "",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3.8-27b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "채팅 템플릿 작성\n\n채팅 템플릿은 토크나이저의 [`~PreTrainedTokenizer.chat_template`] 속성에 저장된 [Jinja](https://jinja.palletsprojects.com/en/stable/templates/) 템플릿입니다. Jinja는 Python과 유사한 코드와 구문을 작성할 수 있는 템플릿 언어입니다.\n\n이를 잠시 살펴보면, 이는 실제로 Python과 매우 유사하지만, 몇 가지 특이한 `{%-` 구문을 사용한다는 점을 인식하게 됩니다. 템플릿은 메시지 목록을 반복하며, 각 메시지에 대해 메시지의 역할과 내용을 출력한 다음 시퀀스 종료 토큰을 출력합니다. `add_generation_prompt=True`인 경우, 대화의 끝에 어시스턴트 메시지의 시작 헤더를 추가합니다.\n\n작성된 템플릿을 문자열로 로드하여 크나이저의 `chat_template` 속성에 할당합니다. 설정이 완료되면 [`~PreTrainedTokenizerBase.apply_chat_template`]를 호출할 때마다 해당 템플릿이 사용됩니다. 또한 [`~PreTrainedTokenizer.save_pretrained`] 또는 [`~PreTrainedTokenizer.push_to_hub`]가 호출될 때 토크나이저와 함께 저장됩니다. 템플릿은 토크나이저 디렉터리의 `chat_template.jinja` 파일에 저장됩니다. 이 파일을 직접 편집하여 템플릿을 변경할 수 있으며, 이는 템플릿 문자열을 조작하는 것보다 일반적으로 더 쉽습니다. Transformers가 지원하는 다른 디스크 저장 형식에 대해서는 아래 [채팅 템플릿 저장 및 로드](#storing-and-loading-chat-templates)를 참조하십시오.",
+            "nvidia-nemotron-3.5-lightning": "채팅 템플릿 작성하기\n\n챗 템플릿은 토크나이저의 [`~PreTrainedTokenizer.chat_template`] 속성에 저장된 [Jinja](https://jinja.palletsprojects.com/en/stable/templates/) 템플릿입니다. Jinja는 Python-와 유사한 코드와 문법을 사용하여 작성할 수 있는 템플릿 언어입니다.\n\n이 코드를 잠시 살펴보면, 이것이 사실상 Python와 매우 비슷하다는 것을 깨닫게 될 것입니다. 다만 약간 이상한 `{%-` 구문만 다를 뿐입니다. 템플릿은 메시지 목록을 반복하며, 각 메시지에 대해 역할(role)과 내용(content)을 출력한 뒤 종료 토큰(end-of-sequence token)을 추가합니다. `add_generation_prompt=True`인 경우, 대화의 끝에 어시스턴트 메시지의 시작 헤더를 추가합니다.\n\n작성된 템플릿을 문자열로 로드하여 토크나이저의 `chat_template` 속성에 할당합니다. 설정한 후에는 [`~PreTrainedTokenizerBase.apply_chat_template`]을 호출할 때마다 템플릿이 사용됩니다. 또한 템플릿은 토크나이저와 함께 [`~PreTrainedTokenizer.save_pretrained`] 또는 [`~PreTrainedTokenizer.push_to_hub`]이 호출될 때마다 저장됩니다. 템플릿은 `chat_template.jinja` 파일에 토크나이저 디렉터리에 저장됩니다. 템플릿을 직접 이 파일을 편집하여 변경할 수 있는데, 이는 종종 템플릿 문자열을 조작하는 것보다 더 쉽습니다. [Storing and loading chat templates](#storing-and-loading-chat-templates) 아래를 참조하십시오. Transformers가 지원하는 다른 온디스크 형태가 있습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "채팅 템플릿 작성하기\n\n채팅 템플릿은 토크나이저의 [`~PreTrainedTokenizer.chat_template`] 속성에 저장된 [Jinja](https://jinja.palletsprojects.com/en/stable/templates/) 템플릿입니다. Jinja는 Python-유사한 코드와 구문을 작성할 수 있도록 허용하는 템플릿 언어입니다.\n\n이것을 조금 더 바라보면, 실제로 이 내용이 Python과 매우 유사하다는 것을 알 수 있습니다. 다만 몇 가지 이상한 `{%-` 구문이 있습니다. 템플릿은 메시지 목록을 반복하며, 각 메시지에 대해 메시지의 역할과 내용을 출력한 후 시퀀스 종료 토큰을 추가합니다. `add_generation_prompt=True`인 경우, 대화의 끝에 어시스턴트 메시지의 시작 헤더를 추가합니다.\n\n작성된 템플릿을 문자열로 로드하여 토크나이저의 `chat_template` 속성에 할당합니다. 설정 후에는 언제든지 [`~PreTrainedTokenizerBase.apply_chat_template`]를 호출할 때 해당 템플릿이 사용됩니다. 또한 [`~PreTrainedTokenizer.save_pretrained`] 또는 [`~PreTrainedTokenizer.push_to_hub`]가 호출될 때 토크나이저와 함께 템플릿이 저장됩니다. 템플릿은 토크나이저 디렉터리 내의 `chat_template.jinja` 파일에 저장됩니다. 템플릿을 수정하려면 이 파일을 직접 편집할 수 있으며, 템플릿 문자열을 조작하는 것보다 훨씬 간편합니다. 기타 디스크에 저장되는 형식에 대해서는 아래의 [채팅 템플릿 저장 및 로드](#storing-and-loading-chat-templates)를 참조하시기 바랍니다. Transformers가 지원하는 다른 디스크 기반 형식에 대해서도 확인할 수 있습니다.",
+            "tencent-hy-mt2-30b-a3b": "채팅 템플릿 작성하기\n\n채팅 템플릿은 토크나이저의 [`~PreTrainedTokenizer.chat_template`] 속성에 저장된 [Jinja](https://jinja.palletsprojects.com/en/stable/templates/) 템플릿입니다. Jinja는 Python과 유사한 코드 및 구문을 작성할 수 있게 해주는 템플릿 언어입니다.\n\n잠시 이 내용을 살펴보면, 이것이 사실상 Python과 매우 유사하다는 것을 알 수 있습니다. 다만 약간 특이한 `{%-` 문법이 사용되었습니다. 이 템플릿은 메시지 목록을 순회하며, 각 메시지에 대해 해당 메시지의 역할과 내용을 출력한 뒤 시퀀스 종료 토큰을 추가합니다. 만약 `add_generation_prompt=True`로 설정되어 있다면, 대화의 끝에 어시스턴트 메시지의 시작 헤더가 추가됩니다.\n\n작성된 템플릿을 문자열로 로드하여 토크나이저의 `chat_template` 속성에 할당합니다. 이렇게 설정되면 [`~PreTrainedTokenizerBase.apply_chat_template`]을 호출할 때마다 해당 템플릿이 사용됩니다. 또한 [`~PreTrainedTokenizer.save_pretrained`] 또는 [`~PreTrainedTokenizer.push_to_hub`]가 호출될 때마다 토크나이저와 함께 해당 템플릿이 저장됩니다. 템플릿은 토크나이저 디렉터리 내의 `chat_template.jinja` 파일에 저장됩니다. 템플릿을 변경하려면 이 파일을 직접 편집하는 것이 템플릿 문자열을 조작하는 것보다 더 쉬운 경우가 많습니다. [채팅 템플릿 저장 및 로드하기](#storing-and-loading-chat-templates)를 참조하여 Transformers에서 지원하는 다른 디스크 저장 형태에 대해 알아볼 수 있습니다.",
+            "google-gemma-4-26b-a4b-it": "채팅 템플릿 작성하기\n\n채팅 템플릿은 토크나이저의 [`~PreTrainedTokenizer.chat_template`] 속성에 저장된 [Jinja](https://jinja.palletsprojects.com/en/stable/templates/) 템플릿입니다. Jinja는 Python과 유사한 코드와 구문을 작성할 수 있게 해주는 템플릿 언어입니다.\n\n이것을 잠시 동안 응시하다 보면, 비록 약간의 이상한 `{%-` 구문이 있기는 하지만, 이것이 실제로는 Python과 매우 유사하다는 것을 깨닫게 될 것입니다. 이 템플릿은 메시지 리스트를 반복하며, 각 메시지에 대해 메시지의 역할과 내용을 출력한 뒤 시퀀스 종료 토큰을 출력합니다. 만약 `add_generation_prompt=True`라면, 대화 끝에 어시스턴트 메시지를 위한 시작 헤더를 추가합니다.\n\n작성된 템플릿을 문자열로 로드하여 토크나이저의 `chat_template` 속성에 할당합니다. 설정이 완료되면, [`~PreTrainedTokenizerBase.apply_chat_template`]을 호출할 때마다 해당 템플릿이 사용됩니다. 또한 [`~PreTrainedTokenizer.save_pretrained`] 또는 [`~PreTrainedTokenizer.push_to_hub`]가 호출될 때마다 토크나이저와 함께 저장됩니다. 템플릿은 토크나이저 디렉터리의 `chat_template.jinja` 파일에 저장됩니다. 템플릿 문자열을 조작하는 것보다 이 파일을 직접 편집하여 템플릿을 변경하는 것이 더 쉬운 경우가 많습니다. Transformers가 지원하는 다른 디스크 저장 형태에 대해서는 아래의 [Storing and loading chat templates](#storing-and-loading-chat-templates)를 참조하십시오."
+          }
+        },
+        "1": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3.8-27b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "nvidia-nemotron-3.5-lightning": "템플릿 작성 팁\n\njinja 템플릿을 작성하는 가장 쉬운 방법은 기존 템플릿을 참고하는 것입니다. `print(tokenizer.chat_template)`를 사용하여 어떤 채팅 모델이 사용하고 있는 템플릿을 확인해 보세요. 도구 사용 모델은 매우 복잡한 템플릿을 가질 수 있으므로, 도구를 호출하지 않거나 RAG를 지원하지 않는 간단한 모델부터 시작해 보세요. 마지막으로 [Jinja 문서](https://jinja.palletsprojects.com/en/stable/templates/#synopsis)를 살펴보아 서식과 문법에 대한 자세한 내용을 확인해 보세요.\n\n챗 템플릿을 작성하는 동안 특정 팁과 함정을 마주할 수 있으며, 이 섹션에서는 그중 일부를 더 자세하게 다룹니다.",
+            "tencent-hy-mt2-30b-a3b": "템플릿 작성 팁입니다.\n\nJinja 템플릿 작성을 시작하는 가장 쉬운 방법은 기존 템플릿을 참고하는 것입니다. 어떤 채팅 모델에서든 `print(tokenizer.chat_template)`를 사용하면 해당 모델이 사용하는 템플릿을 확인할 수 있습니다. 도구를 호출하거나 RAG를 지원하지 않는 간단한 모델부터 시작해 보시기 바랍니다. 왜냐하면 도구 사용 모델의 경우 매우 복잡한 템플릿을 가질 수 있기 때문입니다. 마지막으로, 서식 및 구문에 대한 보다 자세한 내용은 [Jinja 문서](https://jinja.palletsprojects.com/en/stable/templates/#synopsis)를 참조하시기 바랍니다.\n\n특히 채팅 템플릿을 작성할 때는 마주칠 수 있는 몇 가지 특정한 팁과 주의사항이 있으며, 이 섹션에서는 그중 일부를 보다 상세히 다룰 것입니다.",
+            "google-gemma-4-26b-a4b-it": "템플릿 작성 팁\n\nJinja 템플릿 작성을 시작하는 가장 쉬운 방법은 기존 템플릿을 참조하는 것입니다. 어떤 채팅 모델이든 `print(tokenizer.chat_template)`를 사용하여 해당 모델이 사용 중인 템플릿을 확인하십시오. 도구 사용(tool-use) 모델은 템플릿이 매우 복잡할 수 있으므로, 도구를 호출하거나 RAG를 지원하지 않는 간단한 모델부터 시작해 보시기 바랍니다. 마지막으로, 서식 및 구문에 대한 자세한 내용은 [Jinja documentation](https://jinja.palletsprojects.com/en/stable/templates/#synopsis)을 참조하십시오.\n\n다만 채팅 템플릿을 작성할 때 특별히 마주할 수 있는 몇 가지 구체적인 팁과 주의 사항이 있으며, 이 섹션에서는 그중 일부를 더 자세히 다룹니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "템플릿 작성 팁입니다.\n\nJinja 템플릿을 작성하기 가장 쉬운 방법은 기존 템플릿을 참조하는 것입니다. 어떤 채팅 모델에서도 `print(tokenizer.chat_template)`를 사용하여 사용 중인 템플릿을 확인할 수 있습니다. 도구를 호출하거나 RAG를 지원하지 않는 간단한 모델부터 시작해 보시기 바랍니다. 도구 사용 모델은 매우 복잡한 템플릿을 가질 수 있으므로 주의가 필요합니다. 더 자세한 포맷팅 및 문법 정보는 [Jinja 문서](https://jinja.palletsprojects.com/en/stable/templates/#synopsis)를 참조하시기 바랍니다.\n\n채팅 템플릿을 작성하는 과정에서 특정한 팁과 함정을 마주할 수 있으며, 본 섹션에서는 이러한 사항들을 더 자세히 다룹니다.",
+            "qwen-qwen3.8-27b": "템플릿 작성 팁\n\nJinja 템플릿 작성을 시작하는 가장 쉬운 방법은 기존 템플릿을 참고하는 것입니다. 어떤 채팅 모델이든 `print(tokenizer.chat_template)`을 사용하여 해당 모델이 사용하는 템플릿을 확인할 수 있습니다. 도구 호출을 하지 않거나 RAG를 지원하지 않는 간단한 모델부터 시작해 보십시오. 도구 사용 모델은 매우 복잡한 템플릿을 가질 수 있기 때문입니다. 마지막으로, 포맷팅 및 구문에 대한 자세한 내용은 [Jinja 문서](https://jinja.palletsprojects.com/en/stable/templates/#synopsis)를 참고하십시오.\n\n다만, 채팅 템플릿을 작성할 때 특별히 유의해야 할 팁과 함정이 있으며, 이 섹션에서는 그 중 일부를 보다 자세히 다루겠습니다."
+          }
+        },
+        "2": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "nvidia-nemotron-3.5-lightning": "멀티모달 채팅 템플릿 작성\n\n멀티모달 템플릿의 경우, `chat_template` 속성이 설정되었습니다. **프로세서**, 토크나이저가 아닙니다. The `content` 메시지의 키는 종종 단일 문자열이 아니라 콘텐츠 딕셔너리 목록인 경우가 많습니다. 각 콘텐츠 항목의 타입을 확인하고 그에 따라 처리하는 것이 좋습니다.\n\n일반적으로 템플릿은 이미지나 비디오 데이터에 직접 접근해서는 안 됩니다. 이는 템플릿 렌더링이 완료된 후 프로세서에 의해 정상적으로 처리됩니다. 대신 템플릿은 단일 특수 토큰을 방출해야 합니다. `<|image|>` 또는 `<|video|>` 이미지 또는 비디오 콘텐츠를 만나면 프로세서는 단일 특수 토큰을 이미지 또는 비디오 토큰 시퀀스로 확장합니다. 정확히 어떤 토큰을 방출할지는 사용 중인 모델에 따라 달라집니다. 데이터가 어떻게 처리되는지 확인하려면 기존 멀티모달 프로세서를 로드하는 것을 강력히 권장합니다.\n\n아래 예제 템플릿은 혼합된 이미지 및 텍스트 콘텐츠를 처리합니다.\n\n이 멀티모달 템플릿은 위에 있는 더 단순한 템플릿과 매우 유사하지만, `content` 목록을 확인하고 이를 반복하여 `<|image|>` 토큰을 필요한 위치에 렌더링합니다. 이를 통해 이미지를 사용자 텍스트 흐름 안으로 삽입할 수 있습니다.\n\n모든 모델이 이 방식으로 작동하는 것은 아닙니다. 예를 들어, 일부 모델은 모든 이미지를 사용자 메시지의 끝에 이동시킬 수 있습니다. 챗 템플릿은 항상 모델이 훈련된 형식과 일치해야 합니다.",
+            "tencent-hy-mt2-30b-a3b": "다중 모달 채팅 템플릿 작성하기\n\n멀티모달 템플릿의 경우, `chat_template` 속성은 토크나이저가 아닌 **프로세서**에 설정됩니다. 메시지의 `content` 키는 단순한 문자열이 아니라 보통 콘텐츠 딕셔너리들의 목록으로 구성됩니다. 목록 내 각 콘텐츠 항목의 타입을 확인하여 그에 맞게 처리하는 것이 좋습니다.\n\n일반적으로 템플릿은 이미지나 비디오 데이터에 직접 접근해서는 안 됩니다. 이러한 처리는 보통 템플릿 렌더링이 완료된 후에 프로세서가 담당합니다. 대신 템플릿에서는 이미지나 비디오 콘텐츠를 만날 때 `<|image|>` 또는 `<|video|>`와 같은 특수 토큰 하나만을 출력해야 합니다. 이후 프로세서는 이 특수 토큰을 이미지나 비디오 토큰들의 시퀀스로 확장합니다. 출력할 정확한 토큰은 사용 중인 모델에 따라 달라집니다. 데이터 처리 방식을 확인하기 위해 기존의 멀티모달 프로세서를 활용하는 것을 적극 권장합니다.\n\n아래의 예제 템플릿은 이미지와 텍스트가 혼합된 콘텐츠를 처리합니다.\n\n이 멀티모달 템플릿은 위에 설명된 보다 간단한 템플릿과 매우 유사하지만, `content` 목록을 확인하고 필요한 곳에 `<|image|>` 토큰을 렌더링하기 위해 이를 반복 처리합니다. 이를 통해 이미지를 사용자 텍스트의 흐름 속에 삽입할 수 있습니다.\n\n모든 모델이 이렇게 작동하는 것은 아닙니다. 예를 들어, 일부 모델은 모든 이미지를 사용자 메시지의 끝으로 옮길 수도 있습니다. 채팅 템플릿은 항상 모델이 학습된 형식과 일치해야 합니다.",
+            "google-gemma-4-26b-a4b-it": "멀티모달 채팅 템플릿 작성하기\n\n멀티모달 템플릿의 경우, `chat_template` 속성은 토크나이저가 아닌 **processor**에 설정됩니다. 메시지의 `content` 키는 단순히 단일 문자열이 아니라 콘텐츠 딕셔너리들의 리스트인 경우가 많습니다. 리스트 내 각 콘텐츠 항목의 타입을 확인하고 그에 따라 적절히 처리하는 것이 좋습니다.\n\n일반적으로 템플릿은 이미지 또는 비디오 데이터에 직접 접근해서는 안 됩니다. 이는 보통 템플릿 렌더링이 완료된 후 프로세서에 의해 처리됩니다. 대신, 템플릿은 이미지 또는 비디오 콘텐츠를 만났을 때 `<|image|>` 또는 `<|video|>`와 같은 단일 특수 토큰을 방출해야 합니다. 프로세서는 나중에 이 단일 특수 토큰을 이미지 또는 비디오 토큰의 시퀀스로 확장합니다. 방출할 정확한 토큰은 작업 중인 모델에 따라 달라집니다. 데이터 처리 방식을 확인하기 위해 기존의 멀티모달 프로세서를 로드하는 것을 강력히 권장합니다.\n\n아래의 예시 템플릿은 이미지와 텍스트가 혼합된 콘텐츠를 처리합니다.\n\n이 멀티모달 템플릿은 위의 더 단순한 템플릿과 매우 유사하지만, `content` 리스트를 확인하고 이를 반복하여 필요한 위치에 `<|image|>` 토큰을 렌더링합니다. 이를 통해 사용자 텍스트의 \"흐름 속으로\" 이미지를 삽입할 수 있습니다.\n\n모든 모델이 이와 같은 방식으로 작동하는 것은 아닙니다. 예를 들어, 어떤 모델은 모든 이미지를 사용자 메시지의 끝으로 이동할 수도 있습니다. 채팅 템플릿은 항상 모델이 학습된 형식과 일치해야 합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "다중 모달 채팅 템플릿 작성하기입니다.\n\n다중 모달 템플릿의 경우, `chat_template` 속성은 토크나이저가 아니라 **프로세서**에 설정됩니다. 메시지의 `content` 키는 단일 문자열이 아니라 일반적으로 콘텐츠 사전의 리스트입니다. 리스트 내 각 콘텐츠 항목의 타입을 확인하고, 적절히 처리하는 것이 좋습니다.\n\n일반적으로 템플릿은 이미지나 동영상 데이터에 직접 접근해서는 안 됩니다. 이는 보통 템플릿 렌더링이 완료된 후 프로세서에서 처리됩니다. 대신 이미지나 동영상 콘텐츠를 만나면 `<|image|>` 또는 `<|video|>`와 같은 특수 토큰 하나를 출력해야 합니다. 이후 프로세서는 이 특수 토큰을 이미지나 동영상 토큰의 시퀀스로 확장합니다. 출력할 정확한 토큰은 사용 중인 모델에 따라 다릅니다. 기존의 멀티모달 프로세서를 로드하여 데이터 처리 방식을 확인하는 것을 강력히 권장합니다.\n\n아래 예제 템플릿은 이미지와 텍스트의 혼합 콘텐츠를 처리합니다.\n\n이 다중 모달 템플릿은 위의 더 간단한 템플릿과 매우 유사하지만, `content` 목록을 확인하고 필요에 따라 `<|image|>` 토큰을 렌더링하기 위해 이를 반복 처리합니다. 이를 통해 이미지를 사용자 텍스트의 흐름 속에 삽입할 수 있습니다.\n\n모든 모델이 이 방식으로 작동하는 것은 아닙니다. 예를 들어 일부 모델은 모든 이미지를 사용자 메시지의 끝으로 이동할 수 있습니다. 채팅 템플릿은 항상 모델이 훈련된 형식과 일치해야 합니다.",
+            "qwen-qwen3.8-27b": "멀티모달 채팅 템플릿 작성\n\n멀티모달 템플릿의 경우, `chat_template` 속성은 토크나이저가 아닌 **프로세서**에 설정됩니다. 메시지의 `content` 키는 단일 문자열이 아니라 콘텐츠 딕셔너리의 목록인 경우가 많습니다. 목록의 각 콘텐츠 항목의 유형을 확인하고 그에 따라 처리하는 것이 좋습니다.\n\n일반적으로 템플릿은 이미지 또는 비디오 데이터에 직접 접근하지 않아야 합니다. 이는 일반적으로 템플렌트 렌더링이 완료된 후 프로세서에서 처리됩니다. 대신, 템플릿은 이미지 또는 비디오 콘텐츠를 만나면 `<|image|>` 또는 `<|video|>`와 같은 단일 특수 토큰을 출력해야 합니다. 프로세서는 나중에 이 단일 특수 토큰을 이미지 또는 비디오 토큰의 시퀀스로 확장합니다. 출력할 정확한 토큰은 작업 중인 모델에 따라 달라집니다. 기존 멀티모달 프로세서를 로드하여 데이터를 어떻게 처리하는지 확인하는 것을 강력히 권장합니다.\n\n아래 예제 템플릿은 이미지와 텍스트가 혼합된 콘텐츠를 처리합니다.\n\n이 멀티모달 템플릿은 위의 보다 단순한 템플릿과 매우 유사하지만, `content` 목록을 확인하고, 필요한 위치에 `<|image|>` 토큰을 렌더링하도록 반복 처리합니다. 이를 통해 이미지를 사용자 텍스트의 \"흐름\" 안에 삽입할 수 있습니다.\n\n모든 모델이 이러한 방식으로 작동하지는 않습니다. 예를 들어, 일부 모델은 모든 이미지를 사용자 메시지의 끝으로 이동시킬 수 있습니다. 채팅 템플릿은 항상 해당 모델이 학습된 형식과 일치해야 합니다."
+          }
+        },
+        "4": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "nvidia-nemotron-3.5-lightning": "특수 변수 및 콜러블s\n\n템플릿의 유일한 상수는 `messages` 변수와 `add_generation_prompt` 불리언입니다. 그러나 [`~PreTrainedTokenizerBase.apply_chat_template`] 메서드에 전달된 **any other keyword arguments**에 액세스할 수 있습니다.\n\n이 기능은 유연성을 제공하며, 스펙을 설계할 때 고려하지 못했던 사용 사례를 지원합니다. 가장 일반적인 추가 변수는 `tools`이며, 이는 JSON 스키마 형식의 도구 목록을 포함합니다. 변수 이름은 원하는 대로 사용할 수 있지만, 관례에 따라 `tools`를 이 목적에 사용하는 것이 좋습니다. 이는 템플릿을 표준 API와 더 호환되게 만듭니다.\n\n또한 `tokenizer.special_tokens_map`에 포함된 모든 토큰에 액세스할 수 있습니다. 여기에는 `bos_token`과 `eos_token`와 같은 특수 토큰이 자주 포함됩니다. `{{- bos_token }}`과 같이 직접 이름으로 액세스할 수 있습니다.\n\n사용 가능한 호출 가능한 함수가 두 개 있습니다. 이를 호출하려면 `{{- function_name(argument) }}`.\n\n`raise_exception(msg)`는 `TemplateException`을 발생시킵니다. 이는 디버깅이나 템플릿 사용법에 대한 경고에 유용합니다.\n\n`strftime_now(format_str)`는 시스템 메시지에서 자주 필요한 현재 날짜와 시간을 특정 형식으로 반환합니다. Python에서 [datetime.now().strftime(format_str)](https://docs.python.org/3/library/datetime.html#datetime.datetime.now)와 동등합니다.",
+            "tencent-hy-mt2-30b-a3b": "특수 변수 및 호출 가능한 객체입니다.\n\n템플릿 내에서 유일한 상수는 `messages` 변수와 `add_generation_prompt` 불리언 값입니다. 하지만 [`~PreTrainedTokenizerBase.apply_chat_template`] 메서드에 전달되는 **다른 모든 키워드 인수들에도 접근할 수 있습니다.**\n\n이를 통해 유연성을 확보할 수 있으며, 사양을 설계할 때 미처 생각하지 못했던 사용 사례도 지원할 수 있습니다. 가장 일반적으로 사용되는 추가 변수는 `tools`이며, 이는 JSON 스키마 형식으로 된 도구 목록을 포함합니다. 원하는 변수명을 사용할 수 있지만, 관례를 따르고 이 용도로는 `tools`를 사용할 것을 적극 권장합니다. 이렇게 하면 템플릿이 표준 API와 더 잘 호환됩니다.\n\n또한 `tokenizer.special_tokens_map`에 포함된 모든 토큰에도 접근할 수 있으며, 여기에는 보통 `bos_token` 및 `eos_token`와 같은 특수 토큰들이 포함됩니다. 이러한 토큰들은 이름을 통해 직접 접근할 수 있으며, 예로는 `{{- bos_token }}`와 같이 사용됩니다.\n\n사용하실 수 있는 호출 가능한 함수는 두 가지가 있습니다. 이 함수들을 호출하려면 `{{- function_name(argument) }}`를 사용하시면 됩니다.\n\n`raise_exception(msg)`는 `TemplateException`을 발생시킵니다. 이는 디버깅이나 잘못된 템플릿 사용에 대해 사용자에게 경고하는 데 유용합니다.\n\n`strftime_now(format_str)`는 시스템 메시지에서 자주 필요로 하는 특정 형식의 현재 날짜와 시간을 반환합니다. 이는 Python에서 [datetime.now().strftime(format_str)](https://docs.python.org/3/library/datetime.html#datetime.datetime.now)과 동일한 기능을 합니다.",
+            "google-gemma-4-26b-a4b-it": "특수 변수 및 호출 가능한 객체\n\n템플릿에서 유일하게 변하지 않는 것은 `messages` 변수와 `add_generation_prompt` 불리언 값입니다. 하지만 [`~PreTrainedTokenizerBase.apply_chat_template`] 메서드에 **전달되는 다른 모든 키워드 인자**를 사용할 수 있습니다.\n\n이는 유연성을 제공하며 사양을 설계할 때 미처 생각하지 못했을 수도 있는 사용 사례에 대한 지원을 가능하게 합니다. 가장 일반적인 추가 변수는 `tools`이며, 여기에는 JSON 스키마 형식의 도구 목록이 포함됩니다. 원하는 어떤 변수 이름을 사용할 수도 있지만, 관례를 따라 이 용도로 `tools`를 사용하는 것을 강력히 권장합니다. 이렇게 하면 템플릿이 표준 API와 더 높은 호환성을 갖게 됩니다.\n\n또한 `tokenizer.special_tokens_map`에 포함된 모든 토큰에 접근할 수 있으며, 여기에는 종종 `bos_token` 및 `eos_token`와 같은 특수 토큰이 포함됩니다. `{{- bos_token }}`와 같이 이름을 통해 이들에 직접 접근하십시오.\n\n사용할 수 있는 두 개의 호출 가능한 함수가 있습니다. 이 함수들을 호출하려면 `{{- function_name(argument) }}`를 사용하십시오.\n\n`raise_exception(msg)`는 `TemplateException`을(를) 발생시킵니다. 이는 디버깅을 하거나 사용자에게 잘못된 템플릿 사용에 대해 경고를 주는 데 유용합니다.\n\n`strftime_now(format_str)`는 시스템 메시지에서 자주 요구되는 특정 형식의 현재 날짜와 시간을 가져옵니다. 이는 Python의 [datetime.now().strftime(format_str)](https://docs.python.org/3/library/datetime.html#datetime.datetime.now)과 동일합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "특수 변수 및 호출 가능 객체입니다.\n\n템플릿에서 유일한 상수는 `messages` 변수와 `add_generation_prompt` 부울 값입니다. 그러나 [`~PreTrainedTokenizerBase.apply_chat_template`] 메서드에 전달되는 **모든 기타 키워드 인수**에 접근할 수 있습니다.\n\n이러한 방식은 사양을 설계할 때 고려하지 못한 사용 사례에 대한 지원을 가능하게 하여 유연성을 제공합니다. 가장 흔한 추가 변수는 `tools`이며, 이는 JSON 스키마 형식으로 구성된 도구 목록을 포함합니다. 변수 이름은 원하는 대로 사용할 수 있지만, 관례를 따르고 이 목적에 `tools`를 사용하는 것을 강력히 권장합니다. 이를 통해 템플릿이 표준 API와 더 잘 호환되게 됩니다.\n\n또한 `tokenizer.special_tokens_map`에 포함된 토큰에 접근할 수 있습니다. 이는 종종 `bos_token` 및 `eos_token`와 같은 특수 토큰을 포함합니다. 이름을 직접 사용하여 접근할 수 있으며, 예를 들어 `{{- bos_token }}`와 같이 사용합니다.\n\n사용할 수 있는 호출 가능한 함수가 두 개 있습니다. 이를 호출하려면 `{{- function_name(argument) }}`를 사용합니다.\n\n`raise_exception(msg)`는 `TemplateException`를 발생시킵니다. 이는 잘못된 템플릿 사용에 대해 디버깅하거나 사용자에게 경고하는 데 유용합니다.\n\n`strftime_now(format_str)`는 시스템 메시지에서 자주 요구되는 특정 형식의 현재 날짜와 시간을 가져옵니다. 이는 [datetime.now().strftime(format_str)](https://docs.python.org/3/library/datetime.html#datetime.datetime.now)과 동일하며, Python에서 사용됩니다.",
+            "qwen-qwen3.8-27b": "특별 변수와 콜러블\n\n템플릿에서 유일한 상수는 `messages` 변수와 `add_generation_prompt` 불리언 값입니다. 그러나 **전달되는 모든 다른 키워드 인자**에 [`~PreTrainedTokenizerBase.apply_chat_template`] 메서드를 통해 접근할 수 있습니다.\n\n이것은 유연성을 제공하며, 사양을 설계할 당시에는 예상하지 못했을 사용 사례에 대한 지원을 가능하게 합니다. 가장 일반적인 추가 변수는 `tools`이며, JSON 스키마 형식의 도구 목록을 포함합니다. 원하는 변수 이름을 사용할 수 있지만, 이 용도로 `tools`를 사용하는 것이 관례를 따르는 것이므로 강력히 권장합니다. 이렇게 하면 템플릿이 표준 API와 더 호환성이 높아집니다.\n\n`tokenizer.special_tokens_map`에 포함된 모든 토큰에도 접근할 수 있으며, 여기에는 `bos_token`과 `eos_token`와 같은 특수 토큰이 자주 포함됩니다. 이러한 토큰은 `{{- bos_token }}`과 같이 이름으로 직접 접근할 수 있습니다.\n\n사용할 수 있는 콜러블 함수가 두 개 있습니다. 호출하려면 `{{- function_name(argument) }}`을(를) 사용합니다.\n\n`raise_exception(msg)`은 `TemplateException`을 발생시킵니다. 이는 디버깅이나 잘못된 템플릿 사용에 대해 사용자에게 경고하는 데 유용합니다.\n\n`strftime_now(format_str)`은 특정 형식으로 현재 날짜와 시간을 가져오며, 이는 시스템 메시지에서 자주 필요합니다. 이는 Python의 [datetime.now().strftime(format_str)](https://docs.python.org/3/library/datetime.html#datetime.datetime.now)와 동일합니다."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:55:38.130Z",
+      "blind": true
+    }
+  ]
+}
