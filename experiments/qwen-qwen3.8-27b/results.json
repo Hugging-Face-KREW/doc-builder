@@ -135,7 +135,15 @@
     "translation_requests_including_failed_attempts": null,
     "translation_cost_usd_including_failed_attempts": null,
     "openrouter_key_spend_usd_total": 0.422470145,
-    "note": "The adapter did not record per-request counts, tokens, or durations. The key spend total also includes an aborted reasoning-on run (about $0.28) and diagnostic probe calls, so it overstates the cost of these outputs. 326 initial prose units; the reasoning-off generation took about six minutes across reruns."
+    "note": "The adapter did not record per-request counts, or tokens. The key spend total also includes an aborted reasoning-on run (about $0.28) and diagnostic probe calls, so it overstates the cost of these outputs. 326 initial prose units.",
+    "elapsed_seconds": {
+      "run_1_reasoning_off": 88,
+      "run_2_reasoning_off": null,
+      "run_3_reasoning_off": 24,
+      "total_reasoning_off_estimate": "about 2-2.5 minutes (run 2 was not timed)",
+      "aborted_reasoning_on_run": 1825,
+      "source": "Log file timestamps; run 3 from runs.tsv. Run 1 translated all 326 units with retries; runs 2-3 retranslated only tokenizer_summary.md."
+    }
   },
   "validation": {
     "pages": 5,
