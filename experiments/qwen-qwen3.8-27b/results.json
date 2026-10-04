@@ -1,0 +1,147 @@
+{
+  "model": "qwen/qwen3.8-27b",
+  "provider": "openrouter",
+  "language": "ko",
+  "source_repository": "huggingface/transformers",
+  "source_revision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+  "pipeline_code_revision": "1167ecd",
+  "pipeline_code_branch": "translation-korean-qwen3.8-27b",
+  "settings": {
+    "context_window": 65536,
+    "max_tokens": 16384,
+    "retry_max_tokens": 32768,
+    "temperature": 0,
+    "reasoning": "off",
+    "concurrency": 8
+  },
+  "documents": [
+    {
+      "source_document": "pipeline_tutorial.md",
+      "output_file": "ko/pipeline_tutorial.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/pipeline_tutorial.md",
+      "sha256": "c7d8b703d9c7614d7ec68a07a33593119205b1151320bd2193be4238d41cfb6a",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 65536,
+        "output": 16384,
+        "group": 64,
+        "language": "ko",
+        "model": "qwen/qwen3.8-27b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "reasoning": "off"
+      }
+    },
+    {
+      "source_document": "tokenizer_summary.md",
+      "output_file": "ko/tokenizer_summary.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/tokenizer_summary.md",
+      "sha256": "4ce8ecc718fabdea2a835fc21b16a63c66c626c69900e55a426bab9330afb839",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 65536,
+        "output": 16384,
+        "group": 64,
+        "language": "ko",
+        "model": "qwen/qwen3.8-27b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "reasoning": "off"
+      }
+    },
+    {
+      "source_document": "training.md",
+      "output_file": "ko/training.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/training.md",
+      "sha256": "44e409fef70e53fbe3b70c7cf5b49e00d7777d190d71d8b57128fc6b38addf5a",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 65536,
+        "output": 16384,
+        "group": 64,
+        "language": "ko",
+        "model": "qwen/qwen3.8-27b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "reasoning": "off"
+      }
+    },
+    {
+      "source_document": "quantization/selecting.md",
+      "output_file": "ko/quantization/selecting.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/quantization/selecting.md",
+      "sha256": "9328b313f77c7691019010c9f4a0779b96e3d78bce5b0b5e62a398da7b91799b",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 65536,
+        "output": 16384,
+        "group": 64,
+        "language": "ko",
+        "model": "qwen/qwen3.8-27b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "reasoning": "off"
+      }
+    },
+    {
+      "source_document": "chat_templating_writing.md",
+      "output_file": "ko/chat_templating_writing.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/chat_templating_writing.md",
+      "sha256": "22c538792de48b2429ce175f6669c97ac2d495ad7e414033e1c08d5fd9b9ac0d",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 65536,
+        "output": 16384,
+        "group": 64,
+        "language": "ko",
+        "model": "qwen/qwen3.8-27b",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter",
+        "reasoning": "off"
+      }
+    }
+  ],
+  "sidebar": {
+    "output_file": "ko/_toctree.yml",
+    "sha256": "9e2e41c7cd23a82962c679a411314b65ed89210535bbe3d18b3c9559950f3e44"
+  },
+  "aggregate": {
+    "completed_documents": 5,
+    "translation_requests_including_failed_attempts": null,
+    "translation_cost_usd_including_failed_attempts": null,
+    "openrouter_key_spend_usd_total": 0.422470145,
+    "note": "The adapter did not record per-request counts, tokens, or durations. The key spend total also includes an aborted reasoning-on run (about $0.28) and diagnostic probe calls, so it overstates the cost of these outputs. 326 initial prose units; the reasoning-off generation took about six minutes across reruns."
+  },
+  "validation": {
+    "pages": 5,
+    "fenced_code_blocks_preserved": 48,
+    "document_validation": "passed",
+    "sidebar_validation": "passed"
+  },
+  "note": "Unedited machine-translation drafts. Generated with reasoning disabled (OpenRouter reasoning.enabled=false), 8 concurrent requests, and numeric ranges normalized from tilde to hyphen after generation. Not regenerated with the shared-branch adapter at 026ac0a."
+}
