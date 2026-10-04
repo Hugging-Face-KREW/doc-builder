@@ -113,6 +113,13 @@ def translate_command_parser(subparsers=None):
     parser.add_argument("--output-dir", type=Path, help="Local OpenRouter translation and cache directory")
     parser.add_argument("--context-window", type=int, default=16384, help="OpenRouter context budget in tokens")
     parser.add_argument("--max-tokens", type=int, default=4096, help="OpenRouter output budget per unit")
+    parser.add_argument(
+        "--reasoning",
+        choices=["default", "off"],
+        default=os.environ.get("OPENROUTER_REASONING", "default"),
+        help="Disable OpenRouter reasoning tokens for thinking models",
+    )
+    parser.add_argument("--concurrency", type=int, default=1, help="Parallel OpenRouter requests per group")
     parser.add_argument("--source", type=Path, help="Read an existing clean repository checkout")
     parser.add_argument("--bucket", help="Store results in hf://buckets/<owner>/<name>")
     parser.add_argument("--model-revision", help="Pin the model and tokenizer commit SHA")

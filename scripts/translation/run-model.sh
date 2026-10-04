@@ -11,6 +11,8 @@
 #   TRANSFORMERS_SOURCE  default: ../transformers (clean checkout)
 #   CONTEXT_WINDOW       default: 65536
 #   MAX_TOKENS           default: 16384 (reasoning tokens count toward this)
+#   REASONING            default | off (default: off; thinking is slow and costly for translation)
+#   CONCURRENCY          parallel requests (default: 8)
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
@@ -37,9 +39,12 @@ MODEL="${OPENROUTER_MODEL:-qwen/qwen3.8-27b}"
 SOURCE="${TRANSFORMERS_SOURCE:-$ROOT/../transformers}"
 CONTEXT_WINDOW="${CONTEXT_WINDOW:-65536}"
 MAX_TOKENS="${MAX_TOKENS:-16384}"
+REASONING="${REASONING:-off}"
+CONCURRENCY="${CONCURRENCY:-8}"
 PAGES="scripts/translation/ko-poc-pages.txt"
 SLUG="$(echo "$MODEL" | tr '/:' '__')"
 OUTPUT="translation-results/$SLUG"
+[[ $REASONING == off ]] && OUTPUT="$OUTPUT-no-reasoning"
 
 SOURCE="$(cd "$SOURCE" && pwd)"
 SHA="$(git -C "$SOURCE" rev-parse HEAD)"
@@ -70,15 +75,16 @@ if [[ -z "${OPENROUTER_API_KEY:-}" ]]; then
   export OPENROUTER_API_KEY
 fi
 
-echo "Model: $MODEL | source: $SHA | output: $OUTPUT"
+echo "Model: $MODEL | reasoning: $REASONING | concurrency: $CONCURRENCY | source: $SHA | output: $OUTPUT"
 STARTED="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 doc-builder translate transformers --provider openrouter --lang ko --model "$MODEL" \
   --source "$SOURCE" --source-revision "$SHA" --pages-file "$PAGES" \
   --context-window "$CONTEXT_WINDOW" --max-tokens "$MAX_TOKENS" \
+  --reasoning "$REASONING" --concurrency "$CONCURRENCY" \
   --output-dir "$OUTPUT"
 
-printf '%s\t%s\tmodel=%s\tsource=%s\tcontext=%s\tmax_tokens=%s\n' \
-  "$STARTED" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$MODEL" "$SHA" "$CONTEXT_WINDOW" "$MAX_TOKENS" \
+printf '%s\t%s\tmodel=%s\tsource=%s\tcontext=%s\tmax_tokens=%s\treasoning=%s\n' \
+  "$STARTED" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$MODEL" "$SHA" "$CONTEXT_WINDOW" "$MAX_TOKENS" "$REASONING" \
   >> "$OUTPUT/runs.tsv"
 
 git add "$OUTPUT"

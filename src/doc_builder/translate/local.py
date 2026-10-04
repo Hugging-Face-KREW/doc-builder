@@ -56,6 +56,9 @@ def run(files, args, generate_fn=None):
         context=args.context_window,
         output=args.max_tokens,
     )
+    if getattr(args, "reasoning", "default") != "default":
+        # Only non-default settings enter the cache key, so existing caches stay valid.
+        config["reasoning"] = args.reasoning
     if config["output"] <= 0 or config["context"] <= config["output"] * 2 + 256:
         raise ValueError("Context window must exceed twice --max-tokens plus 256")
     state_path = destination(root, ".translation-state.json")
@@ -80,7 +83,7 @@ def run(files, args, generate_fn=None):
             def generate_fn(units, cfg, retry=False):
                 nonlocal generator
                 if generator is None:
-                    generator = OpenRouterGenerator()
+                    generator = OpenRouterGenerator(concurrency=getattr(args, "concurrency", 1))
                 return generator(units, cfg, retry=retry)
 
         translated, candidate, failures = pipeline.translate(files, config, cache, generate_fn)

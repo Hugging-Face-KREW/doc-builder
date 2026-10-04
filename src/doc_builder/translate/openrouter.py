@@ -4,6 +4,7 @@
 import os
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 import httpx
 
@@ -14,13 +15,14 @@ ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 
 
 class OpenRouterGenerator:
-    def __init__(self, api_key=None, client=None, timeout=120, retries=2, sleep=time.sleep):
+    def __init__(self, api_key=None, client=None, timeout=120, retries=2, sleep=time.sleep, concurrency=1):
         self.api_key = api_key or os.environ.get("OPENROUTER_API_KEY")
         if not self.api_key:
             raise ValueError("Set OPENROUTER_API_KEY before generating translations")
         self.client = client or httpx.Client(timeout=timeout)
         self.owns_client = client is None
         self.retries, self.sleep = retries, sleep
+        self.concurrency = max(1, concurrency)
 
     def close(self):
         if self.owns_client:
@@ -41,6 +43,7 @@ class OpenRouterGenerator:
                         "temperature": 0,
                         "max_tokens": budget,
                         "stream": False,
+                        **({"reasoning": {"enabled": False}} if config.get("reasoning") == "off" else {}),
                     },
                 )
             except httpx.TransportError:
@@ -79,8 +82,7 @@ class OpenRouterGenerator:
             source = PLACEHOLDER_RE.sub(lambda m, tags=tags: tags[int(m[1])], unit["text"])
             return source.encode() + pipeline.prompt(unit, config, retry).encode()
 
-        results = []
-        for unit in units:
+        def translate_unit(unit):
             chunks = pipeline.split_unit(unit, estimate, config["context"] - budget - 256, retry=retry)
             parts = []
             for chunk in chunks:
@@ -106,6 +108,8 @@ class OpenRouterGenerator:
                 text = re.sub(
                     r"<\s*(/?)\s*((?:link|image|em|strong|del|span|keep|ph)\d+)\s*(/?)\s*>", r"<\1\2\3>", text
                 )
+                # Korean ranges like "10~20%" would read as GFM strikethrough; use a hyphen instead.
+                text = re.sub(r"(?<=\d)\s*~\s*(?=\d)", "-", text)
                 for i, tag in enumerate(tags):
                     text = (
                         re.sub(rf"<keep{i}>(?:(?!</?keep\d+\b)[\s\S])*?</keep{i}>", f"¤{i}¤", text)
@@ -113,5 +117,9 @@ class OpenRouterGenerator:
                         else text.replace(tag, f"¤{i}¤")
                     )
                 parts.append(re.match(r"\s*", chunk["text"])[0] + text.strip() + re.search(r"\s*$", chunk["text"])[0])
-            results.append(None if None in parts else "".join(parts))
-        return results
+            return None if None in parts else "".join(parts)
+
+        if self.concurrency == 1:
+            return [translate_unit(unit) for unit in units]
+        with ThreadPoolExecutor(self.concurrency) as pool:
+            return list(pool.map(translate_unit, units))
