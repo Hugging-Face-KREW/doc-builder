@@ -48,6 +48,8 @@ def run(files, args, generate_fn=None):
     config = pipeline.configuration(args.lang, pipeline.MODEL_REVISION)
     config.update(
         provider="openrouter",
+        adapter_version=4,
+        validation_attempts=3,
         model=args.model,
         model_revision="openrouter",
         tokenizer_revision="none",

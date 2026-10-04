@@ -175,7 +175,7 @@ def prompt(unit, config, retry=False):
         " Translate every phrase; do not summarize or omit prose. Do not introduce Markdown or XML."
     )
     if config["language"] == "ko":
-        text += " Use natural Korean technical documentation style with polite declarative endings (합니다/입니다)."
+        text += " Use natural Korean technical documentation style with polite declarative endings (합니다/입니다). Write numeric ranges with a hyphen (10-20%), never a tilde."
     if unit.get("kind") == "fragment":
         text += " The source may be an incomplete phrase. Translate only what is present; do not complete it."
     if "¤" in unit["text"]:
@@ -428,10 +428,11 @@ def translate(files, config, cache, generate_fn=generate):
     errors = {}
     unit_errors = {}
     answers = {}
-    for attempt in range(2):
+    attempts = config.get("validation_attempts", 2)
+    for attempt in range(attempts):
         if not pending:
             break
-        print(f"Translating {len(pending)} documents (attempt {attempt + 1}/2)", flush=True)
+        print(f"Translating {len(pending)} documents (attempt {attempt + 1}/{attempts})", flush=True)
         requests = [
             (name, pi, ui, {**unit, **unit_errors.get((name, pi, ui), {})})
             for name, plans in pending.items()

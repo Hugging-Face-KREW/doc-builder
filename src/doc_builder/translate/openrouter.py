@@ -41,6 +41,8 @@ class OpenRouterGenerator:
                         "temperature": 0,
                         "max_tokens": budget,
                         "stream": False,
+                        # Tencent HY-MT2 may otherwise return stop with an empty content.
+                        "reasoning": {"exclude": False},
                     },
                 )
             except httpx.TransportError:
@@ -63,6 +65,29 @@ class OpenRouterGenerator:
                 data = response.json()
                 choice = data["choices"][0]
                 content = choice["message"]["content"]
+                if (
+                    config["model"] == "tencent/hy-mt2-30b-a3b"
+                    and choice.get("finish_reason") == "stop"
+                    and not content
+                    and attempt < self.retries
+                ):
+                    # HY-MT2 can complete with all output classified as hidden reasoning.
+                    # Retry with a concise, contextual translation instruction, accepting
+                    # only message.content and the usual syntax validation afterward.
+                    source = messages[-1]["content"]
+                    language = pipeline.LANGUAGES[config["language"]]
+                    instruction = (
+                        f"This is text from technical documentation, possibly a short comparison-table cell. "
+                        f"Translate the English text into {language}. Return only the translated text, "
+                        "without reasoning or commentary. Preserve every XML tag exactly once and "
+                        "leave keep-tag contents unchanged. Do not add markup or placeholder characters. "
+                        "Use hyphens for numeric ranges. Keep incomplete phrases incomplete."
+                    )
+                    terms = pipeline.pins(source, config)
+                    if terms:
+                        instruction += " Preferred terminology when appropriate: " + str(terms)
+                    messages = [{"role": "system", "content": instruction}, {"role": "user", "content": source}]
+                    continue
                 if choice.get("finish_reason") != "stop" or not isinstance(content, str) or not content.strip():
                     raise ValueError("Incomplete completion")
             except (KeyError, IndexError, TypeError, ValueError):

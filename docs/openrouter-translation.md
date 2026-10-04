@@ -88,6 +88,22 @@ Use the selection in both the dry run and generation commands above:
 --pages-file scripts/translation/ko-poc-pages.txt
 ```
 
+For the tested model `tencent/hy-mt2-30b-a3b`, use:
+
+```bash
+--model tencent/hy-mt2-30b-a3b --context-window 8192 --max-tokens 2048
+```
+
+The model's reported context limit is 8192 and output limit is 4096; the adapter
+doubles the output budget on validation retries. The adapter explicitly requests
+`reasoning.exclude: false`, which resolved empty `content` responses observed with
+this model in the PoC. It still accepts only a complete `message.content` response,
+never reasoning text as a translation. If HY-MT2 still returns an empty completed
+response, a bounded retry uses a concise instruction with technical-document/table
+context, while retaining the exact source text and normal syntax validation.
+Korean numeric ranges use hyphens because
+tildes can be interpreted as document markup by the preservation checks.
+
 Use `--output-dir ./translation-output/ko-five-pages` for this set. It also generates
 an appropriately pruned Korean sidebar. Review terminology, omissions, code and
 link preservation, and Markdown rendering on all five pages. Record the exact source
@@ -108,8 +124,9 @@ choose a new output directory when you need to force fresh translations after a
 provider/model update.
 
 Code, URLs, API references, inline formatting, anchors and document structure are
-protected by the upstream parser and validators. Invalid units get one validation
-retry using smaller fragments. HTTP 429 and 5xx responses and connection failures
+protected by the upstream parser and validators. Invalid units are retried using smaller fragments. OpenRouter allows up to three
+validation passes, so a structural error discovered after repairing missing units
+can get a final targeted repair. HF generation retains two validation passes. HTTP 429 and 5xx responses and connection failures
 get bounded retries. Empty, malformed and truncated completions are rejected.
 If any required page fails, the command exits unsuccessfully, saves completed pages
 in the cache for resumption, and leaves the previously published documents alone.

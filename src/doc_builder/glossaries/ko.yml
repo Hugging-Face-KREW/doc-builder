@@ -1,4 +1,5 @@
 # Korean PoC terminology; review before publishing.
+# Accelerate is a contextual pin so the English verb accelerate remains translatable.
 pin:
   Hub: Hub
   API: API
@@ -24,6 +25,7 @@ pin:
   quantization: 양자화
   distillation: 증류
   learning rate: 학습률
+  Accelerate: Accelerate
 keep:
 - Hub kernels
 - huggingface
@@ -73,7 +75,6 @@ keep:
 - torchao
 - Torch compile
 - Hugging Face
-- Accelerate
 - Transformers
 - Inference Endpoints
 - Trainer
