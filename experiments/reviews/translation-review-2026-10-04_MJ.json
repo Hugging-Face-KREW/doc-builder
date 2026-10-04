@@ -1,0 +1,344 @@
+{
+  "format": "translation-review-five-v1",
+  "reviewer": "MJ",
+  "exportedAt": "2026-10-04T07:50:43.873Z",
+  "reviews": [
+    {
+      "document": "training.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/training.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:28:58.059Z"
+      },
+      "candidates": [
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "89831541c04b7b30b3e01151ee09488738b3082e14156034974b6943b3bd012a",
+          "validationStatus": "accepted_by_existing_pipeline"
+        },
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "1cd3a7f905d0d6e5bdc5e5f12180b756dbac02a0ad46a2def307d381b934f753",
+          "validationStatus": "success"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "c9957ddcfe4960110a95e4c2653f0c92ca9792c1c2720f0e818cd3eb66d41bd5",
+          "validationStatus": "success"
+        },
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "a22757db83b2294a6b79744f637e40eb510eeed19841af676154ea8c72154fd0",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "44e409fef70e53fbe3b70c7cf5b49e00d7777d190d71d8b57128fc6b38addf5a",
+          "validationStatus": "success"
+        }
+      ],
+      "overall": [],
+      "overallNeedsRevision": true,
+      "note": "",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3-30b-a3b-instruct-2507": "미세 조정합니다.\n\n미세 조정은 특정 작업이나 도메인에 맞는 작은 데이터셋을 사용하여 대규모 사전 학습된 모델을 추가로 학습하는 과정입니다. 예를 들어, 코드 예제 데이터셋으로 미세 조정하면 모델의 코드 작성 능력이 향상됩니다. 미세 조정은 사전 학습과 동일한 방식이지만, 무작위 가중치에서 시작하지 않습니다. 또한 계산 자원, 데이터, 시간이 훨씬 적게 필요합니다.\n\n아래의 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델의 미세 조정을 안내합니다.\n\n사용자 토큰을 사용하여 Hugging Face 계정에 로그인하여 최적화된 모델을 Hub에 푸시합니다.",
+            "google-gemma-4-26b-a4b-it": "미세 조정\n\n미세 조정은 특정 작업이나 도메인에 특화된 더 작은 데이터셋을 사용하여 대규모 사전 학습된 모델의 학습을 계속하는 것입니다. 예를 들어, 코딩 예시 데이터셋으로 미세 조정을 수행하면 모델이 코딩 능력을 향상시키는 데 도움이 됩니다. 미세 조정은 무작위 가중치에서 시작하지 않는다는 점을 제외하면 사전 학습과 동일합니다. 또한 미세 조정은 훨씬 적은 연산량, 데이터 및 시간이 필요합니다.\n\n아래 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 과정을 안내합니다.\n\n미세 조정된 모델을 Hub에 푸시하려면 사용자 토큰을 사용하여 Hugging Face 계정에 로그인하십시오.",
+            "nvidia-nemotron-3.5-lightning": "미세 조정\n\n미세 조정은 특정 작업이나 도메인에 특화된 작은 데이터셋으로 대규모 사전 학습 모델의 추가 학습을 진행하는 과정입니다. 예를 들어, 코딩 예시 데이터셋으로 미세 조정하면 모델의 코딩 능력이 향상됩니다. 미세 조정은 사전 학습과 동일하지만, 랜덤 가중치로 시작하지 않는다는 점이 다릅니다. 또한 훨씬 적은 연산, 데이터, 시간을 필요로 합니다.\n\n아래 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 과정을 안내합니다.\n\nHugging Face 계정에 사용자 토큰으로 로그인하여 파인튜닝된 모델을 Hub에 푸시하십시오.",
+            "tencent-hy-mt2-30b-a3b": "미세 조정입니다.\n\n미세 조정은 특정 작업이나 도메인에 맞는 더 작은 데이터셋을 이용하여 사전 학습된 대규모 모델의 학습을 계속하는 과정입니다. 예를 들어, 코딩 예제로 구성된 데이터셋에서 미세 조정을 수행하면 모델이 코딩 능력을 더욱 향상시킬 수 있습니다. 미세 조정은 사전 학습과 동일한 과정이지만, 무작위 가중치에서 시작하지 않는다는 점이 다릅니다. 또한 미세 조정에는 훨씬 적은 연산 자원, 데이터 및 시간이 필요합니다.\n\n아래의 튜토리얼에서는 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 방법을 단계별로 설명합니다.\n\n사용자 토큰을 이용하여 Hugging Face 계정에 로그인한 후, 미세 조정된 모델을 Hub에 업로드할 수 있습니다.",
+            "qwen-qwen3.8-27b": "미세 조정\n\n미세 조정은 특정 작업이나 도메인에 특화된 더 작은 데이터셋을 사용하여 대규모 사전 학습된 모델의 학습을 계속하는 과정입니다. 예를 들어, 코딩 예제 데이터셋으로 미세 조정을 수행하면 모델의 코딩 능력이 향상됩니다. 미세 조정은 무작위 가중치로 시작하지 않는다는 점을 제외하면 사전 학습과 동일합니다. 또한, 훨씬 적은 컴퓨트, 데이터, 시간이 필요합니다.\n\n아래 튜토리얼은 [`Trainer`]를 사용하여 대규모 언어 모델을 미세 조정하는 과정을 안내합니다.\n\n사용자 토큰으로 Hugging Face 계정에 로그인하여 Hub에 파인튜닝된 모델을 푸시합니다."
+          }
+        },
+        "1": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it",
+            "qwen-qwen3.8-27b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3-30b-a3b-instruct-2507": "토큰화합니다\n\n데이터셋을 로드하고 모델이 학습하는 텍스트 열(`horoscope` 아래의 데이터셋에서)을 [토큰화](./fast_tokenizers)합니다.\n\n토크나이저는 모델 입력을 생성하며, `input_ids`와 `attention_mask`를 생성합니다. 모델의 forward 메서드는 오직 `input_ids`와 `attention_mask`만을 수용하므로, 토크나이징 후 `horoscope`와 같은 열을 제거하기 위해 `remove_columns`를 설정합니다.\n\n`truncation=True`를 설정하고, `max_length`를 지정하여 길이가 긴 시퀀스를 지정된 최대 길이로 자르도록 합니다.\n\n모델 평가를 위해 테스트 분할을 생성하려면 [`~datasets.train_test_split`] 메서드를 사용합니다.\n\n데이터 콜레이터는 모델이 처리할 수 있도록 데이터셋 샘플을 배치로 조립합니다. [`DataCollatorForLanguageModeling`] *동적으로* 각 배치를 해당 배치 내에서 가장 긴 시퀀스에 맞춰 패딩하며, 데이터셋 내 모든 시퀀스를 동일한 길이로 패딩하는 방식을 사용하지 않습니다. 이는 불필요한 패딩 토큰 계산을 피함으로써 계산 및 메모리 자원을 절약합니다.\n\n토큰을 무작위로 마스킹하는 것을 방지하려면 `mlm=False`로 설정합니다.",
+            "google-gemma-4-26b-a4b-it": "토큰화\n\n데이터셋을 로드하고 모델이 학습하는 텍스트 컬럼(`horoscope` 아래 데이터셋에 포함됨)을 [토큰화](./fast_tokenizers)합니다.\n\n토크나이저는 모델 입력값인 `input_ids`와 `attention_mask`를 생성합니다. 모델의 forward 메서드는 `input_ids`와 `attention_mask`만 허용하므로, 토큰화 후에 `horoscope`와 같은 열을 제거하려면 `remove_columns`를 설정하십시오.\n\n긴 시퀀스를 지정된 최대 길이로 자르려면 `truncation=True`와 `max_length`를 설정하십시오.\n\n모델을 평가하기 위한 테스트 분할을 생성하려면 [`~datasets.train_test_split`] 메서드를 사용하십시오.\n\n데이터 콜레이터는 모델이 처리할 수 있도록 데이터셋 샘플을 배치로 구성합니다. [`DataCollatorForLanguageModeling`]는 데이터셋의 모든 시퀀스를 동일한 길이로 패딩하는 대신, 각 배치를 해당 배치 내의 가장 긴 시퀀스에 맞춰 *동적으로* 패딩합니다. 이는 불필요한 패딩 토큰을 계산하지 않음으로써 연산 및 메모리를 절약합니다.\n\n토큰을 무작위로 마스킹하지 않으려면 `mlm=False`로 설정하십시오.",
+            "nvidia-nemotron-3.5-lightning": "토큰화\n\n데이터셋을 로드하고 모델이 훈련하는 텍스트 열(`horoscope`)을 [토큰화](./fast_tokenizers)합니다.\n\n토크나이저는 모델 입력인 `input_ids`와 `attention_mask`을 생성합니다. 모델의 forward 메서드는 `input_ids`와 `attention_mask`만 받아들이므로, `remove_columns`를 `horoscope`와 같은 열을 드롭하도록 설정하십시오.\n\n`truncation=True`와 `max_length`을 설정하여 더 긴 시퀀스를 지정된 최대 길이로 잘라냅니다.\n\n[`~datasets.train_test_split`] 방법을 사용하여 모델을 평가하기 위한 테스트 분할을 생성하십시오.\n\n데이터 콜레이터는 모델 처리를 위해 데이터셋 샘플을 배치로 조립합니다. [`DataCollatorForLanguageModeling`] *동적으로* 각 배치에서 가장 긴 시퀀스까지 패딩을 적용하여, 데이터셋 전체 시퀀스를 동일한 길이로 패딩하는 것보다 효율적으로 처리합니다. 이는 불필요한 패딩 토큰 계산을 피함으로써 연산 및 메모리 사용량을 절약합니다.\n\n`mlm=False`를 설정하여 토큰을 무작위로 마스킹하지 않도록 합니다.",
+            "tencent-hy-mt2-30b-a3b": "토큰화입니다.\n\n데이터셋을 로드한 후, 모델이 학습하는 텍스트 열(아래 데이터셋의 `horoscope`)을 [토큰화](./fast_tokenizers)합니다.\n\n토크나이저는 모델 입력값인 `input_ids`와 `attention_mask`를 생성합니다. 모델의 forward 메서드는 오직 `input_ids`와 `attention_mask`만을 받아들이므로, 토큰화 이후에 `horoscope`와 같은 열들을 제거하기 위해 `remove_columns`를 설정해야 합니다.\n\n더 긴 시퀀스를 지정된 최대 길이로 잘라내기 위해 `truncation=True`와 `max_length`를 설정하시기 바랍니다.\n\n모델을 평가하기 위한 테스트 세트를 생성하려면 [`~datasets.train_test_split`] 메서드를 사용하시기 바랍니다.\n\n데이터 콜레이터는 모델이 처리할 수 있도록 데이터셋 샘플을 배치 단위로 구성합니다. [`DataCollatorForLanguageModeling`]는 데이터셋 내의 모든 시퀀스를 동일한 길이로 패딩하는 대신, 각 배치 내에서 가장 긴 시퀀스에 맞게 *동적으로* 패딩을 적용합니다. 이렇게 하면 불필요한 패딩 토큰에 대한 연산을 피함으로써 연산 자원과 메모리를 절약할 수 있습니다.\n\n무작위로 토큰을 마스킹하는 것을 방지하려면 `mlm=False`를 설정하시기 바랍니다.",
+            "qwen-qwen3.8-27b": "토큰화\n\n데이터셋을 로드하고 모델이 학습하는 텍스트 열(`horoscope`은 아래 데이터셋에 해당)을 [토큰화](./fast_tokenizers)합니다.\n\n토크나이저는 모델 입력인 `input_ids`와 `attention_mask`를 생성합니다. 모델의 forward 메서드는 `input_ids`와 `attention_mask`만 허용하므로, 토크나이제이션 후 `horoscope`와 같은 컬럼을 제거하기 위해 `remove_columns`를 설정합니다.\n\n`truncation=True`를 설정하고 `max_length`를 지정하여 더 긴 시퀀스를 지정된 최대 길이로 잘라냅니다.\n\n[`~datasets.train_test_split`] 메서드를 사용하여 모델을 평가하기 위한 테스트 분할을 생성합니다.\n\n데이터 콜레이터는 모델이 처리할 수 있도록 데이터셋 샘플을 배치로 조립합니다. [`DataCollatorForLanguageModeling`]은 데이터셋의 모든 시퀀스를 동일한 길이로 패딩하는 대신, 각 배치를 해당 배치 내 가장 긴 시퀀스 길이에 맞게 *동적으로* 패딩합니다. 이를 통해 불필요한 패딩 토큰의 계산을 피함으로써 계산 및 메모리를 절약합니다.\n\n토큰이 무작위로 마스킹되는 것을 방지하려면 `mlm=False`로 설정합니다."
+          }
+        },
+        "2": {
+          "kind": "section",
+          "selected": [
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3-30b-a3b-instruct-2507": "모델 로딩합니다\n\n사전 학습된 체크포인트를 로드하여 미세 조정합니다 (모델 로드에 대한 자세한 내용은 [모델 로드](./models) 가이드를 참조하세요).\n\n`dtype=\"auto\"`를 설정하면 가중치를 저장된 dtype으로 로드합니다. 이를 설정하지 않으면 PyTorch는 가중치를 `torch.float32`로 로드하게 되며, 가중치가 원래 `torch.bfloat16`였다면 메모리 사용량이 두 배로 증가합니다.",
+            "google-gemma-4-26b-a4b-it": "모델 로드하기\n\n미세 조정을 위해 사전 학습된 체크포인트를 로드합니다 ([Loading models](./models) 가이드를 참조하여 모델 로드에 대한 자세한 내용을 확인하십시오).\n\n가중치를 저장된 dtype으로 로드하려면 `dtype=\"auto\"`를 설정하십시오. 이 설정이 없으면 PyTorch는 가중치를 `torch.float32`로 로드하며, 가중치가 원래 `torch.bfloat16`인 경우 메모리 사용량이 두 배로 증가합니다.",
+            "nvidia-nemotron-3.5-lightning": "모델 로드하기\n\n사전 학습된 체크포인트를 로드하여 [Loading models](./models) 가이드에서 모델 로드에 대한 자세한 내용을 확인하십시오.\n\n`dtype=\"auto\"`를 설정하면 저장된 dtype으로 가중치를 로드합니다. `torch.float32`로 로드하면 가중치가 원래 `torch.bfloat16`인 경우 메모리 사용량이 두 배가 됩니다.",
+            "tencent-hy-mt2-30b-a3b": "모델을 로딩합니다.\n\n사전 학습된 체크포인트를 불러와서 미세 조정을 수행할 수 있습니다(모델 로딩에 관한 보다 자세한 내용은 [모델 로딩](./models) 가이드를 참조하시기 바랍니다).\n\n`dtype=\"auto\"`를 설정하면 저장된 데이터 타입 그대로 가중치를 로드할 수 있습니다. 이 옵션을 사용하지 않으면 PyTorch는 가중치를 `torch.float32` 형태로 로드하는데, 만약 원래 가중치가 `torch.bfloat16` 형태였다면 메모리 사용량이 두 배로 증가하게 됩니다.",
+            "qwen-qwen3.8-27b": "모델 로드\n\n사전 학습된 체크포인트를 로드하여 미세 조정을 수행합니다(모델 로딩에 대한 자세한 내용은 [모델 로드](./models) 가이드를 참조하십시오).\n\n`dtype=\"auto\"`를 설정하면 가중치를 저장된 dtype로 로드합니다. 이 설정이 없으면 PyTorch는 가중치를 `torch.float32`로 로드하며, 가중치가 원래 `torch.bfloat16`인 경우 메모리 사용량이 두 배로 증가합니다."
+          }
+        },
+        "3": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it",
+            "tencent-hy-mt2-30b-a3b",
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3-30b-a3b-instruct-2507": "학습 구성\n\n[`TrainingArguments`]는 학습 실행을 사용자 정의하는 데 필요한 모든 옵션을 제공합니다. 여기서는 가장 일반적인 인수들만 다룹니다. 나머지 모든 인수는 합리적인 기본값을 가지거나 특정 시나리오(예: 분산 학습)에만 관련이 있습니다. 인수의 완전한 목록은 [`TrainingArguments`] API 문서를 참조하시기 바랍니다.\n\n`num_train_epochs`와 `per_device_train_batch_size`는 학습 기간과 배치 크기를 제어합니다. `learning_rate`는 최적화기의 초기 학습률을 설정합니다.\n\n하드웨어가 지원하는 경우(Аmpere 이상 GPU), 빠른 혼합 정밀도 학습을 위해 `bf16=True`로 설정합니다. 그렇지 않은 경우, 오래된 하드웨어에서는 `fp16=True`로 대체합니다.\n\n`gradient_accumulation_steps`는 가중치를 업데이트하기 전에 여러 번의 순전파 동안 그래디언트를 누적함으로써 더 큰 효과적인 배치 크기를 시뮬레이션합니다.\n\n`gradient_checkpointing`는 중간 활성화 값을 저장하는 대신 역전파 과정에서 다시 계산함으로써 계산량을 늘리고 메모리를 절약합니다. 메모리와 속도 사이의 균형을 원할 경우 [부분 체크포인팅](./grad_checkpointing#partial-checkpointing)을 참고합니다.\n\n`gradient_checkpointing=True`인 경우, 긴 시퀀스에 대해 GPU 메모리 사용량을 줄이기 위해 저장된 활성화를 핀ned 호스트 메모리에 유지하려면 `gradient_checkpointing_kwargs={\"offload\": True}`로 설정합니다. 교환 요소에 대해서는 [저장된 활성화를 오프로드하는 방법](./grad_checkpointing#offloading-the-saved-activations)을 참조합니다.\n\n`train_sampling_strategy=\"group_by_length\"`를 설정하여 유사한 길이를 가진 예제를 배치하고 패딩을 줄입니다. 프로세서 기반의 다중 모달 데이터셋 및 사전 계산된 길이에 대해 [길이별로 샘플 그룹화](./trainer_recipes#group-samples-by-length)를 참조합니다.\n\n`eval_strategy`와 `save_strategy`는 학습 중 모델을 평가할 시점과 체크포인트를 저장할 시점을 결정합니다.\n\n`load_best_model_at_end`는 학습이 종료될 때 최고의 체크포인트를 로드합니다. 이 기능을 사용하려면 `eval_strategy`를 설정해야 합니다.\n\n`logging_steps`는 학습 중 손실을 얼마나 자주 업데이트하고 반환할지를 제어합니다.",
+            "google-gemma-4-26b-a4b-it": "학습 설정\n\n[`TrainingArguments`]는 학습 실행을 사용자 정의하기 위한 모든 옵션을 제공합니다. 여기에는 가장 일반적인 인자들만 다룹니다. 그 외의 모든 것들은 합리적인 기본값을 가지고 있거나 분산 학습과 같은 특정 시나리오에만 관련이 있습니다. 전체 인자 목록은 [`TrainingArguments`] API 문서를 참조하십시오.\n\n`num_train_epochs`와 `per_device_train_batch_size`는 학습 기간과 배치 크기를 제어합니다. `learning_rate`는 옵티마이저의 초기 학습률을 설정합니다.\n\n하드웨어가 이를 지원하는 경우(Ampere+ GPU), 빠른 혼합 정밀도 학습을 위해 `bf16=True`를 설정하십시오. 그렇지 않으면 이전 하드웨어에서는 `fp16=True`로 전환하십시오.\n\n`gradient_accumulation_steps`는 가중치를 업데이트하기 전에 여러 번의 순전파에 걸쳐 그래디언트를 누적함으로써 더 큰 유효 배치 크기를 시뮬레이션합니다.\n\n`gradient_checkpointing`은 중간 활성화 함수 값을 저장하는 대신 역전파 과정에서 이를 다시 계산함으로써 메모리 대신 연산량을 사용합니다. 메모리와 속도 사이의 절충안을 확인하려면 [partial checkpointing](./grad_checkpointing#partial-checkpointing)을 참조하십시오.\n\n`gradient_checkpointing=True`를 설정할 때, 저장된 활성화 함수를 고정된 호스트 메모리에 유지하고 긴 시퀀스에 대한 GPU 메모리 사용량을 줄이려면 `gradient_checkpointing_kwargs={\"offload\": True}`를 설정하십시오. 트레이드오프에 대해서는 [offloading the saved activations](./grad_checkpointing#offloading-the-saved-activations)를 참조하십시오.\n\n`train_sampling_strategy=\"group_by_length\"`를 설정하여 길이가 유사한 예시들을 배치로 묶고 패딩을 줄입니다. 프로세서 기반 멀티모달 데이터셋 및 미리 계산된 길이에 대해서는 [group samples by length](./trainer_recipes#group-samples-by-length)를 참조하십시오.\n\n`eval_strategy`와 `save_strategy`는 학습 중에 모델을 언제 평가할지, 그리고 언제 체크포인트를 저장할지를 결정합니다.\n\n`load_best_model_at_end`는 학습이 완료될 때 가장 좋은 체크포인트를 로드합니다. 이를 위해서는 `eval_strategy`가 설정되어 있어야 합니다.\n\n`logging_steps`는 학습 중 손실(loss)을 얼마나 자주 업데이트하고 반환할지를 제어합니다.",
+            "nvidia-nemotron-3.5-lightning": "학습 설정\n\n[`TrainingArguments`]는 훈련 실행의 사용자 지정을 위한 모든 옵션을 제공합니다. 여기서는 가장 일반적인 인자만 다룹니다. 그 외의 인자는 기본값이 합리적이거나 분산 훈련과 같은 특정 시나리오에만 관련이 있습니다. 인자의 전체 목록은 [`TrainingArguments`] API 문서를 참조하십시오.\n\n`num_train_epochs`와 `per_device_train_batch_size`는 학습 기간과 배치 크기를 제어합니다. `learning_rate`는 옵티마이저의 초기 학습률을 설정합니다.\n\n`bf16=True`로 빠른 혼합 정밀도 학습을 설정하려면 하드웨어가 Ampere+ GPU를 지원해야 합니다. 그렇지 않으면 오래된 하드웨어에서는 `fp16=True`로 대체하십시오.\n\n`gradient_accumulation_steps` 배치 크기를 효과적으로 늘리기 위해 여러 번의 forward pass에서 그래디언트를 누적한 후 가중치를 업데이트합니다.\n\n`gradient_checkpointing` 연산을 메모리에 저장하는 대신 역전파 시 중간 활성값을 재계산하여 메모리를 절약합니다. 메모리와 속도의 절충안을 원한다면 [partial checkpointing](./grad_checkpointing#partial-checkpointing)을 참조하십시오.\n\n`gradient_checkpointing=True`인 경우, `gradient_checkpointing_kwargs={\"offload\": True}`를 설정하여 저장된 활성화를 고정 호스트 메모리에 보관하고 장시간 시퀀스에 대한 GPU 메모리 사용량을 줄이십시오. [offloading the saved activations](./grad_checkpointing#offloading-the-saved-activations)를 참조하여 트레이드오프를 확인하십시오.\n\n`train_sampling_strategy=\"group_by_length\"`을(를) 설정하여 배치 예시의 길이를 유사하게 그룹화하고 패딩을 줄입니다. [길이별 샘플링](./trainer_recipes#group-samples-by-length)을 참조하세요. 멀티모달 데이터셋 및 사전 계산된 길이에 대한 프로세서 기반 처리에 적용됩니다.\n\n`eval_strategy`와 `save_strategy`는 모델 훈련 중 평가 시점과 체크포인트 저장 시점을 결정합니다.\n\n`load_best_model_at_end`는 학습이 완료될 때 가장 좋은 체크포인트를 로드합니다. `eval_strategy`가 설정되어 있어야 합니다.\n\n`logging_steps`는 훈련 중 손실을 업데이트하고 반환하는 빈도를 제어합니다.",
+            "tencent-hy-mt2-30b-a3b": "학습 설정입니다.\n\n[`TrainingArguments`]는 학습 실행을 맞춤 설정하기 위한 모든 옵션을 제공합니다. 여기서는 가장 일반적으로 사용되는 인수들만 다룹니다. 그 외의 인수들은 적절한 기본값을 가지거나 분산 학습과 같은 특정 시나리오에서만 관련이 있습니다. 인수의 전체 목록은 [`TrainingArguments`] API 문서를 참조하시기 바랍니다.\n\n`num_train_epochs`와 `per_device_train_batch_size`는 학습 기간과 배치 크기를 조절합니다. `learning_rate`는 최적화기의 초기 학습률을 설정합니다.\n\n하드웨어가 지원하는 경우(Ampere 이상 세대의 GPU)에는 빠른 혼합 정밀도 학습을 위해 `bf16=True`로 설정하시기 바랍니다. 그렇지 않은 경우에는 구형 하드웨어에서 `fp16=True`를 사용하시기 바랍니다.\n\n`gradient_accumulation_steps`는 가중치를 업데이트하기 전에 여러 번의 순전파 과정에서 기울기를 누적시킴으로써 더 큰 효과적인 배치 크기를 시뮬레이션합니다.\n\n`gradient_checkpointing`은 중간 활성화 값을 저장하는 대신 역전파 과정에서 이를 재계산함으로써 메모리를 절약하기 위해 연산량을 늘리는 방식을 사용합니다. 메모리와 속도 사이의 균형을 맞추기 위해서는 [부분 체크포인팅](./grad_checkpointing#partial-checkpointing)을 참고하시기 바랍니다.\n\n`gradient_checkpointing=True`일 경우에는 저장된 활성화 값을 고정된 호스트 메모리에 보관하고 긴 시퀀스 처리 시 GPU 메모리 사용량을 줄이기 위해 `gradient_checkpointing_kwargs={\"offload\": True}`를 설정하시기 바랍니다. 이로 인한 성능상의 절충점에 대해서는 [저장된 활성화 값의 오프로딩](./grad_checkpointing#offloading-the-saved-activations)을 참조해 주시기 바랍니다.\n\n`train_sampling_strategy=\"group_by_length\"`를 설정하여 길이가 비슷한 배치 예시들을 그룹화하고 패딩을 줄일 수 있습니다. 프로세서 기반의 멀티모달 데이터셋 및 미리 계산된 길이 정보에 대해서는 [길이별로 샘플을 그룹화하기](./trainer_recipes#group-samples-by-length)를 참조하시기 바랍니다.\n\n`eval_strategy`와 `save_strategy`는 학습 중에 모델을 평가할 시점과 체크포인트를 저장할 시점을 결정합니다.\n\n`load_best_model_at_end`는 학습이 종료될 때 최적의 체크포인트를 로드합니다. 이를 위해서는 `eval_strategy`가 설정되어 있어야 합니다.\n\n`logging_steps`는 학습 중에 손실 값을 업데이트하고 반환하는 빈도를 조절합니다.",
+            "qwen-qwen3.8-27b": "학습 구성\n\n[`TrainingArguments`]은 학습 실행을 사용자 정의하는 모든 옵션을 제공합니다. 여기서는 가장 일반적인 인자만 다루며, 나머지는 합리적인 기본값을 가지거나 분산 학습과 같은 특정 시나리오에만 관련이 있습니다. 인자의 전체 목록은 [`TrainingArguments`] API 문서를 참조하십시오.\n\n`num_train_epochs`와 `per_device_train_batch_size`는 학습 기간과 배치 크기를 제어합니다. `learning_rate`는 옵티마이저의 초기 학습률을 설정합니다.\n\n하드웨어가 이를 지원할 경우(Ampere 이상 GPU) 빠른 혼합 정밀도 학습을 위해 `bf16=True`를 설정합니다. 그렇지 않으면 구형 하드웨어에서는 `fp16=True`로 전환합니다.\n\n`gradient_accumulation_steps`는 가중치를 업데이트하기 전에 여러 번의 전방 전달에 걸쳐 기울기를 누적하여 더 큰 유효 배치 크기를 시뮬레이션합니다.\n\n`gradient_checkpointing`은 중간 활성화 값을 저장하는 대신 역전파 과정에서 이를 다시 계산함으로써 메모리를 계산으로 교환합니다. 메모리와 속도 사이의 절충점에 대해서는 [부분 체크포인트링](./grad_checkpointing#partial-checkpointing)을 참조하십시오.\n\n`gradient_checkpointing=True`인 경우, `gradient_checkpointing_kwargs={\"offload\": True}`를 설정하여 저장된 활성화를 고정된 호스트 메모리에 유지하고 긴 시퀀스에 대한 GPU 메모리 사용량을 줄입니다. 트레이드오프에 대해서는 [저장된 활성화 오프로딩](./grad_checkpointing#offloading-the-saved-activations)을 참조하십시오.\n\n`train_sampling_strategy=\"group_by_length\"`를 설정하여 유사한 길이의 예시를 배치하고 패딩을 줄입니다. 프로세서 기반 멀티모달 데이터셋 및 사전 계산된 길이에 대해서는 [길이에 따라 샘플 그룹화](./trainer_recipes#group-samples-by-length)를 참조하십시오.\n\n`eval_strategy`와 `save_strategy`는 학습 중에 모델을 평가하는 시점과 체크포인트를 저장하는 시점을 결정합니다.\n\n`load_best_model_at_end`은 학습이 완료되면 최적의 체크포인트를 로드합니다. `eval_strategy`가 설정되어 있어야 합니다.\n\n`logging_steps`은 학습 중에 손실을 업데이트하고 반환하는 빈도를 제어합니다."
+          }
+        },
+        "4": {
+          "kind": "section",
+          "selected": [
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3-30b-a3b-instruct-2507": "학습\n\n필요한 모든 구성 요소를 갖춘 [`Trainer`] 인스턴스를 생성한 후, [`~Trainer.train`]을 호출하여 시작합니다.\n\n[`~Trainer.push_to_hub`]는 최적화된 가중치, 생성 설정, 토크나이저 및 모델 설정을 Hub에 업로드합니다.",
+            "google-gemma-4-26b-a4b-it": "학습\n\n모든 필수 구성 요소를 포함하는 [`Trainer`] 인스턴스를 생성한 다음, [`~Trainer.train`]을 호출하여 시작합니다.\n\n[`~Trainer.push_to_hub`]는 미세 조정된 가중치, 생성 설정, 토크나이저 및 모델 설정을 Hub에 업로드합니다.",
+            "nvidia-nemotron-3.5-lightning": "학습\n\n[`Trainer`] 인스턴스를 생성하여 필요한 모든 컴포넌트를 설정한 뒤, [`~Trainer.train`]을 호출하여 학습을 시작합니다.\n\n[`~Trainer.push_to_hub`] 허브에 파인튜닝된 가중치, 생성 설정, 토크나이저, 모델 설정을 업로드합니다.",
+            "tencent-hy-mt2-30b-a3b": "학습입니다.\n\n필요한 모든 구성 요소를 갖춘 [`Trainer`] 인스턴스를 생성한 후, [`~Trainer.train`]을 호출하여 시작하시기 바랍니다.\n\n[`~Trainer.push_to_hub`]는 미세 조정된 가중치, 생성 설정, 토크나이저 및 모델 설정을 Hub에 업로드합니다.",
+            "qwen-qwen3.8-27b": "학습\n\n필요한 모든 구성 요소를 갖춘 [`Trainer`] 인스턴스를 생성한 다음, [`~Trainer.train`]을 호출하여 시작합니다.\n\n[`~Trainer.push_to_hub`]는 미세 조정된 가중치, 생성 설정, 토크나이저, 모델 설정을 Hub에 업로드합니다."
+          }
+        },
+        "5": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b",
+            "qwen-qwen3.8-27b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3-30b-a3b-instruct-2507": "다음 단계입니다\n\n일반적인 Trainer 기능인 사용자 정의 손실 함수, 메모리 효율적인 평가, 체크포인팅 등에 대한 최소한의 작동 예제는 [Trainer 기능 안내서](./trainer_recipes)를 참조하시기 바랍니다.\n\n읽기 [하위 클래스화합니다 Trainer 방법들입니다](./trainer_customize) 서브클래싱하는 방법을 배우는 가이드입니다. [`Trainer`] 새로운 기능 및 사용자 정의 기능을 지원하기 위한 방법입니다.\n\n로그 기록, 조기 중지 및 기타 사용자 정의 동작을 위해 학습 이벤트에 연결하는 방법을 알아보려면 [콜백](./trainer_callbacks) 가이드를 읽어보십시오.\n\n샘플이 배치로 조합되는 방식을 사용자 정의하는 방법을 배우기 위해 [데이터 콜레이터](./data_collators) 가이드를 읽어보십시오.\n\n임의의 예제 스크립트를 [Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)를 통해 임대한 GPU에서 실행합니다 (자세한 내용은 [Hugging Face Jobs에서 스크립트 실행하기](./run_scripts#run-a-script-on-hugging-face-jobs) 참조합니다).\n\n다른 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제는 [transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [노트북](./notebooks), 또는 **자원 > 작업 조리법** 섹션을 참조하시기 바랍니다.",
+            "google-gemma-4-26b-a4b-it": "다음 단계\n\n커스텀 손실 함수, 메모리 효율적인 평가, 체크포인팅 등 일반적인 Trainer 기능의 최소 작동 예제를 확인하려면 [Trainer 기능](./trainer_recipes) 가이드를 읽어보십시오.\n\n새롭고 사용자 정의된 기능을 지원하기 위해 [`Trainer`] 메서드를 서브클래싱하는 방법을 배우려면 [Trainer 메서드 서브클래싱](./trainer_customize) 가이드를 읽어보십시오.\n\n로깅, 조기 종료 및 기타 사용자 정의 동작을 위해 학습 이벤트에 연결하는 방법을 배우려면 [Callbacks](./trainer_callbacks) 가이드를 읽어보십시오.\n\n샘플이 배치로 조립되는 방식을 사용자 지정하는 방법을 배우려면 [Data collators](./data_collators) 가이드를 읽어보십시오.\n\n[Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)를 사용하여 대여한 GPU에서 모든 예제 스크립트를 실행합니다 ( [ Hugging Face Jobs에서 스크립트 실행](./run_scripts#run-a-script-on-hugging-face-jobs)을 참조하십시오).\n\n다양한 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제는 [transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [notebooks](./notebooks), 또는 **Resources > Task Recipes** 섹션을 참조하십시오.",
+            "nvidia-nemotron-3.5-lightning": "다음 단계\n\n읽기 [Trainer 기능](./trainer_recipes) 가이드: 최소 실행 예제, 일반적인 ... Trainer 사용자 지정 손실 함수, 메모리 효율적인 평가, 체크포인트 등 다양한 기능을 지원합니다.\n\n[Subclassing Trainer methods](./trainer_customize) 가이드를 읽고, [`Trainer`] 클래스의 메서드를 서브클래싱하여 새로운 기능과 사용자 지정 기능을 지원하는 방법을 학습하십시오.\n\n[콜백](./trainer_callbacks) 가이드를 읽고 학습 이벤트에 훅을 걸어 로깅, 조기 종료 및 기타 사용자 정의 동작을 학습하는 방법을 알아보세요.\n\n[데이터 콜레이터](./data_collators) 가이드를 읽어보아, 샘플이 배치로 어셈블되는 방법을 사용자 정의하는 방법을 학습하십시오.\n\n렌트 GPU에서 예제 스크립트를 실행하려면 [Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)을(를) 참조하세요 ( [Run a script on Hugging Face Jobs](./run_scripts#run-a-script-on-hugging-face-jobs) 참조).\n\n[transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [notebooks](./notebooks), 또는 **Resources > Task Recipes** 섹션을 참조하여 다양한 텍스트, 오디오, 비전 및 멀티모달 태스크에 대한 추가 학습 예시를 확인하십시오.",
+            "tencent-hy-mt2-30b-a3b": "다음 단계입니다.\n\n일반적인 Trainer 기능들, 즉 사용자 정의 손실 함수, 메모리 효율적인 평가, 체크포인팅 등에 대한 최소한의 작동 예제를 확인하려면 [Trainer 기능](./trainer_recipes) 가이드를 읽어보시기 바랍니다.\n\n새로운 기능 및 맞춤형 기능을 지원하기 위해 [`Trainer`] 메서드를 서브클래싱하는 방법을 알아보려면 [Subclassing Trainer methods](./trainer_customize) 가이드를 읽어보시기 바랍니다.\n\n로깅, 조기 종료 및 기타 맞춤형 동작을 위해 학습 이벤트에 연결하는 방법을 알아보려면 [콜백](./trainer_callbacks) 가이드를 읽어보시기 바랍니다.\n\n읽어보세요. [데이터 수집기](./data_collators) 샘플을 배치로 구성하는 방식을 사용자 정의하는 방법을 배우기 위한 안내서입니다.\n\n임대한 GPU에서 어떤 예제 스크립트든 실행할 수 있습니다. [Hugging Face 채용 정보](https://huggingface.co/docs/hub/jobs-training) (참조하세요) [스크립트를 실행합니다. Hugging Face 채용 정보](./run_scripts#run-a-script-on-hugging-face-jobs)).\n\n다양한 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제를 확인하려면 [transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [노트북](./notebooks) 또는 **리소스 > 태스크 레시피** 섹션을 참조해 주시기 바랍니다.",
+            "qwen-qwen3.8-27b": "다음 단계\n\n[Trainer 기능](./trainer_recipes) 가이드를 참고하여 커스텀 손실 함수, 메모리 효율적 평가, 체크포인트링 등 일반적인 Trainer 기능의 최소 작동 예제를 확인합니다.\n\n[Trainer 메서드 서브클래스화](./trainer_customize) 가이드를 읽고 [`Trainer`] 메서드를 서브클래스화하여 새로운 및 사용자 정의된 기능을 지원하는 방법을 학습합니다.\n\n학습 이벤트에 대한 로깅, 조기 종료 및 기타 사용자 정의 동작을 연결하는 방법을 배우려면 [콜백](./trainer_callbacks) 가이드를 읽어 보십시오.\n\n[데이터 콜렉터](./data_collators) 가이드를 읽어 샘플이 배치로 조립되는 방식을 사용자 지정하는 방법을 학습합니다.\n\n임대 GPU에서 [Hugging Face Jobs](https://huggingface.co/docs/hub/jobs-training)를 사용하여 예제 스크립트를 실행해 보세요([Hugging Face Jobs에서 스크립트 실행](./run_scripts#run-a-script-on-hugging-face-jobs) 참조).\n\n[transformers/examples/pytorch](https://github.com/huggingface/transformers/tree/main/examples/pytorch), [notebooks](./notebooks), 또는 **Resources > Task Recipes** 섹션을 참조하여 다양한 텍스트, 오디오, 비전 및 멀티모달 작업에 대한 추가 학습 예제를 확인합니다."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:40:12.864Z",
+      "blind": true
+    },
+    {
+      "document": "pipeline_tutorial.md",
+      "documentId": "huggingface/transformers@469230357aab0f2b303b0d638c1f8d06edb14184/pipeline_tutorial.md",
+      "unitSchema": "five-sections-v1",
+      "sourceRevision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+      "datasetSnapshot": {
+        "kind": "github",
+        "repository": "Hugging-Face-KREW/doc-builder",
+        "branch": "translation-korean",
+        "commit": "bcb116d88c8d361838bbd7f4cd59e3b645a7a1d9",
+        "loadedAt": "2026-10-04T07:28:58.059Z"
+      },
+      "candidates": [
+        {
+          "id": "qwen-qwen3.8-27b",
+          "model": "qwen/qwen3.8-27b",
+          "sha256": "c7d8b703d9c7614d7ec68a07a33593119205b1151320bd2193be4238d41cfb6a",
+          "validationStatus": "success"
+        },
+        {
+          "id": "tencent-hy-mt2-30b-a3b",
+          "model": "tencent/hy-mt2-30b-a3b",
+          "sha256": "bb012e106b3057868dc3a3dff1d02910aa7afce35541d18ab1455e15ebbd6429",
+          "validationStatus": "success"
+        },
+        {
+          "id": "nvidia-nemotron-3.5-lightning",
+          "model": "nvidia/nemotron-3.5-lightning",
+          "sha256": "e8a16377990e20e0773e01af566c121ccf76c0656f8b39de5967a4670360c606",
+          "validationStatus": "success"
+        },
+        {
+          "id": "qwen-qwen3-30b-a3b-instruct-2507",
+          "model": "qwen/qwen3-30b-a3b-instruct-2507",
+          "sha256": "a5e9452ce90ca389a02bc803c8e28eda902d4501612181a2844794e5fd6e7c7b",
+          "validationStatus": "accepted_by_existing_pipeline"
+        },
+        {
+          "id": "google-gemma-4-26b-a4b-it",
+          "model": "google/gemma-4-26b-a4b-it",
+          "sha256": "6c9f0aa1bf629f866ea180090e455f0562ef5fe6358c9934cf365e1ec7b38f92",
+          "validationStatus": "success"
+        }
+      ],
+      "overall": [],
+      "overallNeedsRevision": true,
+      "note": "",
+      "units": {
+        "0": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507",
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "파이프라인\n\n[`Pipeline`]은 Hugging Face [Hub](https://hf.co/models)의 다양한 모델로 여러 기계 학습 작업을 수행할 수 있도록 즉시 사용할 수 있는 단순하면서도 강력한 추론 API입니다.\n\n맞춤 [`Pipeline`] 회의록 전사를 위한 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 등 작업별 매개변수를 사용하여 작업에 적용합니다. [`Pipeline`] GPU를 지원합니다. Apple Silicon, 그리고 반정밀도 가중치를 accelerate 추론 및 메모리 저장.\n\nTransformers에는 두 가지 파이프라인 클래스가 있습니다. 범용 [`Pipeline`]과 [`TextGenerationPipeline`]과 같은 여러 개별 작업별 파이프라인입니다. [`Pipeline`]의 `task` 매개변수에 작업 식별자를 설정하여 이러한 개별 파이프라인을 로드할 수 있습니다. 각 파이프라인의 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본적으로 사전 학습된 모델과 전처리기를 사용하도록 구성되지만, 다른 모델을 사용하려는 경우 `model` 매개변수를 사용하여 이를 재정의할 수 있습니다.\n\n예를 들어, [`TextGenerationPipeline`]을 [Gemma 2](./model_doc/gemma2)와 함께 사용하려면 `task=\"text-generation\"`과 `model=\"google/gemma-2-2b\"`를 설정해야 합니다.\n\n입력이 하나 이상인 경우, 목록으로 전달합니다.\n\n이 가이드에서는 [`Pipeline`]을 소개하고, 그 기능을 시연하며, 다양한 매개변수를 구성하는 방법을 보여 드립니다.",
+            "tencent-hy-mt2-30b-a3b": "파이프라인입니다.\n\n[`Pipeline`]는 Hugging Face [Hub](https://hf.co/models)에 있는 어떤 모델이든 사용하여 다양한 머신러닝 작업에 즉시 활용할 수 있는 간단하면서도 강력한 추론 API입니다.\n\n회의록을 작성하기 위해 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 것과 같은 작업별 매개변수를 사용하여 [`Pipeline`]을 사용자의 작업에 맞게 조정할 수 있습니다. [`Pipeline`]은 GPU, Apple Silicon, 그리고 반정밀도 가중치를 지원하여 추론 속도를 높이고 메모리를 절약합니다.\n\nTransformers에는 일반적인 [`Pipeline`]과 [`TextGenerationPipeline`]와 같은 여러 개별 작업 전용 파이프라인이 있습니다. [`Pipeline`]의 `task` 매개변수에 작업 식별자를 지정하여 이러한 개별 파이프라인을 로드할 수 있습니다. 각 파이프라인에 대한 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본적으로 사전 학습된 모델과 전처리기를 사용하도록 설정되어 있지만, 다른 모델을 사용하고 싶다면 `model` 매개변수를 통해 이를 재정의할 수 있습니다.\n\n예를 들어, [Gemma 2](./model_doc/gemma2)와 함께 [`TextGenerationPipeline`]을 사용하려면 `task=\"text-generation\"` 및 `model=\"google/gemma-2-2b\"`로 설정하면 됩니다.\n\n입력이 하나 이상인 경우에는 이를 리스트 형태로 전달해야 합니다.\n\n이 가이드는 [`Pipeline`]에 대해 소개하고, 그 기능을 설명하며, 다양한 매개변수를 구성하는 방법을 보여줍니다.",
+            "nvidia-nemotron-3.5-lightning": "파이프라인\n\nThe [`Pipeline`] 는 다양한 머신러닝 작업에 활용할 수 있는 간단하지만 강력한 추론 API입니다. Hugging Face [Hub](https://hf.co/models).\n\n[`Pipeline`]를 작업에 맞게 조정하려면, 회의록 전사를 위해 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 것과 같은 작업별 파라미터를 추가하십시오. [`Pipeline`]은 GPU, Apple Silicon, 그리고 accelerate을 가속화하고 메모리를 절약하기 위해 반정밀 가중치를 지원합니다.\n\nTransformers는 두 가지 파이프라인 클래스를 가지고 있습니다. 일반적인 [`Pipeline`]과 다양한 개별 태스크 전용 파이프라인, 예를 들어 [`TextGenerationPipeline`]가 그것입니다. 이러한 개별 파이프라인을 로드하려면 [`Pipeline`]의 `task` 파라미터에 태스크 식별자를 설정하면 됩니다. 각 파이프라인에 해당하는 태스크 식별자는 그들의 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본 사전 학습된 모델 및 전처리기를 사용하도록 구성되어 있지만, `model` 파라미터를 사용하여 다른 모델을 사용하고자 할 경우 이를 재정의할 수 있습니다.\n\n예를 들어, [`TextGenerationPipeline`]를 [Gemma 2](./model_doc/gemma2)와 함께 사용하려면 `task=\"text-generation\"`와 `model=\"google/gemma-2-2b\"`를 설정하십시오.\n\n입력이 하나 이상인 경우, 목록으로 전달하십시오.\n\n이 가이드는 [`Pipeline`]을 소개하고, 그 기능을 보여주며, 다양한 파라미터를 구성하는 방법을 보여줍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "파이프라인입니다\n\n[`Pipeline`]는 Hugging Face [Hub](https://hf.co/models)의 어떤 모델을 사용하더라도 다양한 머신러닝 작업에 쉽게 활용할 수 있는 간단하면서도 강력한 추론 API입니다.\n\n작업에 맞게 [`Pipeline`]를 조정하여 회의록을 녹음하는 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 등의 작업 전용 매개변수를 설정할 수 있습니다. [`Pipeline`]는 GPU, Apple Silicon, 및 반정밀도 가중치를 지원하여 accelerate시키고 메모리를 절약합니다.\n\nTransformers에는 일반적인 [`Pipeline`]과 [`TextGenerationPipeline`]와 같은 특정 작업용 파이프라인들이 있습니다. 각각의 파이프라인은 [`Pipeline`]의 `task` 파라미터에 작업 식별자를 설정하여 로드할 수 있습니다. 각 파이프라인의 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본적으로 사전 학습된 모델과 전처리기를 사용하도록 구성되어 있지만, 다른 모델을 사용하고자 할 경우 `model` 매개변수를 통해 이를 재정의할 수 있습니다.\n\n예를 들어, [`TextGenerationPipeline`]를 [Gemma 2](./model_doc/gemma2)와 함께 사용하려면 `task=\"text-generation\"` 및 `model=\"google/gemma-2-2b\"`를 설정합니다.\n\n입력이 하나보다 많을 경우, 이를 리스트 형태로 전달합니다.\n\n이 가이드에서는 [`Pipeline`]를 소개하고, 그 기능을 보여주며, 다양한 매개변수를 어떻게 구성할 수 있는지 안내합니다.",
+            "google-gemma-4-26b-a4b-it": "파이프라인\n\n[`Pipeline`]은 Hugging Face [Hub](https://hf.co/models)의 모든 모델을 사용하여 다양한 머신러닝 작업에 즉시 사용할 수 있는 단순하면서도 강력한 추론 API입니다.\n\n회의록 전사를 위한 자동 음성 인식(ASR) 파이프라인에 타임스탬프를 추가하는 것과 같은 작업별 매개변수를 사용하여 [`Pipeline`]을 귀하의 작업에 맞게 조정하십시오. [`Pipeline`]은 추론을 accelerate하고 메모리를 절약하기 위해 GPU, Apple Silicon 및 반정밀도 가중치를 지원합니다.\n\nTransformers에는 범용적인 [`Pipeline`]과 [`TextGenerationPipeline`]와 같은 여러 개별 작업별 파이프라인이라는 두 가지 파이프라인 클래스가 있습니다. [`Pipeline`]의 `task` 매개변수에 작업 식별자를 설정하여 이러한 개별 파이프라인을 로드할 수 있습니다. 각 파이프라인에 대한 작업 식별자는 해당 API 문서에서 확인할 수 있습니다.\n\n각 작업은 기본 사전 학습된 모델과 전처리기를 사용하도록 구성되어 있지만, 다른 모델을 사용하고자 하는 경우 `model` 파라미터를 사용하여 이를 재정의할 수 있습니다.\n\n예를 들어, [Gemma 2](./model_doc/gemma2)와 함께 [`TextGenerationPipeline`]를 사용하려면 `task=\"text-generation\"` 및 `model=\"google/gemma-2-2b\"`를 설정합니다.\n\n입력이 두 개 이상인 경우, 이를 리스트로 전달합니다.\n\n이 가이드는 [`Pipeline`]을 소개하고, 그 기능을 시연하며, 다양한 매개변수를 구성하는 방법을 보여줍니다."
+          }
+        },
+        "1": {
+          "kind": "section",
+          "selected": [
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "작업\n\n[`Pipeline`]은 다양한 모달리티에 걸친 여러 기계 학습 작업과 호환됩니다. 파이프라인에 적절한 입력을 전달하면 나머지 처리를 자동으로 수행합니다.\n\n[`Pipeline`]를 다양한 작업과 모달리티에 사용하는 방법에 대한 몇 가지 예시를 보여 드리겠습니다.",
+            "tencent-hy-mt2-30b-a3b": "작업입니다.\n\n[`Pipeline`]은 다양한 모달리티에 걸쳐 여러 머신러닝 작업과 호환됩니다. 적절한 입력을 파이프라인에 전달하면 나머지 처리는 파이프라인이 담당합니다.\n\n다양한 작업 및 모달리티에 [`Pipeline`]을 사용하는 방법에 대한 몇 가지 예시를 소개합니다.",
+            "nvidia-nemotron-3.5-lightning": "작업\n\n[`Pipeline`]는 다양한 모달리티에서 많은 머신러닝 작업과 호환됩니다. 적절한 입력을 파이프라인에 전달하면 나머지는 파이프라인이 처리합니다.\n\n[`Pipeline`]를 사용하여 다양한 작업 및 모달리티에 대해 몇 가지 예를 보여드리겠습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "작업\n\n[`Pipeline`]는 다양한 모달리티의 많은 머신러닝 작업과 호환됩니다. 적절한 입력을 파이프라인에 전달하면 나머지는 자동으로 처리됩니다.\n\n다양한 작업과 모달리티에 대해 [`Pipeline`]를 사용하는 방법에 대한 몇 가지 예시입니다.",
+            "google-gemma-4-26b-a4b-it": "작업\n\n[`Pipeline`]은 다양한 모달리티에 걸쳐 많은 머신러닝 작업과 호환됩니다. 파이프라인에 적절한 입력을 전달하면 나머지 작업은 파이프라인이 처리합니다.\n\n다양한 작업 및 모달리티에 대해 [`Pipeline`]를 사용하는 몇 가지 예시는 다음과 같습니다."
+          }
+        },
+        "2": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it",
+            "nvidia-nemotron-3.5-lightning"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "매개변수\n\n최소한, [`Pipeline`]에는 작업 식별자, 모델, 그리고 적절한 입력만 필요합니다. 그러나 작업별 매개변수부터 성능 최적화에 이르기까지 파이프라인을 구성할 수 있는 다양한 매개변수가 있습니다.\n\n이 섹션에서는 보다 중요한 매개변수 중 일부를 소개합니다.",
+            "tencent-hy-mt2-30b-a3b": "매개변수\n\n최소한으로는 [`Pipeline`]에 필요한 것은 작업 식별자, 모델 및 적절한 입력뿐입니다. 하지만 작업별 매개변수부터 성능 최적화에 이르기까지 파이프라인을 구성하는 데 사용할 수 있는 매개변수가 많이 있습니다.\n\n이 섹션에서는 보다 중요한 매개변수들에 대해 소개합니다.",
+            "nvidia-nemotron-3.5-lightning": "매개변수\n\n최소한으로, [`Pipeline`]는 작업 식별자, 모델, 그리고 적절한 입력만 있으면 됩니다. 하지만 파이프라인을 구성하기 위해 사용 가능한 많은 파라미터가 있으며, 작업별 파라미터부터 성능 최적화까지 포함합니다.\n\n이 섹션에서는 주요 파라미터 몇 가지를 소개합니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "매개변수입니다\n\n최소한 [`Pipeline`]는 작업 식별자, 모델 및 적절한 입력만 필요합니다. 그러나 작업에 특화된 매개변수부터 성능 최적화에 이르기까지 구성할 수 있는 다양한 매개변수가 제공됩니다.\n\n이 섹션에서는 더 중요한 파라미터 중 일부를 소개합니다.",
+            "google-gemma-4-26b-a4b-it": "매개변수\n\n최소한 [`Pipeline`]에는 작업 식별자, 모델 및 적절한 입력만 필요합니다. 하지만 작업별 매개변수부터 성능 최적화에 이르기까지 파이프라인을 구성하는 데 사용할 수 있는 많은 매개변수가 있습니다.\n\n이 섹션에서는 몇 가지 더 중요한 매개변수들을 소개합니다."
+          }
+        },
+        "3": {
+          "kind": "section",
+          "selected": [
+            "qwen-qwen3-30b-a3b-instruct-2507"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "장치\n\n[`Pipeline`]은 GPU, CPUs, Apple Silicon를 포함한 다양한 하드웨어 유형과 호환됩니다. 하드웨어 유형은 `device` 매개변수로 설정합니다. 기본적으로 `device`가 설정되지 않은 경우, [`Pipeline`]은 모델을 첫 번째 사용 가능한 가속기(CUDA GPU, Apple Silicon MPS, XPU 등)에 자동으로 배치하며, 사용 가능한 가속기가 없는 경우에만 CPU로 폴백합니다. `device=\"cpu\"`를 전달하여 CPU에서 실행되도록 강제할 수 있습니다.\n\n[`Pipeline`]를 GPU에서 실행하려면 `device`를 해당 CUDA 장치 ID로 설정해야 합니다. 예를 들어, `device=0`은 첫 번째 GPU에서 실행됩니다.\n\n분산 학습을 위한 라이브러리인 [Accelerate](https://hf.co/docs/accelerate/index)를 사용하여 모델 가중치를 적절한 장치에 로드하고 저장하는 방식을 자동으로 선택하도록 할 수도 있습니다. 이는 여러 장치를 사용하는 경우 특히 유용합니다. Accelerate는 가장 빠른 장치에 먼저 모델 가중치를 로드하고 저장한 후, 필요에 따라 가중치를 다른 장치(CPU, 하드 드라이브)로 이동합니다. Accelerate가 장치를 선택하도록 하려면 `device_map=\"auto\"`를 설정합니다.\n\n[!TIP]\n[Accelerate](https://hf.co/docs/accelerate/basic_tutorials/install)이 설치되어 있는지 확인합니다.\n\n[`Pipeline`]를 Apple silicon에서 실행하려면 `device=\"mps\"`를 설정합니다.",
+            "tencent-hy-mt2-30b-a3b": "장치입니다.\n\n[`Pipeline`]는 GPU, CPUs, Apple Silicon 등 다양한 하드웨어 유형과 호환됩니다. 하드웨어 유형은 `device` 매개변수를 사용하여 설정할 수 있습니다. 기본적으로 `device` 값이 지정되지 않으면 [`Pipeline`]는 사용 가능한 첫 번째 가속기(CUDA GPU, Apple Silicon MPS, XPU 등)에 모델을 자동으로 배치하며, 가속기가 없을 경우에만 CPU를 사용합니다. `device=\"cpu\"`를 지정하면 CPU에서 실행되도록 강제할 수 있습니다.\n\nGPU에서 [`Pipeline`]을 실행하려면, 관련된 CUDA 장치 ID로 `device`를 설정해야 합니다. 예를 들어, `device=0`은 첫 번째 GPU에서 실행됩니다.\n\n또한 분산 학습을 위한 라이브러리인 [Accelerate](https://hf.co/docs/accelerate/index)가 적절한 장치에 모델 가중치를 로드하고 저장하는 방법을 자동으로 선택하도록 할 수도 있습니다. 이는 특히 여러 장치를 보유한 경우에 유용합니다. Accelerate는 가장 빠른 장치에 먼저 모델 가중치를 로드 및 저장한 다음, 필요에 따라 다른 장치(CPU, 하드 드라이브 등)로 가중치를 이동시킵니다. Accelerate가 장치를 선택할 수 있도록 `device_map=\"auto\"`를 설정하시기 바랍니다.\n\n[!TIP]\n[Accelerate](https://hf.co/docs/accelerate/basic_tutorials/install)가 설치되어 있는지 확인해 주시기 바랍니다.\n\n[`Pipeline`]을 Apple silicon에서 실행하려면 `device=\"mps\"`로 설정해야 합니다.",
+            "nvidia-nemotron-3.5-lightning": "장치\n\n[`Pipeline`] 는 다양한 하드웨어 유형과 호환되며, GPU를 포함합니다. CPUs, Apple Silicon그리고 더 많은 항목. 하드웨어 유형을 구성하십시오. `device` 매개변수입니다. 기본적으로, when `device` 설정되지 않은 경우 [`Pipeline`] 자동으로 첫 번째 사용 가능한 가속기에 모델을 배치합니다.CUDA GPU, Apple Silicon MPS, XPU, ...) 및 해당되지 않는 경우 기본값으로 폴백합니다. CPU 사용 가능한 것이 없을 때. `device=\"cpu\"` 를 강제로 실행하도록 설정합니다. CPU.\n\nGPU에서 [`Pipeline`]를 실행하려면 `device`를 해당 CUDA 장치 ID에 설정하십시오. 예를 들어 `device=0`는 첫 번째 GPU에서 실행됩니다.\n\nAccelerate 라이브러리를 사용하면 [Accelerate](https://hf.co/docs/accelerate/index)가 분산 학습에 적합한 장치에 모델 가중치를 자동으로 로드하고 저장하도록 할 수 있습니다. 특히 여러 장치를 보유하고 있을 때 유용합니다. Accelerate는 모델 가중치를 가장 빠른 장치에 먼저 로드하고 저장한 뒤, 필요에 따라 CPU나 하드 드라이브와 같은 다른 장치로 이동시킵니다. `device_map=\"auto\"`를 설정하면 Accelerate가 장치를 선택하도록 할 수 있습니다.\n\n[!TIP]\n[Accelerate](https://hf.co/docs/accelerate/basic_tutorials/install)가 설치되어 있는지 확인하십시오.\n\n[`Pipeline`]을 Apple silicon에서 실행하려면 `device=\"mps\"`를 설정하십시오.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "장치입니다\n\n[`Pipeline`]는 GPU, CPUs, Apple Silicon 등 다양한 하드웨어 유형과 호환됩니다. 하드웨어 유형은 `device` 매개변수로 설정할 수 있습니다. 기본적으로 `device`가 설정되지 않은 경우, [`Pipeline`]는 첫 번째 사용 가능한 가속기(CUDA GPU, Apple Silicon MPS, XPU 등)에 모델을 자동으로 배치하며, 가속기가 사용 불가능할 경우에만 CPU로 대체합니다. `device=\"cpu\"`를 전달하여 CPU에서 실행되도록 강제할 수 있습니다.\n\nGPU에서 [`Pipeline`]을 실행하려면 `device`를 해당 CUDA 장치 ID로 설정합니다. 예를 들어, `device=0`은 첫 번째 GPU에서 실행합니다.\n\n또한 분산 학습을 위한 라이브러리인 [Accelerate](https://hf.co/docs/accelerate/index)를 사용하여 모델 가중치를 적절한 장치에 자동으로 로드하고 저장할 수 있습니다. 이 방법은 여러 장치를 보유하고 있을 경우 특히 유용합니다. Accelerate는 가장 빠른 장치부터 모델 가중치를 로드하고 저장한 후, 필요에 따라 다른 장치(CPU, 하드 드라이브)로 가중치를 이동합니다. `device_map=\"auto\"`를 설정하면 Accelerate가 장치를 자동으로 선택합니다.\n\n[!TIP]\n[Accelerate](https://hf.co/docs/accelerate/basic_tutorials/install)가 설치되어 있는지 확인합니다.\n\n[`Pipeline`]를 Apple silicon에서 실행하려면 `device=\"mps\"`로 설정합니다.",
+            "google-gemma-4-26b-a4b-it": "장치\n\n[`Pipeline`]은 GPU, CPUs, Apple Silicon 등을 포함한 다양한 하드웨어 유형과 호환됩니다. `device` 파라미터를 사용하여 하드웨어 유형을 구성하십시오. 기본적으로 `device`를 설정하지 않으면, [`Pipeline`]은 모델을 사용 가능한 첫 번째 가속기(CUDA GPU, Apple Silicon MPS, XPU, ...)에 자동으로 배치하며, 사용 가능한 가속기가 없는 경우에만 CPU로 대체됩니다. CPU에서 실행하도록 강제하려면 `device=\"cpu\"`를 전달하십시오.\n\nGPU에서 [`Pipeline`]을 실행하려면, `device`를 해당 CUDA 장치 ID로 설정하십시오. 예를 들어, `device=0`은 첫 번째 GPU에서 실행됩니다.\n\n분산 학습을 위한 라이브러리인 [Accelerate](https://hf.co/docs/accelerate/index)를 사용하여 적절한 장치에 모델 가중치를 로드하고 저장하는 방법을 자동으로 선택하도록 설정할 수도 있습니다. 이는 여러 개의 장치를 보유한 경우 특히 유용합니다. Accelerate는 가장 빠른 장치에 모델 가중치를 먼저 로드하고 저장한 다음, 필요에 따라 가중치를 다른 장치(CPU, 하드 드라이브)로 이동합니다. Accelerate가 장치를 선택하도록 하려면 `device_map=\"auto\"`를 설정하십시오.\n\n[!TIP]\n[Accelerate](https://hf.co/docs/accelerate/basic_tutorials/install)가 설치되어 있는지 확인하십시오.\n\nApple silicon에서 [`Pipeline`]을(를) 실행하려면, `device=\"mps\"`를 설정하십시오."
+          }
+        },
+        "4": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it",
+            "qwen-qwen3.8-27b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "배치 추론\n\n[`Pipeline`]는 `batch_size` 매개변수를 사용하여 입력 배치도 처리할 수 있습니다. 배치 추론은 특히 GPU에서 속도를 향상시킬 수 있지만, 이는 보장되지 않습니다. 하드웨어, 데이터, 모델 자체와 같은 다른 변수가 배치 추론이 속도를 향상시키는지 여부에 영향을 미칠 수 있습니다. 이 때문에 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]은 한 번에 2개의 입력 배치로 모델을 전달합니다.\n\n배치 추론의 또 다른 좋은 사용 사례는 [`Pipeline`]에서 스트리밍 데이터를 처리하는 것입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단할 때 다음 일반적인 지침을 염두에 두십시오.\n\n확실히 알 수 있는 유일한 방법은 모델, 데이터, 하드웨어에서 성능을 측정하는 것입니다.\n\n지연 시간으로 제한이 있는 경우(예: 실시간 추론 제품)에는 추론을 배치하지 마십시오.\n\nCPU를 사용하는 경우 추론을 배치하지 마십시오.\n\n데이터의 `sequence_length`를 알 수 없는 경우 추론을 배치하지 마십시오. 성능을 측정하고, `sequence_length`에 점진적으로 값을 추가하며, 실패 시 복구하기 위해 메모리 부족(OOM) 검사를 포함하십시오.\n\n`sequence_length`가 규칙적이라면 배치 추론을 수행하고, OOM 오류가 발생할 때까지 계속 증가시키십시오. GPU가 클수록 배치 추론이 더 유용합니다.\n\n배치 추론을 수행하기로 결정했다면 OOM 오류를 처리할 수 있는지 반드시 확인하십시오.",
+            "tencent-hy-mt2-30b-a3b": "배치 추론입니다.\n\n[`Pipeline`]는 `batch_size` 매개변수를 사용하여 입력 데이터의 배치를 처리할 수도 있습니다. 배치 추론은 특히 GPU에서 속도를 향상시킬 수 있지만, 반드시 그런 것은 아닙니다. 하드웨어, 데이터 및 모델 자체와 같은 다른 요인들도 배치 추론이 속도를 개선하는지에 영향을 줄 수 있습니다. 이러한 이유로 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력값이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]은 한 번에 2개의 입력값으로 구성된 배치를 모델에 전달합니다.\n\n배치 추론의 또 다른 유용한 활용 사례는 [`Pipeline`]에서 스트리밍 데이터를 처리하는 것입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단하기 위해 다음의 일반적인 기준을 참고하시기 바랍니다.\n\n확실히 알 수 있는 유일한 방법은 사용 중인 모델, 데이터 및 하드웨어에서 성능을 측정하는 것입니다.\n\n지연 시간에 제약이 있는 경우(예: 실시간 추론 제품)에는 배치 추론을 사용하지 마십시오.\n\nCPU를 사용하는 경우에는 추론을 배치로 처리하지 마십시오.\n\n데이터의 `sequence_length`를 알지 못한다면 배치 추론을 수행하지 마십시오. 성능을 측정한 뒤 `sequence_length` 값을 점진적으로 늘리고, 오류 발생 시 복구할 수 있도록 메모리 부족(OOM) 상태를 확인하는 절차를 포함해야 합니다.\n\n배치 추론이 필요한 경우에는 배치 추론을 수행하십시오. `sequence_length` 일반적으로는 정상적으로 작동하며, OOM 오류가 발생할 때까지 계속해서 추론을 수행합니다. GPU의 용량이 클수록 배치 추론이 더욱 유용합니다.\n\n배치 추론을 수행하려는 경우에는 반드시 메모리 부족 오류를 처리할 수 있는지 확인해야 합니다.",
+            "nvidia-nemotron-3.5-lightning": "배치 추론\n\n[`Pipeline`]는 또한 `batch_size` 파라미터를 사용하여 입력 배치도 처리할 수 있습니다. 배치 추론은 GPU에서 특히 속도를 향상시킬 수 있지만, 보장되지는 않습니다. 하드웨어, 데이터, 모델 자체와 같은 기타 변수는 배치 추론이 속도를 향상시키는지에 영향을 미칠 수 있습니다. 이러한 이유로 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력값이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]는 모델에 한 번에 2개의 입력값 배치(batch)를 전달합니다.\n\n배치 추론의 또 다른 좋은 사용 사례는 [`Pipeline`]에서 스트리밍 데이터에 있습니다.\n\n배치 추론이 성능을 개선하는 데 도움이 될 수 있는지 판단할 때 다음 일반적인 가이드라인을 염두에 두십시오.\n\n모델, 데이터, 하드웨어에서 성능을 측정하는 것만이 확실하게 알 수 있는 유일한 방법입니다.\n\n지연 시간(실시간 추론 제품의 경우 등)에 제약이 있는 경우 배치 추론을 수행하지 마십시오.\n\nCPU를 사용 중이라면 CPU을 하지 마십시오.\n\n배치를 추론하지 마십시오. 데이터의 `sequence_length`를 알 수 없으면요. 성능을 측정하고, `sequence_length`를 반복적으로 늘리며, 메모리 부족(OOM) 체크를 포함하여 실패로부터 복구하십시오.\n\n배치 추론을 수행하려면 `sequence_length`가 규칙적이어야 하며, OOM 오류에 도달할 때까지 계속 밀어붙이십시오. GPU가 클수록 배치 추론이 더 유용합니다.\n\n배치를 수행할 경우 OOM 오류를 처리할 수 있도록 확인해 주세요.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "배치 추론입니다\n\n[`Pipeline`]는 `batch_size` 파라미터를 사용하여 입력의 배치를 처리할 수도 있습니다. 배치 추론은 특히 GPU에서 속도 향상을 가져올 수 있으나, 보장되지는 않습니다. 하드웨어, 데이터 및 모델 자체와 같은 다른 변수들은 배치 추론이 속도 향상에 기여하는지 여부에 영향을 줄 수 있습니다. 이에 따라 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예제에서 입력이 4개이고 `batch_size`가 2로 설정되어 있을 경우, [`Pipeline`]는 모델에 한 번에 2개의 입력 배치를 전달합니다.\n\n배치 추론의 또 다른 좋은 사용 사례는 [`Pipeline`]에서 스트리밍 데이터를 처리하는 것입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단하기 위해 다음의 일반적인 원칙을 기억하시기 바랍니다.\n\n확실하게 알 수 있는 유일한 방법은 모델, 데이터 및 하드웨어에서 성능을 측정하는 것입니다.\n\n지연 시간에 제약이 있는 경우(예: 실시간 추론 제품 등) 배치 추론을 하지 마십시오.\n\nCPU를 사용하는 경우 배치 추론을 하지 마십시오.\n\n데이터의 `sequence_length`를 모른다면 배치 추론을 하지 마십시오. 성능을 측정하고, 반복적으로 `sequence_length`를 늘리며 메모리 초과(OOM) 확인을 포함하여 실패 시 복구할 수 있도록 하십시오.\n\n`sequence_length`가 규칙적인 경우 배치 추론을 수행하고, OOM 오류가 발생할 때까지 계속 진행합니다. GPU가 클수록 배치 추론이 더욱 유용합니다.\n\n배치 추론을 수행하기로 결정한 경우 OOM 오류를 처리할 수 있도록 하십시오.",
+            "google-gemma-4-26b-a4b-it": "배치 추론\n\n[`Pipeline`]는 `batch_size` 매개변수를 사용하여 입력 배치를 처리할 수도 있습니다. 배치 추론은 특히 GPU에서 속도를 향상시킬 수 있지만, 이것이 보장되지는 않습니다. 하드웨어, 데이터 및 모델 자체와 같은 다른 변수들이 배치 추론이 속도를 향상시키는지 여부에 영향을 미칠 수 있습니다. 이러한 이유로 배치 추론은 기본적으로 비활성화되어 있습니다.\n\n아래 예시에서 입력이 4개이고 `batch_size`가 2로 설정된 경우, [`Pipeline`]는 한 번에 2개의 입력으로 구성된 배치를 모델에 전달합니다.\n\n배치 추론의 또 다른 유용한 사례는 [`Pipeline`]에서의 스트리밍 데이터입니다.\n\n배치 추론이 성능 향상에 도움이 될 수 있는지 판단할 때 다음의 일반적인 지침들을 염두에 두십시오.\n\n확실하게 알 수 있는 유일한 방법은 모델, 데이터 및 하드웨어에 대한 성능을 측정하는 것입니다.\n\n지연 시간에 제약이 있는 경우(예를 들어 실시간 추론 제품)에는 배치를 통한 추론을 수행하지 마십시오.\n\nCPU를 사용하는 경우 배치를 통한 추론을 수행하지 마십시오.\n\n데이터의 `sequence_length`를 알 수 없는 경우에는 배치를 사용한 추론을 수행하지 마십시오. 성능을 측정하면서 `sequence_length`를 반복적으로 추가하고, 오류 발생 시 복구할 수 있도록 메모리 부족(OOM) 체크를 포함하십시오.\n\n`sequence_length`가 일정하다면 배치 추론을 수행하고, OOM 오류가 발생할 때까지 계속 시도하십시오. GPU의 크기가 클수록 배치 추론이 더 유용합니다.\n\n배치 추론을 수행하기로 결정했다면 OOM 오류를 처리할 수 있는지 반드시 확인하십시오."
+          }
+        },
+        "5": {
+          "kind": "section",
+          "selected": [
+            "tencent-hy-mt2-30b-a3b"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "작업별 매개변수\n\n[`Pipeline`]은 각 개별 태스크 파이프라인에서 지원하는 모든 매개변수를 허용합니다. 사용 가능한 매개변수의 유형을 확인하려면 각 개별 태스크 파이프라인을 살펴보세요. 사용 사례에 유용한 매개변수를 찾을 수 없다면, 요청하기 위해 GitHub [이슈](https://github.com/huggingface/transformers/issues/new?assignees=&labels=feature&template=feature-request.yml)를 열어도 됩니다.!\n\n아래 예시에서는 사용 가능한 작업별 매개변수 중 일부를 보여 줍니다.\n\n`return_timestamps=\"word\"` 매개변수를 [`Pipeline`]에 전달하여 각 단어가 언제 발화되었는지 반환합니다.\n\n`return_full_text=False`를 [`Pipeline`]에 전달하여 전체 텍스트(프롬프트 및 생성된 텍스트) 대신 생성된 텍스트만 반환하도록 합니다.\n\n[`~TextGenerationPipeline.__call__`]은 [`~GenerationMixin.generate`] 메서드의 추가 키워드 인자도 지원합니다. 생성된 시퀀스를 하나 이상 반환하려면 `num_return_sequences`을 1보다 큰 값으로 설정합니다.",
+            "tencent-hy-mt2-30b-a3b": "작업별 특정 매개변수입니다.\n\n[`Pipeline`]는 각 개별 작업 파이프라인에서 지원하는 모든 매개변수를 받아들입니다. 사용 가능한 매개변수의 종류를 확인하려면 각 개별 작업 파이프라인을 반드시 살펴보시기 바랍니다. 만약 자신의 사용 사례에 유용한 매개변수를 찾을 수 없다면, 언제든지 GitHub에 [이슈](https://github.com/huggingface/transformers/issues/new?assignees=&labels=feature&template=feature-request.yml)를 생성하여 요청해 주시기 바랍니다.!\n\n아래의 예시들은 사용 가능한 작업별 매개변수 중 일부를 보여줍니다.\n\n각 단어가 발화된 시점을 반환하려면 `return_timestamps=\"word\"` 매개변수를 [`Pipeline`]에 전달하면 됩니다.\n\n`return_full_text=False`를 [`Pipeline`]에 전달하면 전체 텍스트(프롬프트와 생성된 텍스트) 대신 생성된 텍스트만 반환됩니다.\n\n[`~TextGenerationPipeline.__call__`]는 [`~GenerationMixin.generate`] 메서드에서 제공하는 추가 키워드 인수도 지원합니다. 두 개 이상의 생성된 시퀀스를 반환하려면 `num_return_sequences` 값을 1보다 큰 숫자로 설정해야 합니다.",
+            "nvidia-nemotron-3.5-lightning": "작업별 매개변수\n\n[`Pipeline`]는 각 개별 작업 파이프라인에서 지원하는 모든 매개변수를 수락합니다. 사용 가능한 매개변수 유형을 확인하려면 각 개별 작업 파이프라인을 확인해 주시기 바랍니다. 유용한 매개변수를 찾을 수 없는 경우, GitHub [issue](https://github.com/huggingface/transformers/issues/new?assignees=&labels=feature&template=feature-request.yml)를 열어 요청해 주시기 바랍니다.!\n\n아래 예제는 사용 가능한 일부 태스크별 파라미터를 보여줍니다.\n\n`return_timestamps=\"word\"` 파라미터를 [`Pipeline`]에 전달하여 각 단어가 언제 발화되었는지 반환합니다.\n\n`return_full_text=False`를 [`Pipeline`]에 전달하여 프롬프트와 생성된 텍스트 대신 생성된 텍스트만 반환하도록 합니다.\n\n[`~TextGenerationPipeline.__call__`]는 또한 [`~GenerationMixin.generate`] 메서드에서 추가 키워드 인수를 지원합니다. 여러 개의 생성된 시퀀스를 반환하려면 `num_return_sequences`를 1보다 큰 값으로 설정하십시오.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "작업 전용 매개변수입니다.\n\n[`Pipeline`]는 각 개별 작업 파이프라인에서 지원하는 모든 매개변수를 수락합니다. 사용 가능한 매개변수 유형을 확인하기 위해 각 개별 작업 파이프라인을 확인해 주시기 바랍니다. 귀하의 사용 사례에 유용한 매개변수가 없을 경우, 자유롭게 GitHub [이슈](https://github.com/huggingface/transformers/issues/new?assignees=&labels=feature&template=feature-request.yml)를 열어 요청하시기 바랍니다.!\n\n아래의 예시는 사용 가능한 작업 전용 매개변수 중 일부를 보여줍니다.\n\n각 단어가 발화된 시점을 반환하려면 `return_timestamps=\"word\"` 매개변수를 [`Pipeline`]에 전달합니다.\n\n`return_full_text=False`를 [`Pipeline`]에 전달하여 전체 텍스트(프롬프트와 생성된 텍스트) 대신 생성된 텍스트만 반환합니다.\n\n[`~TextGenerationPipeline.__call__`]는 또한 [`~GenerationMixin.generate`] 메서드에서 제공하는 추가 키워드 인수를 지원합니다. 하나 이상의 생성된 시퀀스를 반환하려면 `num_return_sequences`를 1보다 큰 값으로 설정합니다.",
+            "google-gemma-4-26b-a4b-it": "작업별 매개변수\n\n[`Pipeline`]은 각 개별 작업 파이프라인에서 지원하는 모든 매개변수를 수락합니다. 어떤 유형의 매개변수를 사용할 수 있는지 확인하려면 각 개별 작업 파이프라인을 반드시 확인하시기 바랍니다. 사용 사례에 유용한 매개변수를 찾을 수 없는 경우, GitHub [issue](https://github.com/huggingface/transformers/issues/new?assignees=&labels=feature&template=feature-request.yml)를 열어 자유롭게 요청해 주십시오.!\n\n아래의 예제들은 사용 가능한 일부 작업별 매개변수들을 보여줍니다.\n\n각 단어가 언제 발화되었는지 반환하려면 `return_timestamps=\"word\"` 파라미터를 [`Pipeline`]에 전달하십시오.\n\n전체 텍스트(프롬프트 및 생성된 텍스트) 대신 생성된 텍스트만 반환하려면 [`Pipeline`]에 `return_full_text=False`를 전달하십시오.\n\n[`~TextGenerationPipeline.__call__`]는 [`~GenerationMixin.generate`] 메서드의 추가 키워드 인자도 지원합니다. 하나 이상의 생성된 시퀀스를 반환하려면 `num_return_sequences`를 1보다 큰 값으로 설정하십시오."
+          }
+        },
+        "6": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "청크 배치\n\n데이터를 청크 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 타입의 경우, 단일 입력(예: 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 분할해야 할 수 있습니다.\n\n일부 작업, 예를 들어 제로샷 분류나 질의응답의 경우, 단일 입력에 대해 여러 번의 전방 전달이 필요할 수 있으며, 이로 인해 `batch_size` 매개변수와 관련된 문제가 발생할 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)은 배치 처리를 자동으로 처리할 수 있으므로 입력이 유발하는 전방 패스 횟수에 대해 걱정할 필요가 없습니다. 대신, 입력과 독립적으로 `batch_size`를 최적화할 수 있습니다.\n\n아래 예제는 [`Pipeline`]와 어떻게 다른지를 보여 줍니다.",
+            "tencent-hy-mt2-30b-a3b": "청크 배칭입니다.\n\n데이터를 청크 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 단일 입력(예: 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 나누어야 할 수 있습니다.\n\n일부 작업, 예를 들어 제로샷 분류나 질의응답과 같은 경우에는 단일 입력에 대해 여러 번의 순전파가 필요할 수 있으며, 이로 인해 `batch_size` 매개변수와 관련된 문제가 발생할 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)는 자동으로 배치 처리를 수행할 수 있으므로 입력 데이터가 유발하는 순전파 횟수에 대해 걱정할 필요가 없습니다. 대신 `batch_size`를 입력 데이터와 별개로 최적화할 수 있습니다.\n\n아래 예시는 이가 [`Pipeline`]과 어떻게 다른지를 보여줍니다.",
+            "nvidia-nemotron-3.5-lightning": "청크 배치\n\n데이터를 청크로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 예를 들어 정말 긴 오디오 파일과 같이 단일 입력이 여러 부분으로 분할되어 처리될 수 있습니다.\n\n일부 작업, 예를 들어 영 제로-샷 분류나 질문 응답의 경우, 단일 입력에 대해 여러 번의 전파가 필요할 수 있으며, 이는 `batch_size` 파라미터에 문제를 일으킬 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)는 자동으로 배치 처리를 처리할 수 있으므로 입력으로 트리거된 포워드 패스의 수에 대해 걱정할 필요가 없습니다. 대신, `batch_size`를 입력과 독립적으로 최적화할 수 있습니다.\n\n아래 예제는 [`Pipeline`]과 어떻게 다른지 보여줍니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "청크 배치 처리합니다\n\n데이터를 조각 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 하나의 입력(예: 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 나누어야 할 수 있습니다.\n\n일부 작업, 예를 들어 제로샷 분류 또는 질문 응답과 같은 경우, 단일 입력에 대해 여러 번의 전방 전파가 필요할 수 있으며, 이는 `batch_size` 매개변수에 문제를 일으킬 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스는 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)가 자동으로 배치 처리를 수행하므로 입력값이 유발하는 순전파 횟수에 대해 걱정할 필요가 없습니다. 대신 입력값과 무관하게 `batch_size`를 별도로 최적화할 수 있습니다.\n\n아래 예시는 [`Pipeline`]와 어떻게 다른지 보여줍니다.",
+            "google-gemma-4-26b-a4b-it": "청크 배치 처리\n\n데이터를 청크 단위로 처리해야 하는 경우가 있습니다.\n\n일부 데이터 유형의 경우, 단일 입력(예를 들어, 매우 긴 오디오 파일)을 처리하기 전에 여러 부분으로 분할해야 할 수도 있습니다.\n\n제로샷 분류 또는 질의응답과 같은 일부 작업의 경우, 단일 입력에 대해 여러 번의 순방향 패스가 필요할 수 있으며 이는 `batch_size` 매개변수에 문제를 일으킬 수 있습니다.\n\n[ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387) 클래스는 이러한 사용 사례를 처리하도록 설계되었습니다. 두 파이프라인 클래스 모두 동일한 방식으로 사용되지만, [ChunkPipeline](https://github.com/huggingface/transformers/blob/99e0ab6ed888136ea4877c6d8ab03690a1478363/src/transformers/pipelines/base.py#L1387)는 배치 처리를 자동으로 수행할 수 있으므로 입력값이 트리거하는 순전파 횟수에 대해 걱정할 필요가 없습니다. 대신, 입력값과 독립적으로 `batch_size`를 최적화할 수 있습니다.\n\n아래 예시는 [`Pipeline`]와 어떻게 다른지 보여줍니다."
+          }
+        },
+        "7": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "대규모 데이터셋\n\n대형 데이터셋에 대한 추론을 수행하려면 데이터셋 자체를 직접 반복할 수 있습니다. 이를 통해 전체 데이터셋에 대한 메모리를 즉시 할당하는 것을 방지할 수 있으며, 배치를 직접 생성할 필요도 없습니다. 성능이 향상되는지 확인하려면 [배치 추론](#batch-inference)을 `batch_size` 매개변수와 함께 사용해 보세요.\n\n[`Pipeline`]로 대규모 데이터셋에서 추론을 실행하는 다른 방법에는 반복자 또는 생성자를 사용하는 것이 포함됩니다.",
+            "tencent-hy-mt2-30b-a3b": "대용량 데이터셋입니다.\n\n대용량 데이터셋을 이용한 추론 작업의 경우, 데이터셋 자체를 직접 반복 처리할 수 있습니다. 이렇게 하면 전체 데이터셋을 위해 즉시 메모리를 할당할 필요가 없으며, 배치를 직접 생성하는 것에 대해서도 걱정할 필요가 없습니다. 성능 향상을 확인하기 위해 [배치 추론](#batch-inference) 기능에서 `batch_size` 매개변수를 사용해 보시기 바랍니다.\n\n대규모 데이터셋에서 추론을 실행하는 다른 방법들입니다. [`Pipeline`] 이터레이터나 제너레이터를 사용하는 방법도 포함됩니다.",
+            "nvidia-nemotron-3.5-lightning": "대규모 데이터세트\n\n대규모 데이터셋에 대한 추론 시, 데이터셋 자체를 직접 반복할 수 있습니다. 이는 전체 데이터셋에 대한 메모리를 즉시 할당하지 않으며, 배치 자체를 생성할 필요도 없습니다. `batch_size` 파라미터와 함께 [배치 추론](#batch-inference)을 시도해 보시면 성능 향상이 도움이 될 수 있습니다.\n\n[`Pipeline`]를 사용한 대량 데이터셋 추론의 다른 방법으로는 반복자나 제너레이터를 사용하는 것이 있습니다.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "대규모 데이터셋입니다\n\n큰 데이터셋을 사용한 추론의 경우, 데이터셋 자체를 직접 반복할 수 있습니다. 이 방법은 전체 데이터셋에 대한 메모리 할당을 즉시 하지 않으며, 배치를 수동으로 생성할 필요도 없습니다. 성능 향상 여부를 확인하기 위해 [배치 추론](#batch-inference)을 `batch_size` 매개변수와 함께 시도해 보시기 바랍니다.\n\n크고 큰 데이터셋에 대해 [`Pipeline`]를 사용하여 추론을 실행하는 다른 방법으로는 반복자나 생성자를 사용하는 것이 있습니다.",
+            "google-gemma-4-26b-a4b-it": "대규모 데이터 세트\n\n대규모 데이터셋으로 추론을 수행할 때는 데이터셋 자체를 직접 반복할 수 있습니다. 이는 데이터셋 전체에 대해 즉시 메모리를 할당하는 것을 방지하며, 직접 배치를 생성하는 것에 대해 걱정할 필요가 없습니다. [Batch inference](#batch-inference)를 `batch_size` 매개변수와 함께 사용하여 성능이 향상되는지 확인해 보십시오.\n\n[`Pipeline`]를 사용하여 대규모 데이터셋에 대해 추론을 실행하는 다른 방법으로는 이터레이터 또는 제너레이터를 사용하는 방법이 있습니다."
+          }
+        },
+        "8": {
+          "kind": "section",
+          "selected": [
+            "google-gemma-4-26b-a4b-it",
+            "qwen-qwen3-30b-a3b-instruct-2507"
+          ],
+          "needsRevision": false,
+          "note": "",
+          "texts": {
+            "qwen-qwen3.8-27b": "대형 모델\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]으로 대규모 모델을 실행할 때 여러 최적화를 제공합니다. 먼저 Accelerate가 설치되어 있는지 확인하십시오.\n\n`device_map=\"auto\"` 설정은 모델이 가용한 경우 더 느린 장치(CPU, 하드 드라이브)로 배포되기 전에 가장 빠른 장치(GPU)에 자동으로 분배되도록 하는 데 유용합니다.\n\n[`Pipeline`]는 반정밀 가중치(torch.float16)를 지원하며, 이는 훨씬 더 빠르고 메모리를 절약할 수 있습니다. 대부분의 모델, 특히 더 큰 모델의 경우 성능 저하는 무시할 수 있는 수준입니다. 하드웨어가 이를 지원하는 경우, 더 넓은 범위를 위해 대신 torch.bfloat16를 활성화할 수 있습니다.\n\n[!TIP]\n입력은 내부적으로 torch.float16으로 변환되며, PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]은 메모리 사용량을 더욱 줄이기 위해 양자화 모델도 지원합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 후, 파이프라인의 `model_kwargs`에 `quantization_config`를 추가하십시오.",
+            "tencent-hy-mt2-30b-a3b": "대형 모델입니다.\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]를 사용하여 대형 모델을 실행할 때 몇 가지 최적화 기능을 제공합니다. 먼저 Accelerate가 설치되어 있는지 확인하십시오.\n\n`device_map=\"auto\"` 설정은 모델을 먼저 가장 빠른 장치인 GPU에 자동으로 할당한 뒤, 사용 가능한 경우 다른 더 느린 장치인 CPU나 하드 드라이브로 보내는 데 유용합니다.\n\n[`Pipeline`]은 반정밀도 가중치(torch.float16)를 지원하며, 이를 통해 처리 속도가 크게 향상되고 메모리 사용량도 절약됩니다. 대부분의 모델, 특히 규모가 큰 모델의 경우 성능 저하가 거의 없습니다. 만약 사용 중인 하드웨어가 지원한다면, 더 넓은 범위를 활용하기 위해 torch.bfloat16를 사용할 수도 있습니다.\n\n[!TIP]\n입력값은 내부적으로 torch.float16 형식으로 변환되며, 이 기능은 PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]은 메모리 사용량을 더욱 줄이기 위해 양자화된 모델도 지원합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 뒤, 파이프라인 내의 `model_kwargs`에 `quantization_config`를 추가해 주시기 바랍니다.",
+            "nvidia-nemotron-3.5-lightning": "대형 모델\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]을 사용하여 대규모 모델을 실행할 때 몇 가지 최적화를 가능하게 합니다. Accelerate를 먼저 설치해 주세요.\n\nThe `device_map=\"auto\"` 설정은 사용 가능한 경우 가장 빠른 장치(GPU)에 먼저 모델을 자동으로 분산시킨 다음 다른 느린 장치에 배포하는 데 유용합니다.CPU, 하드디스크).\n\n[`Pipeline`]는 torch.float16의 반정밀 가중치를 지원하며, 이는 크게 빨라지고 메모리를 절약할 수 있습니다. 대부분의 모델에서 성능 손실은 무시할 수 있으며, 특히 큰 모델의 경우 더욱 그렇습니다. 하드웨어가 지원한다면 torch.bfloat16을 대신 사용하면 더 넓은 범위를 지원할 수 있습니다.\n\n[!TIP]\n내부적으로 입력은 torch.float16로 변환되며, PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로 [`Pipeline`]도 메모리 사용량을 더욱 줄이기 위해 양자화된 모델을 수락합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 다음, `quantization_config`를 `model_kwargs`에 추가하십시오.",
+            "qwen-qwen3-30b-a3b-instruct-2507": "대규모 모델입니다\n\n[Accelerate](https://hf.co/docs/accelerate/index)는 [`Pipeline`]를 사용하여 대규모 모델을 실행할 때 몇 가지 최적화 기능을 제공합니다. 먼저 Accelerate가 설치되어 있는지 확인하시기 바랍니다.\n\n`device_map=\"auto\"` 설정은 모델을 가장 빠른 장치(GPU)에 우선적으로 자동으로 배분한 후, 사용 가능한 경우 더 느린 장치(CPU, 하드 드라이브)로 배분하는 데 유용합니다.\n\n[`Pipeline`]는 반정밀 가중치(torch.float16)를 지원하여 성능이 향상되고 메모리 사용량을 절약할 수 있습니다. 대부분의 모델, 특히 더 큰 모델에서는 성능 저하가 거의 발생하지 않습니다. 하드웨어에서 지원하는 경우 더 넓은 범위를 위해 torch.bfloat16를 사용할 수 있습니다.\n\n[!TIP]\n입력은 내부적으로 torch.float16로 변환되며, 이는 오직 PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]는 메모리 사용량을 더욱 줄이기 위해 양자화 모델도 수용합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인하고, 그 후 파이프라인에 `quantization_config`를 `model_kwargs`에 추가합니다.",
+            "google-gemma-4-26b-a4b-it": "대규모 모델\n\n[Accelerate](https://hf.co/docs/accelerate/index)를 사용하면 [`Pipeline`]으로 대규모 모델을 실행할 때 몇 가지 최적화 기능을 사용할 수 있습니다. 먼저 Accelerate가 설치되어 있는지 확인하십시오.\n\n`device_map=\"auto\"` 설정은 모델을 다른 더 느린 장치(CPU, 하드 드라이브)로 보내기 전에 가장 빠른 장치(GPU)에 우선적으로 자동으로 분산 배치하는 데 유용합니다.\n\n[`Pipeline`]은(는) 반정밀도 가중치(torch.float16)를 지원하며, 이를 통해 속도를 크게 높이고 메모리를 절약할 수 있습니다. 대부분의 모델, 특히 규모가 큰 모델의 경우 성능 저하는 무시할 수 있는 수준입니다. 하드웨어가 지원하는 경우, 더 넓은 범위를 위해 대신 torch.bfloat16을(를) 활성화할 수 있습니다.\n\n[!TIP]\n입력값은 내부적으로 torch.float16으로 변환되며, PyTorch 백엔드를 사용하는 모델에서만 작동합니다.\n\n마지막으로, [`Pipeline`]은 메모리 사용량을 더욱 줄이기 위해 양자화된 모델도 지원합니다. 먼저 [bitsandbytes](https://hf.co/docs/bitsandbytes/installation) 라이브러리가 설치되어 있는지 확인한 다음, 파이프라인의 `model_kwargs`에 `quantization_config`를 추가하십시오."
+          }
+        }
+      },
+      "updatedAt": "2026-10-04T07:50:41.390Z",
+      "blind": true
+    }
+  ]
+}
