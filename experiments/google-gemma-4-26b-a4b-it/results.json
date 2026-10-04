@@ -1,0 +1,140 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "provider": "openrouter",
+  "language": "ko",
+  "source_repository": "huggingface/transformers",
+  "source_revision": "469230357aab0f2b303b0d638c1f8d06edb14184",
+  "pipeline_code_revision": "773a807b08ba5a039d6ead6774545e748064f596",
+  "settings": {
+    "context_window": 16384,
+    "max_tokens": 4096,
+    "retry_max_tokens": 8192,
+    "temperature": 0
+  },
+  "documents": [
+    {
+      "source_document": "pipeline_tutorial.md",
+      "output_file": "ko/pipeline_tutorial.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/pipeline_tutorial.md",
+      "sha256": "6c9f0aa1bf629f866ea180090e455f0562ef5fe6358c9934cf365e1ec7b38f92",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 16384,
+        "output": 4096,
+        "group": 64,
+        "language": "ko",
+        "model": "google/gemma-4-26b-a4b-it",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "source_document": "tokenizer_summary.md",
+      "output_file": "ko/tokenizer_summary.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/tokenizer_summary.md",
+      "sha256": "2d529bf374095267ac3e93046b4bb00e134b9e824828e121d7e8017a7b6807a5",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 16384,
+        "output": 4096,
+        "group": 64,
+        "language": "ko",
+        "model": "google/gemma-4-26b-a4b-it",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "source_document": "training.md",
+      "output_file": "ko/training.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/training.md",
+      "sha256": "1cd3a7f905d0d6e5bdc5e5f12180b756dbac02a0ad46a2def307d381b934f753",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 16384,
+        "output": 4096,
+        "group": 64,
+        "language": "ko",
+        "model": "google/gemma-4-26b-a4b-it",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "source_document": "quantization/selecting.md",
+      "output_file": "ko/quantization/selecting.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/quantization/selecting.md",
+      "sha256": "b1ad7e6ad3b15b6cb1af7c40692b7d3c195dc30a2edaef0220d8e3082e5858d1",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 16384,
+        "output": 4096,
+        "group": 64,
+        "language": "ko",
+        "model": "google/gemma-4-26b-a4b-it",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    },
+    {
+      "source_document": "chat_templating_writing.md",
+      "output_file": "ko/chat_templating_writing.md",
+      "source_url": "https://github.com/huggingface/transformers/blob/469230357aab0f2b303b0d638c1f8d06edb14184/docs/source/en/chat_templating_writing.md",
+      "sha256": "9a5ffab32257bf0adf25431f3e1ab2feeca1322e364b81dfe4bcac1493427fb8",
+      "status": "success",
+      "pipeline_config": {
+        "kit_hash": "63e9a89dd1e1ac0e3052b94bb96bc855251d65ea80eeab7979d19eb40ed51ebd",
+        "version": 23,
+        "attention": "none",
+        "context": 16384,
+        "output": 4096,
+        "group": 64,
+        "language": "ko",
+        "model": "google/gemma-4-26b-a4b-it",
+        "model_revision": "openrouter",
+        "tokenizer_revision": "none",
+        "transformers": "none",
+        "provider": "openrouter"
+      }
+    }
+  ],
+  "sidebar": {
+    "output_file": "ko/_toctree.yml",
+    "sha256": "060babf3a98fb16c8f948c03038a679f291c8a014c6ee9e40f6c0d4749e6adc2",
+    "note": "The five translated pages are unchanged. The sidebar title was restored from 파이프라인 API to Pipeline API at user request. A temporary glossary preference used during sidebar generation was reverted."
+  },
+  "aggregate": {
+    "completed_documents": 5,
+    "translation_requests_including_failed_attempts": null,
+    "translation_cost_usd_including_failed_attempts": null,
+    "note": "The adapter used for this run did not record API request counts, token usage, costs, or durations. The 326 initial prose units are not an API request total."
+  },
+  "validation": {
+    "pages": 5,
+    "fenced_code_blocks_preserved": 48,
+    "document_validation": "passed",
+    "sidebar_validation": "passed with one explicit user-requested untranslated title: Pipeline API"
+  },
+  "original_result_commit": "adc0e05",
+  "note": "Moved byte-for-byte from the original result branch. No new inference was run with the newer shared-branch pipeline or glossary. Selected pages and pruned sidebar only; linked unselected pages are not included."
+}

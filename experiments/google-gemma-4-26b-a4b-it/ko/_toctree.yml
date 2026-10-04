@@ -1,0 +1,34 @@
+- isExpanded: true
+  sections:
+  - isExpanded: false
+    sections:
+    - local: tokenizer_summary
+      title: 토큰화 알고리즘
+    title: 전처리기
+  title: 기본 클래스
+- isExpanded: true
+  sections:
+  - isExpanded: false
+    sections:
+    - local: pipeline_tutorial
+      title: 파이프라인
+    title: Pipeline API
+  - isExpanded: false
+    sections:
+    - local: chat_templating_writing
+      title: 채팅 템플릿 작성하기
+    title: 모델과 대화하기
+  title: 추론
+- isExpanded: true
+  sections:
+  - isExpanded: false
+    sections:
+    - local: training
+      title: 미세 조정
+    title: 시작하기
+  title: 학습
+- isExpanded: false
+  sections:
+  - local: quantization/selecting
+    title: 양자화 방법 선택하기
+  title: 양자화
