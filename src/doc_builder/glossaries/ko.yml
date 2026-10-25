@@ -1,10 +1,22 @@
-# Korean PoC terminology; review before publishing.
+# Korean terminology — PyTorchKR × Hugging Face KREW; review before publishing.
+# terms-kr snapshot: 0344ae34ec247aef7b2ddd446b9d0eefcaae2447 (exported 2026-10-25).
+# https://github.com/PyTorchKR/terms-kr/tree/0344ae34ec247aef7b2ddd446b9d0eefcaae2447/data
+# Template: src/doc_builder/glossaries/ja.yml (pin / keep / labels).
+# Preserve existing keep/labels and pins absent from the imported glossary.
+# Exact-key conflicts use terms-kr: gradient → 그래디언트; fine-tuning → 미세조정.
+# Imported translations are not chosen by occurrence counts. No inflections are generated.
+# This file guides translations in context; it is not a blind replacement dictionary.
+# Existing weight → 가중치 is retained; six other multi-meaning words are deferred below.
+# The current pipeline invalidates only caches for pages mentioning affected terms.
+# Merge: 239 new pins, 2 updated pins, 2 new keep entries; existing labels unchanged.
+# terms-kr coverage: 254 pins + 3 protected names + 6 deferred terms = 263 terms.
+# Source examples, synonyms, and definitions remain in the linked terms-kr JSON.
 # Accelerate is a contextual pin so the English verb accelerate remains translatable.
 pin:
   Hub: Hub
   API: API
   fine-tune: 미세 조정
-  fine-tuning: 미세 조정
+  fine-tuning: 미세조정
   pretrained: 사전 학습된
   pretraining: 사전 학습
   training: 학습
@@ -21,11 +33,252 @@ pin:
   weight: 가중치
   vocabulary: 어휘
   mixed precision: 혼합 정밀도
-  gradient: 기울기
+  gradient: 그래디언트
   quantization: 양자화
   distillation: 증류
   learning rate: 학습률
   Accelerate: Accelerate
+
+  # PyTorchKR × Hugging Face KREW: terms-kr additions (original spellings retained).
+  "activation function": "활성화 함수"
+  "adversarial example": "적대적 예제"
+  "agency": "에이전시"
+  "agent memory": "에이전트 메모리"
+  "all-reduce": "올리듀스"
+  "anchor box": "앵커 박스"
+  "architecture": "아키텍처"
+  "attention": "어텐션"
+  "attention mask": "어텐션 마스크"
+  "audio classification": "오디오 분류"
+  "augmentation": "증강"
+  "autograd": "자동 미분"
+  "automatic speech recognition": "자동 음성 인식"
+  "autoregressive model": "자기회귀 모델"
+  "autotuner": "오토튜너"
+  "backbone": "백본"
+  "backpropagation": "역전파"
+  "baseline": "기준선"
+  "batch normalization": "배치 정규화"
+  "benchmark": "벤치마크"
+  "bounding box": "경계 상자"
+  "causal language modeling": "인과적 언어 모델링"
+  "chain of thought": "사고 과정"
+  "chain rule": "연쇄 법칙"
+  "channel": "채널"
+  "chunk": "청크"
+  "classification": "분류"
+  "classification token": "분류 토큰"
+  "code agent": "코드 에이전트"
+  "collective": "집합 통신"
+  "computational graph": "계산 그래프"
+  "computer vision": "컴퓨터 비전"
+  "confusion matrix": "혼동 행렬"
+  "context": "문맥"
+  "convergence": "수렴"
+  "convolution": "합성곱"
+  "convolutional neural network": "합성곱 신경망"
+  "crop": "크롭"
+  "cross-entropy": "교차 엔트로피"
+  "DAG": "방향성 비순환 그래프"
+  "data augmentation": "데이터 증강"
+  "data collator": "데이터 콜레이터"
+  "data parallel": "데이터 병렬 처리"
+  "dataloader": "데이터로더"
+  "decoder model": "디코더 모델"
+  "deep learning": "심층 학습"
+  "deep neural network": "심층 신경망"
+  "deep Q-network": "심층 Q 네트워크"
+  "dense layer": "완전 연결층"
+  "derivative": "도함수"
+  "device-agnostic": "장치에 구애받지 않는"
+  "direct alignment algorithms": "직접 정렬 알고리즘"
+  "direct preference optimization": "직접 선호 최적화"
+  "distributed data parallel": "분산 데이터 병렬"
+  "distributed training": "분산 학습"
+  "downstream task": "다운스트림 과제"
+  "dropout": "드롭아웃"
+  "early stopping": "조기 종료"
+  "edge deployment": "엣지 배포"
+  "element-wise": "요소별"
+  "encoder model": "인코더 모델"
+  "ensemble": "앙상블"
+  "environment": "환경"
+  "epilogue fusion": "에필로그 융합"
+  "epoch": "에포크"
+  "evaluation mode": "평가 모드"
+  "exact match": "정확 일치"
+  "exploitation": "활용"
+  "exploration": "탐험"
+  "feature extraction": "특징 추출"
+  "feature extractor": "특징 추출기"
+  "feature map": "특징 맵"
+  "feed-forward network": "순전파 신경망"
+  "fine-tuned model": "미세 조정 모델"
+  "flatten": "평탄화"
+  "forward KL": "순방향 KL"
+  "forward pass": "순전파"
+  "freezing": "동결"
+  "GAN": "생성적 적대 신경망"
+  "GEMM": "GEMM"
+  "generative model": "생성 모델"
+  "global memory": "전역 메모리"
+  "gradient accumulation": "그래디언트 누적"
+  "gradient descent": "경사하강법"
+  "gradient synchronization": "그래디언트 동기화"
+  "hardware-agnostic": "하드웨어에 구애받지 않는"
+  "head": "헤드"
+  "held-out set": "보류 평가셋"
+  "hessian": "헤시안"
+  "hidden layer": "은닉층"
+  "hidden state": "은닉 상태"
+  "horizontal fusion": "수평 융합"
+  "hyperparameter": "하이퍼파라미터"
+  "image captioning": "이미지 캡셔닝"
+  "image classification": "이미지 분류"
+  "image patch": "이미지 패치"
+  "image processor": "이미지 프로세서"
+  "image segmentation": "이미지 분할"
+  "in-place": "제자리"
+  "inference provider": "추론 공급자"
+  "initialization": "초기화"
+  "input IDs": "입력 ID"
+  "instruction tuning": "지시 미세조정"
+  "iteration": "반복"
+  "kernel": "커널"
+  "kernel fusion": "커널 융합"
+  "kernel launch": "커널 실행"
+  "knowledge distillation": "지식 증류"
+  "KV cache": "KV 캐시"
+  "label": "레이블"
+  "language model": "언어 모델"
+  "large language model": "대규모 언어 모델"
+  "leaderboard": "리더보드"
+  "learning rate scheduler": "학습률 스케줄러"
+  "likelihood": "가능도"
+  "linear layer": "선형 계층"
+  "LLM-as-a-judge": "LLM-as-a-judge"
+  "logit": "로짓"
+  "loss function": "손실 함수"
+  "lowering": "저수준화"
+  "machine translation": "기계 번역"
+  "margin": "마진"
+  "Markov decision process": "마르코프 결정 과정"
+  "masked language modeling": "마스크드 언어 모델링"
+  "matrix multiplication": "행렬 곱"
+  "MCP client": "MCP 클라이언트"
+  "MCP server": "MCP 서버"
+  "mean-squared error": "평균제곱오차"
+  "mel-frequency": "멜 주파수"
+  "memory bandwidth": "메모리 대역폭"
+  "memory traffic": "메모리 트래픽"
+  "metric": "평가지표"
+  "Microscaling": "마이크로스케일링"
+  "mini-batch": "미니배치"
+  "mixture of experts": "전문가 혼합"
+  "modality": "모달리티"
+  "model context protocol": "모델 컨텍스트 프로토콜"
+  "model parallelism": "모델 병렬화"
+  "model serving": "모델 서빙"
+  "momentum": "모멘텀"
+  "multi-step agent": "멀티스텝 에이전트"
+  "multimodal model": "멀티모달 모델"
+  "named entity recognition": "개체명 인식"
+  "natural language processing": "자연어 처리"
+  "neural network": "신경망"
+  "node": "노드"
+  "normalization": "정규화"
+  "object detection": "객체 검출"
+  "off-policy": "오프-정책"
+  "on-policy": "온-정책"
+  "one-hot encoding": "원-핫 인코딩"
+  "optimizer": "옵티마이저"
+  "overfitting": "과적합"
+  "parameter": "매개변수"
+  "parsing": "구문 분석"
+  "perplexity": "펄플렉서티"
+  "pipeline": "파이프라인"
+  "pipeline parallelism": "파이프라인 병렬화"
+  "pixel values": "픽셀 값"
+  "planning step": "계획 단계"
+  "pointwise fusion": "점별 융합"
+  "policy gradient": "정책 그래디언트"
+  "pooling": "풀링"
+  "post-training": "사후 학습"
+  "pre-training": "사전학습"
+  "precision": "정밀도"
+  "preference data": "선호도 데이터"
+  "prefix": "접두 문맥"
+  "preprocessing": "전처리"
+  "pretrained model": "사전학습 모델"
+  "profiling": "프로파일링"
+  "prologue fusion": "프롤로그 융합"
+  "prompt": "프롬프트"
+  "pruning": "가지치기"
+  "query": "쿼리"
+  "question answering": "질의응답"
+  "race condition": "경쟁 조건"
+  "ReAct": "ReAct"
+  "reasoning model": "추론 모델"
+  "reasoning trace": "추론 과정"
+  "recall": "재현율"
+  "recurrent neural network": "순환 신경망"
+  "reduction": "리덕션"
+  "regularization": "정규화"
+  "reinforcement learning": "강화학습"
+  "rejection sampling": "거부 샘플링"
+  "ReLU": "렐루"
+  "representation learning": "표현 학습"
+  "retrieval-augmented generation": "검색 증강 생성"
+  "reverse KL": "역방향 KL"
+  "reward": "보상"
+  "reward model": "보상 모델"
+  "rollout": "롤아웃"
+  "rotary position embedding": "회전 위치 임베딩"
+  "sampling rate": "샘플링 레이트"
+  "segmentation": "분할"
+  "self-attention": "셀프 어텐션"
+  "semantic search": "시맨틱 검색"
+  "semi-structured sparsity": "반구조화 희소성"
+  "sentiment analysis": "감성 분석"
+  "sequence classification": "시퀀스 분류"
+  "sequence-to-sequence": "시퀀스-투-시퀀스"
+  "sigmoid": "시그모이드"
+  "softmax": "소프트맥스"
+  "sparsity": "희소성"
+  "special token": "특수 토큰"
+  "spectrogram": "스펙트로그램"
+  "speech recognition": "음성 인식"
+  "stride": "스트라이드"
+  "structured output": "구조화된 출력"
+  "student model": "학생 모델"
+  "supervised fine-tuning": "지도 미세조정"
+  "supervised learning": "지도학습"
+  "synthetic data": "합성 데이터"
+  "system prompt": "시스템 프롬프트"
+  "teacher model": "교사 모델"
+  "tensor": "텐서"
+  "tensor parallelism": "텐서 병렬화"
+  "TensorBoard": "텐서보드"
+  "text-to-speech": "텍스트 음성 변환"
+  "tile": "타일"
+  "token": "토큰"
+  "token classification": "토큰 분류"
+  "tokenization": "토큰화"
+  "tool calling": "도구 호출"
+  "training loop": "학습 루프"
+  "transfer learning": "전이학습"
+  "transformer": "트랜스포머"
+  "transpose": "전치"
+  "underfitting": "과소적합"
+  "unsupervised learning": "비지도학습"
+  "validation": "검증"
+  "vanishing gradient": "그래디언트 소실"
+  "vertical fusion": "수직 융합"
+  "vision-language model": "비전-언어 모델"
+  "waveform": "파형"
+  "word embedding": "단어 임베딩"
+  "workflow": "워크플로"
+  "zero-shot learning": "제로샷 학습"
 keep:
 - Hub kernels
 - huggingface
@@ -171,6 +424,9 @@ keep:
 - Triton
 - Unsloth
 - Winogrande
+# Additional proper names from terms-kr. Existing keep rules remain unchanged.
+- BERT
+- ONNX
 labels:
   keep:
   - boolean
@@ -453,3 +709,62 @@ labels:
   - Watermarking
   - Where
   - 'Yes'
+
+# ── 문맥별 검토 대상: 아래 내용은 주석이며 번역 엔진에 적용되지 않습니다. ──
+# 6개 용어는 pin에서 제외합니다. weight는 기존 pin을 유지하며 아래에 검토 맥락을 보존합니다.
+#
+# DEFERRED: "agent"
+#   "에이전트" — 환경과 상호작용하며 보상을 최대화하기 위해 행동을 선택하는 학습 주체
+#   "대리인" — 사용자를 대신하여 특정 작업을 수행하는 자율적인 소프트웨어 시스템
+#   Review: https://terms.kr/#/term/agent
+#
+# DEFERRED: "bias"
+#   "바이어스" — 신경망의 뉴런에서 가중합에 더해지는 상수 항으로, 활성화 함수의 임계값을 조정하는 매개변수
+#   "편향" — 데이터나 알고리즘이 특정 집단에 대해 불공정한 결과를 초래하는 체계적인 오류
+#   Review: https://terms.kr/#/term/bias
+#
+# DEFERRED: "feature"
+#   "특징" — 모델 학습에 사용되는 입력 데이터의 개별 측정 가능한 속성
+#   "기능" — 소프트웨어나 시스템이 제공하는 특정 능력이나 동작
+#   Review: https://terms.kr/#/term/feature
+#
+# DEFERRED: "layer"
+#   "층" — 신경망을 구성하는 뉴런들의 집합으로, 입력을 변환하는 기본 단위
+#   "레이어" — 시스템이나 소프트웨어의 논리적 구조를 나타내는 추상화 수준
+#   Review: https://terms.kr/#/term/layer
+#
+# DEFERRED: "loss"
+#   "손실" — 모델의 예측값과 실제값 사이의 차이를 수치화한 값
+#   "로스" — 정보나 성능의 감소 또는 저하
+#   Review: https://terms.kr/#/term/loss
+#
+# DEFERRED: "model"
+#   "모델" — 데이터로부터 학습된 패턴을 바탕으로 예측이나 결정을 수행하는 수학적 구조
+#   "모형" — 현상을 설명하거나 예측하기 위한 수학적 또는 개념적 표현
+#   Review: https://terms.kr/#/term/model
+#
+# EXISTING PIN RETAINED: "weight"
+#   "가중치" — 신경망에서 입력 신호에 곱해지는 학습 가능한 매개변수
+#   "가중" — 특정 요소에 중요도나 비중을 부여하는 것
+#   Review: https://terms.kr/#/term/weight
+
+# Source data license: MIT License
+# Copyright (c) 2026 terms.kr contributors
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
